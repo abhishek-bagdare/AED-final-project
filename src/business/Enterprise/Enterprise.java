@@ -1,15 +1,16 @@
-/*
+ /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package business.Enterprise;
-import business.Organization.Organization;
-import business.Organization.OrganizationDirectory;
+package Business.Enterprise;
+
+import Business.Organization.Organization;
+import Business.Organization.OrganizationDirectory;
 
 /**
  *
- * @author virajshah
+ * @author Dhaval
  */
 public abstract class Enterprise extends Organization{
     
@@ -21,8 +22,8 @@ public abstract class Enterprise extends Organization{
     }
     
     public enum EnterpriseType{
-        HelpSeeker("HelpSeeker"),Health("Health"),Legal("Legal"),
-        NGO("NGO"),Pharmacy("Pharmacy");
+        HelpSeeker("HelpSeeker"),SexualHarassment("Sexual Harassment"),ChildAbuse("Child Abuse"),
+        NGO("NGO"),FoodMgmt("Food Management");
         
         private String value;
         
@@ -51,5 +52,4 @@ public abstract class Enterprise extends Organization{
         this.enterpriseType=type;
         organizationDirectory=new OrganizationDirectory();
     }
-    
 }

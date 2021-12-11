@@ -4,12 +4,13 @@
  * and open the template in the editor.
  */
 
-package Business;
+package business;
 
-import Business.Network.Network;
-import Business.Organization.Organization;
-import Business.Role.Role;
-import Business.Role.SystemAdminRole;
+import Business.Network.Network; 
+import business.Organization.Organization;
+import business.Role.Role;
+import business.Role.AdminRole;
+import business.Role.SystemAdminRole;
 import java.util.ArrayList;
 
 /**
@@ -18,7 +19,7 @@ import java.util.ArrayList;
  */
 public class EcoSystem extends Organization{
     
-    private static EcoSystem business;
+   private static EcoSystem business;
     private ArrayList<Network> networkList;
     public static EcoSystem getInstance(){
         if(business==null){

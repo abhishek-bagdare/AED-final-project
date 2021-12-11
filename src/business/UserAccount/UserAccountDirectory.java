@@ -17,7 +17,7 @@ public class UserAccountDirectory {
     private ArrayList<UserAccount> userAccountList;
 
     public UserAccountDirectory() {
-        userAccountList = new ArrayList<>();
+        userAccountList = new ArrayList();
     }
 
     public ArrayList<UserAccount> getUserAccountList() {
@@ -41,4 +41,54 @@ public class UserAccountDirectory {
         userAccountList.add(userAccount);
         return userAccount;
     }
+    
+    public boolean checkIfUsernameIsUnique(String username){
+        for (UserAccount ua : userAccountList){
+            if (ua.getUsername().equals(username))
+                return false;
+        }
+        return true;
+    }
+    
+    public UserAccount searchUserAccount(String username, String Password){
+        for (UserAccount ua : userAccountList){
+            if(ua.getUsername().equals(username)&& ua.getPassword().equals(Password)){
+                return ua;
+            }
+        }
+        return null;
+    }
+    
+    public boolean IsValidInput(String s) {
+
+        boolean status = false;    
+        char [] array = s.toCharArray();
+        int lower=0, upper=0, digits=0;
+
+        if (s.length() > 8) 
+        status = true;
+
+        for ( int i = 0;  i < array.length; i++) {
+            if(Character.isDigit(array[i]))
+                digits++;
+            if(Character.isLowerCase(array[i]))
+                lower++;
+            if(Character.isUpperCase(array[i]))
+                upper++;
+            
+            
+        }
+
+        if ( !(lower  > 0 ))
+            status = false;
+
+        if ( !(upper  > 0 ))
+            status = false;
+
+        if ( !(digits > 0 ))
+            status = false;
+
+        return status;
+    }
+
 }

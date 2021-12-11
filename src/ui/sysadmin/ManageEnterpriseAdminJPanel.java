@@ -14,7 +14,7 @@ import java.awt.Color;
 import business.EcoSystem;
 import business.Employee.Employee;
 import business.Enterprise.Enterprise;
-import Business.Network.Network;
+import business.Network.Network;
 import business.Role.HealthAdminRole;
 import business.Role.LegalAdminRole;
 import business.Role.NGOAdminRole;
@@ -59,7 +59,7 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
                 for (UserAccount userAccount : enterprise.getUserAccountDirectory().getUserAccountList()) {
                     Object[] row = new Object[4];
                     row[0] = enterprise.getName();
-                    row[1] = network.getNetworkName();
+                    row[1] = network.getNameOfNetwork();
                     row[2] = userAccount;
                     row[3] =userAccount.getPassword();
                     System.out.println(userAccount.getUsername());

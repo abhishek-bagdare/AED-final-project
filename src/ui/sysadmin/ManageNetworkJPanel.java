@@ -5,12 +5,12 @@
  */
 package ui.sysadmin;
 
-import Business.EcoSystem;
-import Business.Enterprise.Enterprise;
-import Business.Network.Network;
-import Business.Organization.CaseVolunteerOrganization;
+import business.EcoSystem;
+import business.Enterprise.Enterprise;
+import business.Network.Network;
+import business.Organization.CaseVolunteerOrganization;
 import Business.Organization.HelpSeekerOrganization;
-import Business.Organization.Organization;
+import business.Organization.Organization;
 import java.awt.CardLayout;
 import java.awt.Color;
 import java.awt.Component;
@@ -246,7 +246,7 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
         String name = txtEnterNameOfNetwork.getText();
 
         Network network = system.createAndAddNetwork();
-        network.setNetworkName(name);
+        network.setNameOfNetwork(name);
 
         populateNetworkTable();
         txtEnterNameOfNetwork.setText("");

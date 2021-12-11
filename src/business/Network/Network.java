@@ -3,27 +3,27 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Business.Network;
+package business.Network;
 
-import Business.Enterprise.EnterpriseDirectory;
+import business.Enterprise.EnterpriseDirectory;
 
 /**
  *
  * @author MyPC1
  */
 public class Network {
-    private String name;
+    private String nameOfNetwork;
     private EnterpriseDirectory enterpriseDirectory;
     
     public Network(){
         enterpriseDirectory=new EnterpriseDirectory();
     }
-    public String getName() {
-        return name;
+    public String getNameOfNetwork() {
+        return nameOfNetwork;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNameOfNetwork(String nameOfNetwork) {
+        this.nameOfNetwork = nameOfNetwork;
     }
 
     public EnterpriseDirectory getEnterpriseDirectory() {
@@ -32,7 +32,5 @@ public class Network {
     
     @Override
     public String toString(){
-        return name;
-    }
-    
-}
+        return nameOfNetwork;
+    }}

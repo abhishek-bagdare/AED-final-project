@@ -5,17 +5,18 @@
  */
 package business.Enterprise;
 
-import Business.Role.Role;
+import business.Enterprise.Enterprise;
 import java.util.ArrayList;
 
 /**
  *
- * @author Ajinkya
+ * @author Dhaval
  */
-public class HelpSeekerEnterprise extends Enterprise {
+
+public class NGOrgEnterprise extends Enterprise {
     
-    public HelpSeekerEnterprise(String name){
-        super(name,EnterpriseType.HelpSeeker);
+    public NGOrgEnterprise(String name){
+        super(name,Enterprise.EnterpriseType.NGO);
     }
     @Override
     public ArrayList<Role> getSupportedRole() {

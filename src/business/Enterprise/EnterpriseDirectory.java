@@ -4,9 +4,9 @@
  * and open the template in the editor.
  */
 
-package Business.Enterprise;
+package business.Enterprise;
 
-import Business.Organization.OrganizationDirectory;
+import business.Organization.OrganizationDirectory;
 import java.util.ArrayList;
 
 /**
@@ -40,24 +40,28 @@ public class EnterpriseDirectory {
     public Enterprise createAndAddEnterprise(String name,Enterprise.EnterpriseType type){
         Enterprise enterprise=null;
         
-        if(type==Enterprise.EnterpriseType.HelpSeeker){
-            enterprise=new HelpSeekerEnterprise(name);
+        if(type==Enterprise.EnterpriseType.CaseReporter){
+            enterprise=new CaseReporterEnterprise(name);
             enterpriseList.add(enterprise);
         }
-        if(type==Enterprise.EnterpriseType.SexualHarassment){
-            enterprise=new SexualHarassmentEnterprise(name);
+        if(type==Enterprise.EnterpriseType.Wellness){
+            enterprise=new WellnessEnterprise(name);
             enterpriseList.add(enterprise);
         }
-        if(type==Enterprise.EnterpriseType.ChildAbuse){
-            enterprise=new ChildAbuseEnterprise(name);
+        if(type==Enterprise.EnterpriseType.JusticeEnterprise){
+            enterprise=new JusticeEnterprise(name);
             enterpriseList.add(enterprise);
         }
         if(type==Enterprise.EnterpriseType.NGO){
-            enterprise=new NGOEnterprise(name);
+            enterprise=new NGOrgEnterprise(name);
             enterpriseList.add(enterprise);
         }
-        if(type==Enterprise.EnterpriseType.FoodMgmt){
-            enterprise=new FoodMgmtEnterprise(name);
+        if(type==Enterprise.EnterpriseType.Pharmaceutical){
+            enterprise=new PharmaceuticalEnterprise(name);
+            enterpriseList.add(enterprise);
+        }
+        if(type==Enterprise.EnterpriseType.Rehabilitation){
+            enterprise=new RehabilitationEnterprise(name);
             enterpriseList.add(enterprise);
         }
         return enterprise;

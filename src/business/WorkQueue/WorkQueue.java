@@ -13,12 +13,17 @@ import java.util.ArrayList;
 public class WorkQueue {
     
     private ArrayList<WorkRequest> workRequestList;
+    private ArrayList <RehabilitationCaretakerWorkRequest> rehabilitationCaretakerWorkRequest;
 
     public WorkQueue() {
         workRequestList = new ArrayList<>();
+        rehabilitationCaretakerWorkRequest=new ArrayList<RehabilitationCaretakerWorkRequest>();
     }
 
     public ArrayList<WorkRequest> getWorkRequestList() {
         return workRequestList;
+    }
+    public ArrayList<RehabilitationCaretakerWorkRequest> getRehabilitationCaretakerWorkRequest() {
+        return rehabilitationCaretakerWorkRequest;
     }
 }

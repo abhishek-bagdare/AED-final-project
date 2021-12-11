@@ -45,7 +45,7 @@ public class OrganizationDirectory {
             organization = new ForensicOrganization();
             organizationList.add(organization);
         }
-        else if (type.getValue().equals(Type.CounsellingDept.getValue())){
+        else if (type.getValue().equals(Type.CounsellingOrganization.getValue())){
             organization = new CounsellingOrganization();
             organizationList.add(organization);
         }

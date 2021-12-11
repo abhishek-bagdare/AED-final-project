@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Business.Enterprise;
+package business.Enterprise;
 
-import Business.Organization.Organization;
-import Business.Organization.OrganizationDirectory;
+import business.Organization.Organization;
+import business.Organization.OrganizationDirectory;
 
 /**
  *
@@ -22,7 +22,7 @@ public abstract class Enterprise extends Organization{
     }
     
     public enum EnterpriseType{
-        HelpSeeker("HelpSeeker"),Wellness("Wellness"),Justice("Justice"),
+        CaseReporter("CaseReporter"),Wellness("Wellness"),Justice("Justice"),
         NGO("NGO"),Pharmaceutical("Pharmaceutical"),Rehabilitation("Rehabilitation"); //Added different enterprises by Viraj
         
         private String value;

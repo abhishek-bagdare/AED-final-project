@@ -22,8 +22,8 @@ public abstract class Enterprise extends Organization{
     }
     
     public enum EnterpriseType{
-        HelpSeeker("HelpSeeker"),SexualHarassment("Sexual Harassment"),ChildAbuse("Child Abuse"),
-        NGO("NGO"),FoodMgmt("Food Management");
+        HelpSeeker("HelpSeeker"),Wellness("Wellness"),Justice("Justice"),
+        NGO("NGO"),Pharmaceutical("Pharmaceutical"),Rehabilitation("Rehabilitation"); //Added different enterprises by Viraj
         
         private String value;
         

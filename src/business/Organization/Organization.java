@@ -5,10 +5,12 @@
 package business.Organization;
 
 import business.Employee.EmployeeDirectory;
-import business.Encounter.CounsellorEncounterDirectory;
-import business.Encounter.CounsellorEncounter;
-import business.Encounter.PsychiatristEncounterDirectory;
-import business.Encounter.LawyerEncounterDirectory;
+import business.Encounter.EncounterCounsellor;
+import business.Encounter.EncounterCounsellorDir;
+import business.Encounter.EncounterLawyer;
+import business.Encounter.EncounterPsychiatrist;
+import business.Encounter.EncounterPsychiatristDir;
+import business.Encounter.EncounterLawyerDir;
 import business.Role.Role;
 import business.UserAccount.UserAccountDirectory;
 import business.WorkQueue.WorkQueue;
@@ -26,14 +28,14 @@ public abstract class Organization {
     private UserAccountDirectory userAccountDirectory;
     private int organizationID;
     private static int counter=0;
-    private CounsellorEncounterDirectory counsellorencounterdir;
-    private LawyerEncounterDirectory lawyerencounterdir;
-    private PsychiatristEncounterDirectory Psychiatricencounterdir;
+    private EncounterCounsellorDir counsellorencounterdir;
+    private EncounterLawyerDir lawyerencounterdir;
+    private EncounterPsychiatristDir Psychiatricencounterdir;
     
     public enum Type{
         CaseReporter("CaseReporterOrganization"),Hospital("HospitalOrganization"),Forensic("ForensicOrganization"),
-        CounsellingDept("CounsellingDeptOrganization"), Legal("LegalOrganization"), CaseVolunteer("CaseVolunteer"),
-        HelpProvider("HelpProviderOrganization"),Pharmacy("PharmacyOrganization"),Rehabilitation("Rehabilitation")
+        CounsellingOrganization("CounsellingOrganization"), Legal("LegalOrganization"), CaseVolunteer("CaseVolunteer"),
+        PsychiatricOrganization("PsychiatricOrganization"),Pharmacy("PharmacyOrganization"),Rehabilitation("Rehabilitation")
         ;
         private String value;
         private Type(String value) {
@@ -47,9 +49,9 @@ public abstract class Organization {
     public Organization(String name) {
         this.name = name;
         workQueue = new WorkQueue();
-        counsellorencounterdir=new CounsellorEncounterDirectory();
-        lawyerencounterdir = new LawyerEncounterDirectory();
-        Psychiatricencounterdir=new PsychiatristEncounterDirectory();
+        counsellorencounterdir=new EncounterCounsellorDir();
+        lawyerencounterdir = new EncounterLawyerDir();
+        Psychiatricencounterdir=new EncounterPsychiatristDir();
         employeeDirectory = new EmployeeDirectory();
         userAccountDirectory = new UserAccountDirectory();
         organizationID = counter;
@@ -62,15 +64,15 @@ public abstract class Organization {
         return userAccountDirectory;
     }
 
-    public PsychiatristEncounterDirectory getPsychiatricencounterdir() {
+    public EncounterPsychiatristDir getPsychiatricencounterdir() {
         return Psychiatricencounterdir;
     }
 
-    public CounsellorEncounterDirectory getCounsellorencounterdir() {
+    public EncounterCounsellorDir getCounsellorencounterdir() {
         return counsellorencounterdir;
-    }
+    } 
 
-    public LawyerEncounterDirectory getLawyerencounterdir() {
+    public EncounterLawyerDir getLawyerencounterdir() {
         return lawyerencounterdir;
     }
     

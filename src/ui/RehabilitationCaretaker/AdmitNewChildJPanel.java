@@ -8,8 +8,8 @@ package UI.RehabilitationCaretaker;
 import Business.EcoSystem;
 import Business.Organization.PharmacyOrganization;
 import Business.UserAccount.UserAccount;
-import Business.WorkQueue.Meds;
-import Business.WorkQueue.PharmacistWorkRequest;
+import Business.WorkQueue.Child;
+import Business.WorkQueue.RehabilitationCaretakerWorkRequest;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 
@@ -25,7 +25,7 @@ public class AdmitNewChildJPanel extends javax.swing.JPanel {
      */
     JPanel userProcessContainer;
     EcoSystem system;
-    PharmacistWorkRequest request;
+    RehabilitationCaretakerWorkRequest request;
     UserAccount userAccount;
     AdmitNewChildJPanel(JPanel userProcessContainer, EcoSystem business, PharmacyOrganization POrganization, UserAccount userAccount) {
       this.userProcessContainer = userProcessContainer;
@@ -130,11 +130,11 @@ public class AdmitNewChildJPanel extends javax.swing.JPanel {
         Object[] row=new Object[2];
         model.setRowCount(0);
         
-         for(Meds M : request.getMedicines())
+         for(Child C : request.getChildren())
          {
          
-            row[0]=M;
-            row[1]=M.getQty();
+            row[0]=C.getChildAge();
+            row[1]=C.getChildName();
             
             model.addRow(row);
             

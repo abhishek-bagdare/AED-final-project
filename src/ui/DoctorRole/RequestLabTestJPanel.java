@@ -3,9 +3,7 @@
  * and open the template in the editor.
  */
 package ui.DoctorRole;
-
-import business.Business;
-import business.Organization.LabOrganization;
+ 
 import business.Organization.Organization;
 import business.UserAccount.UserAccount;
 import business.WorkQueue.LabTestWorkRequest;
@@ -16,12 +14,12 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author raunak
+ * @author abhishekbagdare
  */
 public class RequestLabTestJPanel extends javax.swing.JPanel {
 
     private JPanel userProcessContainer;
-    private Business business;
+   // private Business business;
     private UserAccount userAccount;
     /**
      * Creates new form RequestLabTestJPanel

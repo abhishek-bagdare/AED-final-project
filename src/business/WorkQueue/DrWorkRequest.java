@@ -10,7 +10,10 @@ package business.WorkQueue;
  * @author abhishekbagdare
  */
 public class DrWorkRequest extends WorkRequest{
-     RehabilitationCaretakerWorkRequest  rehabilitationCaretakerWorkRequest;
+      CaseReporterWorkRequest CaseReporterWorkRequest;
+    LabAssistantWorkRequest LabAssistanceWorkRequest;
+    PharmacistWorkRequest PharmacistWorkRequest;
+    RehabilitationCaretakerWorkRequest  rehabilitationCaretakerWorkRequest;
 
     public RehabilitationCaretakerWorkRequest getRehabilitationCaretakerWorkRequest() {
         return rehabilitationCaretakerWorkRequest;
@@ -19,4 +22,39 @@ public class DrWorkRequest extends WorkRequest{
     public void setRehabilitationCaretakerWorkRequest(RehabilitationCaretakerWorkRequest rehabilitationCaretakerWorkRequest) {
         this.rehabilitationCaretakerWorkRequest = rehabilitationCaretakerWorkRequest;
     }
+    private String docsign;
+
+    public CaseReporterWorkRequest getCaseReporterWorkRequest() {
+        return CaseReporterWorkRequest;
+    }
+
+    public void setCaseReporterWorkRequest(CaseReporterWorkRequest CaseReporterWorkRequest) {
+        this.CaseReporterWorkRequest = CaseReporterWorkRequest;
+    }
+
+    public String getDocsign() {
+        return docsign;
+    }
+
+    public void setDocsign(String docsign) {
+        this.docsign = docsign;
+    }
+
+    public LabAssistantWorkRequest getLabAssistanceWorkRequest() {
+        return LabAssistanceWorkRequest;
+    }
+
+    public void setLabAssistanceWorkRequest(LabAssistantWorkRequest LabAssistanceWorkRequest) {
+        this.LabAssistanceWorkRequest = LabAssistanceWorkRequest;
+    }
+
+    public PharmacistWorkRequest getPharmacistWorkRequest() {
+        return PharmacistWorkRequest;
+    }
+
+    public void setPharmacistWorkRequest(PharmacistWorkRequest PharmacistWorkRequest) {
+        this.PharmacistWorkRequest = PharmacistWorkRequest;
+    }
+    
+    
 }

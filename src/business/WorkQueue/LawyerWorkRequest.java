@@ -13,15 +13,15 @@ import java.util.ArrayList;
  * @author abhishekbagdare
  */
 public class LawyerWorkRequest extends WorkRequest {
-      CaseReporterWorkRequest HelpSeekerWorkRequest;
+      CaseReporterWorkRequest CaseReporterWorkRequest;
     ArrayList<EncounterLawyer> LawyerEncounter = new ArrayList<EncounterLawyer>();
 
-    public CaseReporterWorkRequest getHelpSeekerWorkRequest() {
-        return HelpSeekerWorkRequest;
+    public CaseReporterWorkRequest getCaseReporterWorkRequest() {
+        return CaseReporterWorkRequest;
     }
 
-    public void setHelpSeekerWorkRequest(CaseReporterWorkRequest HelpSeekerWorkRequest) {
-        this.HelpSeekerWorkRequest = HelpSeekerWorkRequest;
+    public void setCaseReporterWorkRequest(CaseReporterWorkRequest CaseReporterWorkRequest) {
+        this.CaseReporterWorkRequest = CaseReporterWorkRequest;
     }
 
     public ArrayList<EncounterLawyer> getLawyerEncounter() {

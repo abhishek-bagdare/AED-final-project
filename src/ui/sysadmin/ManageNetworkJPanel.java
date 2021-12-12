@@ -330,7 +330,7 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
                
                 if (o instanceof CaseVolunteerOrganization){
                
-                int count = o.getWorkQueue().getHelpSeekerworkRequestList().size();
+                int count = o.getWorkQueue().getCaseReporterWorkRequestList().size();
                 
                 chart.put(n.toString(), count);
                 

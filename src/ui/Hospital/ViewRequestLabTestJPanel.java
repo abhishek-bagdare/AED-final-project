@@ -5,7 +5,7 @@
  */
 package ui.Hospital;
 
-import Business.EcoSystem;
+import business.EcoSystem;
 import java.awt.CardLayout;
 import java.awt.Color;
 import java.awt.Component;
@@ -13,7 +13,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author patel and Ajinkya
+ * @author abhishekbagdare
  */
 public class ViewRequestLabTestJPanel extends javax.swing.JPanel {
 

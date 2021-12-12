@@ -74,12 +74,10 @@ public class SignUpJFrame extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         fnamejLabel = new javax.swing.JLabel();
         contactjLabel = new javax.swing.JLabel();
-        emailjLabel = new javax.swing.JLabel();
         usernamejLabel = new javax.swing.JLabel();
         passwordjLabel = new javax.swing.JLabel();
         nameJTextField = new javax.swing.JTextField();
         contactTextField = new javax.swing.JTextField();
-        emailjTextField = new javax.swing.JTextField();
         usernameJTextField = new javax.swing.JTextField();
         signupjButton = new javax.swing.JButton();
         passwordJPasswordField = new javax.swing.JPasswordField();
@@ -133,17 +131,6 @@ public class SignUpJFrame extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(21, 142, 0, 0);
         detailsjPanel.add(contactjLabel, gridBagConstraints);
 
-        emailjLabel.setFont(new java.awt.Font("Monaco", 1, 18)); // NOI18N
-        emailjLabel.setText("Email - Id");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 5;
-        gridBagConstraints.gridwidth = 2;
-        gridBagConstraints.ipadx = 47;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(23, 142, 0, 0);
-        detailsjPanel.add(emailjLabel, gridBagConstraints);
-
         usernamejLabel.setFont(new java.awt.Font("Monaco", 1, 18)); // NOI18N
         usernamejLabel.setText("Username");
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -183,30 +170,6 @@ public class SignUpJFrame extends javax.swing.JFrame {
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(18, 27, 0, 0);
         detailsjPanel.add(contactTextField, gridBagConstraints);
-
-        emailjTextField.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                emailjTextFieldMousePressed(evt);
-            }
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                emailjTextFieldMouseReleased(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                emailjTextFieldMouseExited(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                emailjTextFieldMouseEntered(evt);
-            }
-        });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 5;
-        gridBagConstraints.gridwidth = 7;
-        gridBagConstraints.gridheight = 2;
-        gridBagConstraints.ipadx = 125;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(20, 27, 0, 0);
-        detailsjPanel.add(emailjTextField, gridBagConstraints);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 9;
@@ -328,63 +291,6 @@ public class SignUpJFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void emailjTextFieldMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_emailjTextFieldMouseEntered
-        /*        String email= emailjTextField.getText();
-        String validate="^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@" + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
-        if(email.matches(validate))
-        {
-            BufferedImage img = null;
-            try {
-                img = ImageIO.read(new File("AEDcorrectlogo.png"));
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
-            Image dimg = img.getScaledInstance(jLabel3.getWidth(), jLabel3.getHeight(),Image.SCALE_SMOOTH);
-            ImageIcon icon=new ImageIcon(dimg);
-            jLabel3.setIcon(icon);
-        }   else
-        {
-            BufferedImage img = null;
-            try {
-                img = ImageIO.read(new File("AEDwronglogo.jpg"));
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
-            Image dimg = img.getScaledInstance(jLabel3.getWidth(), jLabel3.getHeight(),Image.SCALE_SMOOTH);
-            ImageIcon icon=new ImageIcon(dimg);
-            jLabel3.setIcon(icon);
-        } */          // TODO add your handling code here:
-    }//GEN-LAST:event_emailjTextFieldMouseEntered
-
-    private void emailjTextFieldMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_emailjTextFieldMouseExited
-        /*      String email= emailjTextField.getText();
-        String validate="^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@" + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
-        if(email.matches(validate))
-        {
-            BufferedImage img = null;
-            try {
-                img = ImageIO.read(new File("C:\\Users\\patel\\OneDrive\\Pictures\\AEDcorrectlogo.png"));
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
-            Image dimge = img.getScaledInstance(jLabel3.getWidth(), jLabel3.getHeight(),Image.SCALE_SMOOTH);
-            ImageIcon icon=new ImageIcon(dimge);
-            jLabel3.setIcon(icon);
-        }  */     // TODO add your handling code here:
-    }//GEN-LAST:event_emailjTextFieldMouseExited
-
-    private void emailjTextFieldMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_emailjTextFieldMousePressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_emailjTextFieldMousePressed
-
-    private void emailjTextFieldMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_emailjTextFieldMouseReleased
-
-        // TODO add your handling code here:
-    }//GEN-LAST:event_emailjTextFieldMouseReleased
-
     private void signupjButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_signupjButtonMouseEntered
         signupjButton.setForeground(Color.WHITE);
     }//GEN-LAST:event_signupjButtonMouseEntered
@@ -396,7 +302,7 @@ public class SignUpJFrame extends javax.swing.JFrame {
     private void signupjButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signupjButtonActionPerformed
 
         if(nameJTextField.getText().isEmpty() || contactTextField.getText().isEmpty() ||
-            emailjTextField.getText().isEmpty() || usernameJTextField.getText().isEmpty() ||
+            "ssgetText()".isEmpty() || usernameJTextField.getText().isEmpty() ||
             passwordJPasswordField.getText().isEmpty())
         {
             JOptionPane.showMessageDialog(null, "Please fill all details", "Info", JOptionPane.INFORMATION_MESSAGE);
@@ -409,7 +315,7 @@ public class SignUpJFrame extends javax.swing.JFrame {
             String name = nameJTextField.getText();
             String contactno=contactTextField.getText();
             //long contact=Long.parseLong(contactno);
-            String email=emailjTextField.getText();
+            String email="aaa@gmail.com";
 
             if(isNumber(contactno)){
                 // JOptionPane.showMessageDialog(null, "Info added!", "Info", JOptionPane.INFORMATION_MESSAGE);
@@ -434,7 +340,7 @@ public class SignUpJFrame extends javax.swing.JFrame {
             }
 
             String validate="^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@" + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
-            if(!email.matches(validate))
+            if(1==0)
             {
                 JOptionPane.showMessageDialog(null, "Please enter valid email");
                 return;
@@ -449,7 +355,7 @@ public class SignUpJFrame extends javax.swing.JFrame {
             if(x==true){
                 Enterprise enterprise = network.getEnterpriseDirectory().searchEnterprisebyType(Enterprise.EnterpriseType.CaseReporter);
                 //System.out.println("start2");
-                if(enterprise.getOrganizationDirectory().searchOrganizationbyname("HelpSeekerOrganization")==null){
+                if(enterprise.getOrganizationDirectory().searchOrganizationbyname("CaseReporterOrganization")==null){
                     //System.out.println("start3");
                     Organization.Type type = (Organization.Type) Organization.Type.CaseReporter;
                     Organization org= enterprise.getOrganizationDirectory().createOrganization(type);
@@ -467,7 +373,7 @@ public class SignUpJFrame extends javax.swing.JFrame {
                 else{
                     //System.out.println("start4");
 
-                    Organization org = enterprise.getOrganizationDirectory().searchOrganizationbyname("HelpSeekerOrganization");
+                    Organization org = enterprise.getOrganizationDirectory().searchOrganizationbyname("CaseReporterOrganization");
                     Employee employee= org.getEmployeeDirectory().createEmployee(name);
                     if(org.getUserAccountDirectory().CheckIsValidInput(password)){
                         UserAccount userAccount=org.getUserAccountDirectory().createUserAccnt(username, password, employee, new CaseReporterRole());
@@ -481,7 +387,7 @@ public class SignUpJFrame extends javax.swing.JFrame {
             }
             else{
                 Enterprise enterprise = network.getEnterpriseDirectory().createAndAddEnterprise("HS", Enterprise.EnterpriseType.CaseReporter);
-                if(enterprise.getOrganizationDirectory().searchOrganizationbyname("HelpSeekerOrganization")==null){
+                if(enterprise.getOrganizationDirectory().searchOrganizationbyname("CaseReporterOrganization")==null){
                     //System.out.println("start3");
                     Organization.Type type = (Organization.Type) Organization.Type.CaseReporter;
                     Organization org= enterprise.getOrganizationDirectory().createOrganization(type);
@@ -498,7 +404,7 @@ public class SignUpJFrame extends javax.swing.JFrame {
                 }
                 else{
                     //System.out.println("start4");
-                    Organization org = enterprise.getOrganizationDirectory().searchOrganizationbyname("HelpSeekerOrganization");
+                    Organization org = enterprise.getOrganizationDirectory().searchOrganizationbyname("CaseReporterOrganization");
                     Employee employee= org.getEmployeeDirectory().createEmployee(name);
                     if(org.getUserAccountDirectory().CheckIsValidInput(password)){
                         UserAccount userAccount=org.getUserAccountDirectory().createUserAccnt(username, password, employee, new CaseReporterRole());
@@ -545,7 +451,7 @@ public class SignUpJFrame extends javax.swing.JFrame {
             //Enterprise enterprise = network.getEnterpriseDirectory().searchEnterprisebyType(Enterprise.EnterpriseType.HelpSeeker);
             this.setVisible(false);
             Enterprise enterprise = network.getEnterpriseDirectory().searchEnterprisebyType(Enterprise.EnterpriseType.CaseReporter);
-            Organization org = enterprise.getOrganizationDirectory().searchOrganizationbyname("HelpSeekerOrganization");
+            Organization org = enterprise.getOrganizationDirectory().searchOrganizationbyname("CaseReporterOrganization");
             UserAccount ua= org.getUserAccountDirectory().authenticateUserAccnt(username, password);
             //ReportJFrame r = new ReportJFrame(system,network,ua,org);
             dB4OUtil.storeSystem(system);
@@ -631,8 +537,6 @@ public static boolean isNumber(String price){
     private javax.swing.JTextField contactTextField;
     private javax.swing.JLabel contactjLabel;
     private javax.swing.JPanel detailsjPanel;
-    private javax.swing.JLabel emailjLabel;
-    private javax.swing.JTextField emailjTextField;
     private javax.swing.JLabel fnamejLabel;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;

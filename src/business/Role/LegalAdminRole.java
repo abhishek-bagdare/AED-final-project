@@ -11,7 +11,7 @@ import business.Enterprise.Enterprise;
 import business.Network.Network;
 import business.Organization.Organization;
 import business.UserAccount.UserAccount;
-import ui.enterpriseadmin.EnterpriseAdminJPanel;
+import ui.EnterpriseAdmin.EnterpriseAdminJPanel;
 import javax.swing.JPanel;
 
 

@@ -35,10 +35,7 @@ import javax.mail.internet.MimeMessage;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
-/**
- *
- * @author patel
- */
+ 
 public class CaseReportDJPanel extends javax.swing.JPanel {
 
     /**

@@ -1,94 +1,98 @@
 /*
- * To change this template, choose Tools | Templates
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
 package business.UserAccount;
 
+import java.util.ArrayList;
 import business.Employee.Employee;
 import business.Role.Role;
-import java.util.ArrayList;
+
 
 /**
  *
- * @author raunak
+ * @author Dhaval
  */
+
+
 public class UserAccountDirectory {
     
-    private ArrayList<UserAccount> userAccountList;
+    private ArrayList<UserAccount> userAccntList;
 
     public UserAccountDirectory() {
-        userAccountList = new ArrayList();
+        userAccntList = new ArrayList();
     }
 
-    public ArrayList<UserAccount> getUserAccountList() {
-        return userAccountList;
+    public ArrayList<UserAccount> getUserAccntList() {
+        return userAccntList;
     }
     
-    public UserAccount authenticateUser(String username, String password){
-        for (UserAccount ua : userAccountList)
-            if (ua.getUsername().equals(username) && ua.getPassword().equals(password)){
+    public UserAccount authenticateUserAccnt(String username, String password){
+        for (UserAccount ua : userAccntList)
+            if (ua.getUsername().equals(username) && ua.getPwd().equals(password)){
                 return ua;
             }
         return null;
     }
     
-    public UserAccount createUserAccount(String username, String password, Employee employee, Role role){
-        UserAccount userAccount = new UserAccount();
-        userAccount.setUsername(username);
-        userAccount.setPassword(password);
-        userAccount.setEmployee(employee);
-        userAccount.setRole(role);
-        userAccountList.add(userAccount);
-        return userAccount;
+    public UserAccount createUserAccnt(String username, String password, Employee employee, Role role){
+        UserAccount userAccnt = new UserAccount();
+        userAccnt.setUsername(username);
+        userAccnt.setPwd(password);
+        userAccnt.setEmp(employee);
+        userAccnt.setRole(role);
+        userAccntList.add(userAccnt);
+        return userAccnt;
     }
     
-    public boolean checkIfUsernameIsUnique(String username){
-        for (UserAccount ua : userAccountList){
+    public boolean checkUserIsUnique(String username){
+        for (UserAccount ua : userAccntList){
             if (ua.getUsername().equals(username))
                 return false;
         }
         return true;
     }
     
-    public UserAccount searchUserAccount(String username, String Password){
-        for (UserAccount ua : userAccountList){
-            if(ua.getUsername().equals(username)&& ua.getPassword().equals(Password)){
+    public UserAccount searchUserAccnt(String username, String Password){
+        for (UserAccount ua : userAccntList){
+            if(ua.getUsername().equals(username)&& ua.getPwd().equals(Password)){
                 return ua;
             }
         }
         return null;
     }
     
-    public boolean IsValidInput(String s) {
+    public boolean CheckIsValidInput(String s) {
 
-        boolean status = false;    
-        char [] array = s.toCharArray();
-        int lower=0, upper=0, digits=0;
+        boolean field_status = false;    
+        char [] chkpwd = s.toCharArray();
+        int lower_case=0, upper_case=0, digits=0;
 
         if (s.length() > 8) 
-        status = true;
+        field_status = true;
 
-        for ( int i = 0;  i < array.length; i++) {
-            if(Character.isDigit(array[i]))
+        for ( int i = 0;  i < chkpwd.length; i++) {
+            if(Character.isDigit(chkpwd[i]))
                 digits++;
-            if(Character.isLowerCase(array[i]))
-                lower++;
-            if(Character.isUpperCase(array[i]))
-                upper++;
+            if(Character.isLowerCase(chkpwd[i]))
+                lower_case++;
+            if(Character.isUpperCase(chkpwd[i]))
+                upper_case++;
             
             
         }
 
-        if ( !(lower  > 0 ))
-            status = false;
+        if ( !(lower_case  > 0 ))
+            field_status = false;
 
-        if ( !(upper  > 0 ))
-            status = false;
+        if ( !(upper_case  > 0 ))
+            field_status = false;
 
         if ( !(digits > 0 ))
-            status = false;
+            field_status = false;
 
-        return status;
+        return field_status;
     }
 
 }

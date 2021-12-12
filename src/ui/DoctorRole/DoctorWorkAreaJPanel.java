@@ -41,7 +41,7 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
         DefaultTableModel model = (DefaultTableModel) tblWorkRequests.getModel();
         
         model.setRowCount(0);
-        for (WorkRequest request : userAccount.getWorkQueue().getWorkRequestList()){
+        for (WorkRequest request : userAccount.getWrkQue().getWorkRequestList()){
             Object[] row = new Object[4];
             row[0] = request.getMessage();
             row[1] = request.getReceiver();

@@ -48,8 +48,8 @@ public class LabAssistantWorkAreaJPanel extends javax.swing.JPanel {
         for (WorkRequest request : labOrganization.getWorkQueue().getWorkRequestList()) {
             Object[] row = new Object[4];
             row[0] = request;
-            row[1] = request.getSender().getEmployee().getName();
-            row[2] = request.getReceiver() == null ? null : request.getReceiver().getEmployee().getName();
+            row[1] = request.getSender().getEmp().getName();
+            row[2] = request.getReceiver() == null ? null : request.getReceiver().getEmp().getName();
             row[3] = request.getStatus();
 
             model.addRow(row);

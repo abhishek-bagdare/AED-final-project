@@ -72,7 +72,7 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
         model.setRowCount(0);
 
         for (Organization organization : business.getOrganizationDirectory().getOrganizationList()) {
-            for (UserAccount ua : organization.getUserAccountDirectory().getUserAccountList()) {
+            for (UserAccount ua : organization.getUserAccountDirectory().getUserAccntList()) {
                 Object row[] = new Object[2];
                 row[0] = ua;
                 row[1] = ua.getRole();
@@ -294,7 +294,7 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
         Employee employee = (Employee) cmbEmployee.getSelectedItem();
         Role role = (Role) cmbRoles.getSelectedItem();
 
-        organization.getUserAccountDirectory().createUserAccount(userName, password, employee, role);
+        organization.getUserAccountDirectory().createUserAccnt(userName, password, employee, role);
 
         popUserAccountsTable();
 

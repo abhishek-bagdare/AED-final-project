@@ -56,14 +56,14 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         model.setRowCount(0);
         for (Network network : system.getNetworkList()) {
             for (Enterprise enterprise : network.getEnterpriseDirectory().getEnterpriseList()) {
-                for (UserAccount userAccount : enterprise.getUserAccountDirectory().getUserAccountList()) {
+                for (UserAccount userAccount : enterprise.getUserAccountDirectory().getUserAccntList()) {
                     Object[] row = new Object[4];
                     row[0] = enterprise.getName();
                     row[1] = network.getNameOfNetwork();
                     row[2] = userAccount;
-                    row[3] =userAccount.getPassword();
+                    row[3] =userAccount.getPwd();
                     System.out.println(userAccount.getUsername());
-                       System.out.println(userAccount.getPassword());
+                       System.out.println(userAccount.getPwd());
                     model.addRow(row);
                 }
             }
@@ -301,7 +301,7 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         Employee employee = enterprise.getEmployeeDirectory().createEmployee(name);
         
         if(enterprise.getEnterpriseType().getValue().equalsIgnoreCase("Health")){
-            if(enterprise.getUserAccountDirectory().IsValidInput(password)){
+            if(enterprise.getUserAccountDirectory().CheckIsValidInput(password)){
                         UserAccount userAccount=enterprise.getUserAccountDirectory().createUserAccount(username, password, employee, new HealthAdminRole());
                     }
                     else{
@@ -309,39 +309,39 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
                         txtPassword.setText("");
                         return;
                     }
-            //UserAccount account = enterprise.getUserAccountDirectory().createUserAccount(username, password, employee, new HealthAdminRole());
+            //UserAccount account = enterprise.getUserAccountDirectory().createUserAccnt(username, password, employee, new HealthAdminRole());
         } else if(enterprise.getEnterpriseType().getValue().equalsIgnoreCase("Legal")){
-            if(enterprise.getUserAccountDirectory().IsValidInput(password)){
-                        UserAccount userAccount=enterprise.getUserAccountDirectory().createUserAccount(username, password, employee, new LegalAdminRole());
+            if(enterprise.getUserAccountDirectory().CheckIsValidInput(password)){
+                        UserAccount userAccount=enterprise.getUserAccountDirectory().createUserAccnt(username, password, employee, new LegalAdminRole());
                     }
                     else{
                         JOptionPane.showMessageDialog(null, "Password should have a minimum length of 8 and contain atleast 1 Uppercase, 1 Lowercase, 1 Special character and 1 Digit ");
                         txtPassword.setText("");
                         return;
                     }
-            //UserAccount account = enterprise.getUserAccountDirectory().createUserAccount(username, password, employee, new LegalAdminRole());
+            //UserAccount account = enterprise.getUserAccountDirectory().createUserAccnt(username, password, employee, new LegalAdminRole());
         }else if(enterprise.getEnterpriseType().getValue().equalsIgnoreCase("NGO")){
-            if(enterprise.getUserAccountDirectory().IsValidInput(password)){
-                        UserAccount userAccount=enterprise.getUserAccountDirectory().createUserAccount(username, password, employee, new NGOAdminRole());
+            if(enterprise.getUserAccountDirectory().CheckIsValidInput(password)){
+                        UserAccount userAccount=enterprise.getUserAccountDirectory().createUserAccnt(username, password, employee, new NGOAdminRole());
                     }
                     else{
                         JOptionPane.showMessageDialog(null, "Password should have a minimum length of 8 and contain atleast 1 Uppercase, 1 Lowercase, 1 Special character and 1 Digit ");
                         txtPassword.setText("");
                         return;
                     }
-            //UserAccount account = enterprise.getUserAccountDirectory().createUserAccount(username, password, employee, new NGOAdminRole());
+            //UserAccount account = enterprise.getUserAccountDirectory().createUserAccnt(username, password, employee, new NGOAdminRole());
         }else if(enterprise.getEnterpriseType().getValue().equalsIgnoreCase("Pharmacy")){
-            if(enterprise.getUserAccountDirectory().IsValidInput(password)){
-                        UserAccount userAccount=enterprise.getUserAccountDirectory().createUserAccount(username, password, employee, new PharmacyAdminRole());
+            if(enterprise.getUserAccountDirectory().CheckIsValidInput(password)){
+                        UserAccount userAccount=enterprise.getUserAccountDirectory().createUserAccnt(username, password, employee, new PharmacyAdminRole());
                     }
                     else{
                         JOptionPane.showMessageDialog(null, "Password should have a minimum length of 8 and contain atleast 1 Uppercase, 1 Lowercase, 1 Special character and 1 Digit ");
                         txtPassword.setText("");
                         return;
                     }
-            //UserAccount account = enterprise.getUserAccountDirectory().createUserAccount(username, password, employee, new PharmacyAdminRole());
+            //UserAccount account = enterprise.getUserAccountDirectory().createUserAccnt(username, password, employee, new PharmacyAdminRole());
         }
-        //UserAccount account = enterprise.getUserAccountDirectory().createUserAccount(username, password, employee, new AdminRole());
+        //UserAccount account = enterprise.getUserAccountDirectory().createUserAccnt(username, password, employee, new AdminRole());
         populateTable();
         txtUsername.setText("");
         txtPassword.setText("");
@@ -378,10 +378,10 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
             {
                 for (Enterprise enterprise : network.getEnterpriseDirectory().getEnterpriseList()) 
                 {
-                    for (UserAccount userAccount : enterprise.getUserAccountDirectory().getUserAccountList())
+                    for (UserAccount userAccount : enterprise.getUserAccountDirectory().getUserAccntList())
                     {
                         if (p == userAccount) {
-                            enterprise.getUserAccountDirectory().getUserAccountList().remove(p);
+                            enterprise.getUserAccountDirectory().getUserAccntList().remove(p);
                             break;
                         }
 

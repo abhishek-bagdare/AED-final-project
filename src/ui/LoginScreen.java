@@ -120,7 +120,7 @@ public class LoginScreen extends javax.swing.JPanel {
 
         UserAccount userAccount = null;
         for (Organization organization : business.getOrganizationDirectory().getOrganizationList()){
-            userAccount = organization.getUserAccountDirectory().authenticateUser(userName, password);
+            userAccount = organization.getUserAccountDirectory().authenticateUserAccnt(userName, password);
             if (userAccount != null){
                 
                 JPanel mainScreen = new MainScreen(mainWorkArea, userAccount, organization, business);

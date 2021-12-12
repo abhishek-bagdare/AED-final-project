@@ -123,7 +123,7 @@ public class MainScreen extends javax.swing.JPanel {
 
     private void initUserWorkArea() {
         
-        lblWelcome.setText("Welcome " + ((userAccount.getEmployee() != null) ? userAccount.getEmployee().getName() : userAccount.getUsername()) + "!");
+        lblWelcome.setText("Welcome " + ((userAccount.getEmp() != null) ? userAccount.getEmp().getName() : userAccount.getUsername()) + "!");
         
         CardLayout layout = (CardLayout) workArea.getLayout();
         workArea.add("workArea", userAccount.getRole().createWorkArea(workArea, userAccount, organization, business));

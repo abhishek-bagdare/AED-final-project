@@ -77,88 +77,102 @@ public class ReportJPanel extends javax.swing.JPanel {
         txtAgeofChild = new javax.swing.JTextField();
         lblAgeofChild = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(255, 255, 255));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new java.awt.GridBagLayout());
 
+        namesurvivorjLabel.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
         namesurvivorjLabel.setText("Name of Child : ");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
-        gridBagConstraints.gridwidth = 2;
-        gridBagConstraints.ipadx = 33;
+        gridBagConstraints.gridwidth = 3;
+        gridBagConstraints.gridheight = 2;
+        gridBagConstraints.ipadx = 7;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(12, 47, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(20, 200, 0, 0);
         jPanel1.add(namesurvivorjLabel, gridBagConstraints);
 
+        relationjLabel.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
         relationjLabel.setText("Relation with Survivor : ");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 4;
-        gridBagConstraints.gridwidth = 2;
-        gridBagConstraints.ipadx = 9;
+        gridBagConstraints.gridwidth = 4;
+        gridBagConstraints.ipadx = 10;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(16, 47, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(4, 130, 0, 0);
         jPanel1.add(relationjLabel, gridBagConstraints);
 
-        lblType.setText("Type of Incident");
+        lblType.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
+        lblType.setText("Type of Incident:");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 6;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.ipadx = 6;
+        gridBagConstraints.gridwidth = 4;
+        gridBagConstraints.gridheight = 2;
+        gridBagConstraints.ipadx = 14;
+        gridBagConstraints.ipady = 11;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(21, 47, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(5, 190, 0, 0);
         jPanel1.add(lblType, gridBagConstraints);
 
+        lblLocation.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
         lblLocation.setText("Location of Incident :");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 8;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.ipadx = 24;
+        gridBagConstraints.gridheight = 2;
+        gridBagConstraints.ipadx = 4;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(21, 47, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(11, 150, 0, 0);
         jPanel1.add(lblLocation, gridBagConstraints);
 
+        lblDate.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
         lblDate.setText("Date of Incident :");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 10;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.ipadx = 42;
-        gridBagConstraints.ipady = -6;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.ipadx = 7;
+        gridBagConstraints.ipady = 1;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(18, 47, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(11, 180, 0, 0);
         jPanel1.add(lblDate, gridBagConstraints);
 
+        lblDetails.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
         lblDetails.setText("More Details : ");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 11;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.ipadx = 56;
+        gridBagConstraints.gridy = 12;
+        gridBagConstraints.gridwidth = 6;
+        gridBagConstraints.ipadx = 27;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(18, 47, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(14, 210, 0, 0);
         jPanel1.add(lblDetails, gridBagConstraints);
 
+        lblSuspect.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
         lblSuspect.setText("Suspect :");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 13;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.ipadx = 83;
+        gridBagConstraints.gridy = 14;
+        gridBagConstraints.gridwidth = 7;
+        gridBagConstraints.ipadx = 68;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(19, 47, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(9, 250, 0, 0);
         jPanel1.add(lblSuspect, gridBagConstraints);
 
+        lblNameofSuspect.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
         lblNameofSuspect.setText("Name of Suspect : ");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 16;
-        gridBagConstraints.gridwidth = 4;
-        gridBagConstraints.ipadx = 38;
+        gridBagConstraints.gridwidth = 5;
+        gridBagConstraints.ipadx = 12;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(20, 47, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(6, 190, 0, 0);
         jPanel1.add(lblNameofSuspect, gridBagConstraints);
 
         txtChildName.addActionListener(new java.awt.event.ActionListener() {
@@ -167,23 +181,26 @@ public class ReportJPanel extends javax.swing.JPanel {
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 0;
-        gridBagConstraints.gridwidth = 23;
-        gridBagConstraints.gridheight = 2;
+        gridBagConstraints.gridwidth = 16;
         gridBagConstraints.ipadx = 155;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(9, 14, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(10, 23, 0, 0);
         jPanel1.add(txtChildName, gridBagConstraints);
 
+        friendRadioButton.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
         friendRadioButton.setText("Friend");
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 5;
+        gridBagConstraints.gridx = 6;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.gridwidth = 14;
+        gridBagConstraints.gridheight = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(14, 60, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(4, 13, 0, 0);
         jPanel1.add(friendRadioButton, gridBagConstraints);
 
+        parentRadioButton.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
         parentRadioButton.setText("Parent");
         parentRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -191,23 +208,25 @@ public class ReportJPanel extends javax.swing.JPanel {
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 5;
-        gridBagConstraints.gridwidth = 5;
-        gridBagConstraints.ipadx = 12;
+        gridBagConstraints.gridx = 21;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.gridwidth = 32;
+        gridBagConstraints.gridheight = 2;
+        gridBagConstraints.ipadx = 3;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(14, 32, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(4, 18, 0, 0);
         jPanel1.add(parentRadioButton, gridBagConstraints);
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 16;
-        gridBagConstraints.gridwidth = 46;
+        gridBagConstraints.gridwidth = 31;
         gridBagConstraints.gridheight = 2;
         gridBagConstraints.ipadx = 161;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(17, 10, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(6, 23, 0, 0);
         jPanel1.add(txtSuspectName, gridBagConstraints);
 
+        knownRadioButton.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
         knownRadioButton.setText("Known");
         knownRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -215,72 +234,78 @@ public class ReportJPanel extends javax.swing.JPanel {
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 5;
-        gridBagConstraints.gridy = 13;
-        gridBagConstraints.gridwidth = 6;
-        gridBagConstraints.gridheight = 3;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(15, 15, 0, 0);
-        jPanel1.add(knownRadioButton, gridBagConstraints);
-
-        unknownRadioButton.setText("Unknown");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 17;
-        gridBagConstraints.gridy = 13;
-        gridBagConstraints.gridwidth = 47;
+        gridBagConstraints.gridx = 6;
+        gridBagConstraints.gridy = 14;
+        gridBagConstraints.gridwidth = 15;
         gridBagConstraints.gridheight = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(14, 29, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(9, 23, 0, 0);
+        jPanel1.add(knownRadioButton, gridBagConstraints);
+
+        unknownRadioButton.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
+        unknownRadioButton.setText("Unknown");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 21;
+        gridBagConstraints.gridy = 14;
+        gridBagConstraints.gridwidth = 49;
+        gridBagConstraints.gridheight = 2;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(9, 38, 0, 0);
         jPanel1.add(unknownRadioButton, gridBagConstraints);
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 5;
-        gridBagConstraints.gridy = 11;
-        gridBagConstraints.gridwidth = 34;
+        gridBagConstraints.gridx = 6;
+        gridBagConstraints.gridy = 12;
+        gridBagConstraints.gridwidth = 16;
         gridBagConstraints.gridheight = 2;
         gridBagConstraints.ipadx = 155;
         gridBagConstraints.ipady = 25;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(18, 15, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(14, 23, 0, 0);
         jPanel1.add(txtMoreDetails, gridBagConstraints);
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 8;
-        gridBagConstraints.gridwidth = 34;
-        gridBagConstraints.gridheight = 2;
+        gridBagConstraints.gridwidth = 16;
         gridBagConstraints.ipadx = 155;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(18, 15, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(1, 23, 0, 0);
         jPanel1.add(txtLocation, gridBagConstraints);
 
+        Selfradiobutton.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
         Selfradiobutton.setText("Self");
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 10;
-        gridBagConstraints.gridy = 5;
-        gridBagConstraints.gridwidth = 7;
-        gridBagConstraints.ipadx = 13;
+        gridBagConstraints.gridx = 69;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.gridwidth = 50;
+        gridBagConstraints.gridheight = 2;
+        gridBagConstraints.ipadx = 4;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(14, 18, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(4, 3, 0, 0);
         jPanel1.add(Selfradiobutton, gridBagConstraints);
 
+        otherRadioButton.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
         otherRadioButton.setText("Other");
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 17;
-        gridBagConstraints.gridy = 5;
-        gridBagConstraints.gridwidth = 47;
+        gridBagConstraints.gridx = 119;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.gridwidth = 115;
+        gridBagConstraints.gridheight = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(14, 47, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(4, 12, 0, 122);
         jPanel1.add(otherRadioButton, gridBagConstraints);
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 10;
-        gridBagConstraints.gridwidth = 60;
-        gridBagConstraints.ipadx = 180;
+        gridBagConstraints.gridwidth = 114;
+        gridBagConstraints.gridheight = 2;
+        gridBagConstraints.ipadx = 261;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(6, 15, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(11, 23, 0, 0);
         jPanel1.add(dateOfIncident, gridBagConstraints);
 
-        ReportjButton.setBackground(new java.awt.Color(255, 0, 51));
-        ReportjButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        ReportjButton.setBackground(new java.awt.Color(51, 102, 255));
+        ReportjButton.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
+        ReportjButton.setForeground(new java.awt.Color(255, 255, 255));
         ReportjButton.setText("Report");
         ReportjButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -288,12 +313,12 @@ public class ReportJPanel extends javax.swing.JPanel {
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 17;
+        gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 18;
-        gridBagConstraints.gridwidth = 61;
-        gridBagConstraints.ipadx = 38;
+        gridBagConstraints.gridwidth = 13;
+        gridBagConstraints.ipadx = 29;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(18, 34, 11, 57);
+        gridBagConstraints.insets = new java.awt.Insets(24, 310, 254, 0);
         jPanel1.add(ReportjButton, gridBagConstraints);
 
         comboBoxIncident.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select one", "Child Labor", "Child Physical Abuse", "Child Sexual Abuse", "ChildHarrassment" }));
@@ -303,53 +328,33 @@ public class ReportJPanel extends javax.swing.JPanel {
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 6;
-        gridBagConstraints.gridwidth = 13;
-        gridBagConstraints.gridheight = 2;
+        gridBagConstraints.gridwidth = 48;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(18, 15, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(6, 23, 0, 0);
         jPanel1.add(comboBoxIncident, gridBagConstraints);
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 2;
-        gridBagConstraints.gridwidth = 23;
+        gridBagConstraints.gridwidth = 16;
         gridBagConstraints.gridheight = 2;
         gridBagConstraints.ipadx = 155;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(16, 14, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(1, 23, 0, 0);
         jPanel1.add(txtAgeofChild, gridBagConstraints);
 
+        lblAgeofChild.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
         lblAgeofChild.setText("Age :");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 2;
-        gridBagConstraints.gridwidth = 2;
-        gridBagConstraints.ipadx = 97;
+        gridBagConstraints.ipadx = 10;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(19, 47, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(1, 280, 0, 0);
         jPanel1.add(lblAgeofChild, gridBagConstraints);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 844, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 844, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 633, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 633, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
+        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 844, 633));
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtChildNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtChildNameActionPerformed
@@ -461,7 +466,7 @@ public class ReportJPanel extends javax.swing.JPanel {
             knownRadioButton.setSelected(false);
             unknownRadioButton.setSelected(false);
             comboBoxIncident.setSelectedIndex(0);
-            dateOfIncident.setDate(null);
+           // dateOfIncident.setDate(null);
             userAccount.getWrkQue().getCaseReporterWorkRequestList().add(request);
             
             

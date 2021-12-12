@@ -52,7 +52,14 @@ public class CaseVolunteerPJPanel extends javax.swing.JPanel {
         btnViewReport = new javax.swing.JButton();
         lblCaseReq = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(255, 255, 255));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
         jCasePanel.setBackground(new java.awt.Color(255, 255, 255));
+        jCasePanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         tblCaseReq.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -75,7 +82,11 @@ public class CaseVolunteerPJPanel extends javax.swing.JPanel {
         });
         jCaseVolunteerPanel.setViewportView(tblCaseReq);
 
-        btnViewReport.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jCasePanel.add(jCaseVolunteerPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(81, 111, 580, 100));
+
+        btnViewReport.setBackground(new java.awt.Color(51, 102, 255));
+        btnViewReport.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
+        btnViewReport.setForeground(new java.awt.Color(255, 255, 255));
         btnViewReport.setText("View Report");
         btnViewReport.setBorderPainted(false);
         btnViewReport.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -88,75 +99,16 @@ public class CaseVolunteerPJPanel extends javax.swing.JPanel {
                 btnViewReportActionPerformed(evt);
             }
         });
+        jCasePanel.add(btnViewReport, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 240, 126, 44));
 
-        lblCaseReq.setFont(new java.awt.Font("Agency FB", 1, 36)); // NOI18N
+        lblCaseReq.setFont(new java.awt.Font("Monaco", 1, 18)); // NOI18N
+        lblCaseReq.setForeground(new java.awt.Color(51, 102, 255));
         lblCaseReq.setText("Case Requests");
+        jCasePanel.add(lblCaseReq, new org.netbeans.lib.awtextra.AbsoluteConstraints(178, 26, -1, -1));
 
-        javax.swing.GroupLayout jCasePanelLayout = new javax.swing.GroupLayout(jCasePanel);
-        jCasePanel.setLayout(jCasePanelLayout);
-        jCasePanelLayout.setHorizontalGroup(
-            jCasePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jCasePanelLayout.createSequentialGroup()
-                .addGap(0, 81, Short.MAX_VALUE)
-                .addComponent(jCaseVolunteerPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 580, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(54, 54, 54))
-            .addGroup(jCasePanelLayout.createSequentialGroup()
-                .addGap(292, 292, 292)
-                .addComponent(btnViewReport, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jCasePanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lblCaseReq)
-                .addGap(267, 267, 267))
-        );
-        jCasePanelLayout.setVerticalGroup(
-            jCasePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jCasePanelLayout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addComponent(lblCaseReq)
-                .addGap(42, 42, 42)
-                .addComponent(jCaseVolunteerPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(48, 48, 48)
-                .addComponent(btnViewReport, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(209, Short.MAX_VALUE))
-        );
+        jPanel1.add(jCasePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 6, -1, -1));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jCasePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jCasePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 715, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 632, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 610, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-        );
+        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 102, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnViewReportMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnViewReportMouseEntered

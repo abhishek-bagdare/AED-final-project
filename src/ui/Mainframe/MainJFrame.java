@@ -64,10 +64,7 @@ public class MainJFrame extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel1.setIcon(new javax.swing.ImageIcon("/Users/abhishekbagdare/Desktop/kids.gif")); // NOI18N
-        jLabel1.setText("jLabel1");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -270, 1280, 830));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -270, 1070, 830));
 
         SignupjButton.setBackground(new java.awt.Color(255, 255, 255));
         SignupjButton.setFont(new java.awt.Font("Monaco", 1, 24)); // NOI18N

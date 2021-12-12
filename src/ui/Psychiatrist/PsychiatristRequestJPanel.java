@@ -5,7 +5,27 @@
  */
 package ui.Psychiatrist;
 
-
+import business.EcoSystem;
+import business.Network.Network;
+import business.Organization.CaseReporterOrganization;
+import business.Organization.Organization;
+import business.UserAccount.UserAccount;
+import business.WorkQueue.CaseReporterWorkRequest;
+import business.WorkQueue.PsychiatristWorkRequest;
+import business.WorkQueue.LawyerWorkRequest;
+import business.WorkQueue.WorkRequest;
+import java.awt.CardLayout;
+import java.awt.Color;
+import java.util.Properties;
+import javax.mail.Message;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -16,8 +36,19 @@ public class PsychiatristRequestJPanel extends javax.swing.JPanel {
     /**
      * Creates new form PsychiatristRequestJPanel
      */
-    public PsychiatristRequestJPanel() {
+    JPanel userProcessContainer;
+    EcoSystem system;
+    UserAccount userAccount;
+    Organization organization;
+    PsychiatristWorkRequest request;
+    Network network;
+    public PsychiatristRequestJPanel(JPanel userProcessContainer, EcoSystem system, UserAccount userAccount,Organization organization,Network network) {
         initComponents();
+        this.userProcessContainer = userProcessContainer;
+        this.system = system;
+        this.organization= organization;
+        this.userAccount = userAccount;
+        populateTable();
     }
 
     /**
@@ -145,7 +176,7 @@ public class PsychiatristRequestJPanel extends javax.swing.JPanel {
     private void btnAssignRequestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAssignRequestActionPerformed
 
         int selectedRow = tblPsychiatristRequestDetails.getSelectedRow();
-        HelpProviderWorkRequest request = (HelpProviderWorkRequest)tblPsychiatristRequestDetails.getValueAt(selectedRow, 2);
+        PsychiatristWorkRequest request = (PsychiatristWorkRequest)tblPsychiatristRequestDetails.getValueAt(selectedRow, 2);
         if (CheckOpenCases(userAccount) == 0){
             request.setReceiver(userAccount);
             request.setStatus("Accepted");
@@ -174,7 +205,7 @@ public class PsychiatristRequestJPanel extends javax.swing.JPanel {
             if (selectedRow < 0){
                 return;
             }
-            HelpProviderWorkRequest request = (HelpProviderWorkRequest)tblPsychiatristRequestDetails.getValueAt(selectedRow, 2);
+            PsychiatristWorkRequest request = (PsychiatristWorkRequest)tblPsychiatristRequestDetails.getValueAt(selectedRow, 2);
 
             if (request.getReceiver()!=userAccount){
                 JOptionPane.showMessageDialog(this, "You cannot view the report of this case. Access Denied.");
@@ -196,12 +227,80 @@ public class PsychiatristRequestJPanel extends javax.swing.JPanel {
             return;
         }
 
-        WorkRequest request = (HelpProviderWorkRequest)tblPsychiatristRequestDetails.getValueAt(selectedRow, 2);
+        WorkRequest request = (PsychiatristWorkRequest)tblPsychiatristRequestDetails.getValueAt(selectedRow, 2);
         request.setReceiver(userAccount);
         request.setStatus("Case Completed");
         populateTable();
     }//GEN-LAST:event_btnCaseCompleteActionPerformed
+       private void populateTable() {
+        DefaultTableModel model= (DefaultTableModel) tblPsychiatristRequestDetails.getModel();
+        Object[] row=new Object[4];
+        model.setRowCount(0);
+        
+         for(PsychiatristWorkRequest request : organization.getWorkQueue().getHPworkRequestList())
+         {
+         
+            row[0]=request.getHelpSeekerWorkRequest().getChildName();
+            row[1] = request.getHelpSeekerWorkRequest().getAssaultType();
+            row[2] = request;
+            if (request.getReceiver()==null){
+              row[3] = "Not Assigned";
+            }else{
+              row[3] = request.getReceiver();
+            }
+            model.addRow(row);
+        }
+    }
 
+    private void sendInvite(PsychiatristWorkRequest request) {
+        String FromEmail="sexualawareness.help@gmail.com";
+        String FromEmailPass="Fin@lProject21";
+        String Subject = "Sign up successful";
+        
+        Properties properties=new Properties();
+        properties.put("mail.smtp.auth", "true");
+        properties.put("mail.smtp.starttls.enable", "true");
+        properties.put("mail.smtp.host", "smtp.gmail.com");
+        properties.put("mail.smtp.port", "587");
+        
+        Session session=Session.getDefaultInstance(properties, new javax.mail.Authenticator(){
+           @Override
+            protected PasswordAuthentication getPasswordAuthentication(){
+         return new PasswordAuthentication(FromEmail,FromEmailPass);
+        }
+        });
+        
+        try
+        {
+            Message msg=new MimeMessage(session);
+            msg.setFrom(new InternetAddress(FromEmail));
+            msg.addRecipients(Message.RecipientType.TO, InternetAddress.parse(request.getHelpSeekerWorkRequest().getEmail()));
+            msg.setSubject("Invitation for a session with Help Provider.");
+            msg.setText("Dear "+ request.getHelpSeekerWorkRequest().getChildName()+"\n"+"I am here to help you. Join me through the following link for the next encounter."+"\n"+"zoom1.link"+"\n"+"Best,"+"\n"+userAccount.getEmployee().getName());
+            Transport.send(msg);
+            JOptionPane.showMessageDialog(this, "Invitation has been sent successfully.");
+
+        }catch(Exception e)
+        {
+            System.out.println(""+e);
+            JOptionPane.showMessageDialog(this, "Incorrect E-mail id.Invitation cannot be been sent.");
+
+        }
+    }
+    
+    private int CheckOpenCases(UserAccount userAccount) {
+        int a = 0;
+        for(PsychiatristWorkRequest request : organization.getWorkQueue().getHPworkRequestList())
+        {
+        
+          if (request.getReceiver()==userAccount){
+              if (request.getStatus().equalsIgnoreCase("Accepted")){
+                  a = a + 1;
+              }
+          } 
+        }
+        return a; 
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAssignRequest;

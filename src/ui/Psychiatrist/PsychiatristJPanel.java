@@ -99,7 +99,10 @@ public class PsychiatristJPanel extends javax.swing.JPanel {
             .addComponent(jSplitPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
-
+    private void populateBottom() {
+        PsychiatristRequestJPanel hprJPanel=new PsychiatristRequestJPanel(userProcessContainer,business,userAccount,HPOrganization,network);
+        jSplitPane1.setBottomComponent(hprJPanel);
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel jPanel1;

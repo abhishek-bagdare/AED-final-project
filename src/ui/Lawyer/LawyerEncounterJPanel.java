@@ -11,7 +11,7 @@ import business.Network.Network;
 import business.Organization.Organization;
 import business.UserAccount.UserAccount;
 import business.WorkQueue.LawyerWorkRequest;
-import business.WorkQueue.HelpSeekerWorkRequest;
+import business.WorkQueue.CaseReporterWorkRequest;
 import java.awt.CardLayout;
 import java.awt.Color;
 import java.awt.Component;
@@ -302,7 +302,7 @@ public class LawyerEncounterJPanel extends javax.swing.JPanel {
 
 private void populateName() {
         
-        txtName.setText(request.getHelpSeekerWorkRequest().getChildName());
+        txtName.setText(request.getCaseReporterWorkRequest().getChildName());
        
         
         DefaultTableModel model= (DefaultTableModel) tblEncounterDetails.getModel();

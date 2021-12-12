@@ -13,7 +13,7 @@ import business.Organization.HospitalOrganization;
 import business.Organization.Organization;
 import business.UserAccount.UserAccount;
 import business.WorkQueue.LawyerWorkRequest;
-import business.WorkQueue.HelpSeekerWorkRequest;
+import business.WorkQueue.CaseReporterWorkRequest;
 import business.WorkQueue.WorkRequest;
 import java.awt.CardLayout;
 import java.awt.Color;
@@ -39,10 +39,10 @@ public class CaseReportLJPanel extends javax.swing.JPanel {
      */
     JPanel userProcessContainer;
     EcoSystem system;
-    HelpSeekerWorkRequest request;
+    CaseReporterWorkRequest request;
     UserAccount userAccount;
     Network network;
-    public CaseReportLJPanel(JPanel userProcessContainer, EcoSystem system, HelpSeekerWorkRequest request,UserAccount userAccount, Network network) {
+    public CaseReportLJPanel(JPanel userProcessContainer, EcoSystem system, CaseReporterWorkRequest request,UserAccount userAccount, Network network) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.system = system;

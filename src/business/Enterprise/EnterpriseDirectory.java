@@ -63,7 +63,7 @@ public class EnterpriseDirectory {
         if(type==Enterprise.EnterpriseType.Rehabilitation){
             enterprise=new RehabilitationEnterprise(name);
             enterpriseList.add(enterprise);
-        }
+        }  
         return enterprise;
     }
     

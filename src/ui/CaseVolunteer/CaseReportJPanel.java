@@ -84,17 +84,23 @@ public class CaseReportJPanel extends javax.swing.JPanel {
         btnReqDoc = new javax.swing.JButton();
         btnReqCounsellar = new javax.swing.JButton();
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(255, 255, 255));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnReqLawyer.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        btnReqLawyer.setBackground(new java.awt.Color(51, 102, 255));
+        btnReqLawyer.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
+        btnReqLawyer.setForeground(new java.awt.Color(255, 255, 255));
         btnReqLawyer.setText("Request Lawyer");
         btnReqLawyer.setBorderPainted(false);
         btnReqLawyer.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnReqLawyerMouseEntered(evt);
-            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 btnReqLawyerMouseExited(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnReqLawyerMouseEntered(evt);
             }
         });
         btnReqLawyer.addActionListener(new java.awt.event.ActionListener() {
@@ -102,16 +108,19 @@ public class CaseReportJPanel extends javax.swing.JPanel {
                 btnReqLawyerActionPerformed(evt);
             }
         });
+        jPanel1.add(btnReqLawyer, new org.netbeans.lib.awtextra.AbsoluteConstraints(176, 633, 170, 38));
 
-        btnReqPsych.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnReqPsych.setBackground(new java.awt.Color(51, 102, 255));
+        btnReqPsych.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
+        btnReqPsych.setForeground(new java.awt.Color(255, 255, 255));
         btnReqPsych.setText("Psychiatrist");
         btnReqPsych.setBorderPainted(false);
         btnReqPsych.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnReqPsychMouseEntered(evt);
-            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 btnReqPsychMouseExited(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnReqPsychMouseEntered(evt);
             }
         });
         btnReqPsych.addActionListener(new java.awt.event.ActionListener() {
@@ -119,23 +128,32 @@ public class CaseReportJPanel extends javax.swing.JPanel {
                 btnReqPsychActionPerformed(evt);
             }
         });
+        jPanel1.add(btnReqPsych, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 633, 152, 38));
 
         lblDate.setBackground(new java.awt.Color(255, 255, 255));
 
+        lblVictimName.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
         lblVictimName.setText("Victim name : ");
 
+        lblRelation.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
         lblRelation.setText("Relation/ Volunteer name: ");
 
+        lblTypeofAssault.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
         lblTypeofAssault.setText("Type of child Assault : ");
 
+        lblLocation.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
         lblLocation.setText("Location of Incident :");
 
+        timejLabel.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
         timejLabel.setText("Date of Incident :");
 
+        lblMoreDetail.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
         lblMoreDetail.setText("More Details : ");
 
+        lblSuspect.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
         lblSuspect.setText("Suspect :");
 
+        lblNameSuspect.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
         lblNameSuspect.setText("Name of Suspect : ");
 
         txtVictimName.addActionListener(new java.awt.event.ActionListener() {
@@ -230,15 +248,19 @@ public class CaseReportJPanel extends javax.swing.JPanel {
                 .addContainerGap(60, Short.MAX_VALUE))
         );
 
-        btnBack.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jPanel1.add(lblDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(176, 62, -1, -1));
+
+        btnBack.setBackground(new java.awt.Color(51, 102, 255));
+        btnBack.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
+        btnBack.setForeground(new java.awt.Color(255, 255, 255));
         btnBack.setText("Back");
         btnBack.setBorderPainted(false);
         btnBack.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnBackMouseEntered(evt);
-            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 btnBackMouseExited(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnBackMouseEntered(evt);
             }
         });
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -246,19 +268,24 @@ public class CaseReportJPanel extends javax.swing.JPanel {
                 btnBackActionPerformed(evt);
             }
         });
+        jPanel1.add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(29, 14, 82, -1));
 
-        lblVictimInfo.setFont(new java.awt.Font("Agency FB", 1, 36)); // NOI18N
-        lblVictimInfo.setText("VICTIM INFORMATION");
+        lblVictimInfo.setFont(new java.awt.Font("Monaco", 1, 18)); // NOI18N
+        lblVictimInfo.setForeground(new java.awt.Color(51, 102, 255));
+        lblVictimInfo.setText("Victim Information");
+        jPanel1.add(lblVictimInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(272, 14, 342, 42));
 
-        btnReqDoc.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnReqDoc.setBackground(new java.awt.Color(51, 102, 255));
+        btnReqDoc.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
+        btnReqDoc.setForeground(new java.awt.Color(255, 255, 255));
         btnReqDoc.setText("Request Doctor");
         btnReqDoc.setBorderPainted(false);
         btnReqDoc.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnReqDocMouseEntered(evt);
-            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 btnReqDocMouseExited(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnReqDocMouseEntered(evt);
             }
         });
         btnReqDoc.addActionListener(new java.awt.event.ActionListener() {
@@ -266,16 +293,19 @@ public class CaseReportJPanel extends javax.swing.JPanel {
                 btnReqDocActionPerformed(evt);
             }
         });
+        jPanel1.add(btnReqDoc, new org.netbeans.lib.awtextra.AbsoluteConstraints(176, 548, 170, 41));
 
-        btnReqCounsellar.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnReqCounsellar.setBackground(new java.awt.Color(51, 102, 255));
+        btnReqCounsellar.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
+        btnReqCounsellar.setForeground(new java.awt.Color(255, 255, 255));
         btnReqCounsellar.setText("Request Counsellar");
         btnReqCounsellar.setBorderPainted(false);
         btnReqCounsellar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnReqCounsellarMouseEntered(evt);
-            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 btnReqCounsellarMouseExited(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnReqCounsellarMouseEntered(evt);
             }
         });
         btnReqCounsellar.addActionListener(new java.awt.event.ActionListener() {
@@ -283,73 +313,9 @@ public class CaseReportJPanel extends javax.swing.JPanel {
                 btnReqCounsellarActionPerformed(evt);
             }
         });
+        jPanel1.add(btnReqCounsellar, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 548, 200, 41));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(29, 29, 29)
-                        .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(161, 161, 161)
-                        .addComponent(lblVictimInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 342, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(176, 176, 176)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(btnReqDoc, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(btnReqLawyer, javax.swing.GroupLayout.DEFAULT_SIZE, 146, Short.MAX_VALUE))
-                                .addGap(158, 158, 158)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(btnReqPsych, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(btnReqCounsellar, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                .addContainerGap(162, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(lblVictimInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lblDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(btnBack))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnReqCounsellar, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnReqDoc, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(44, 44, 44)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnReqPsych, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnReqLawyer, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(54, 54, 54))
-        );
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 869, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 725, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
+        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(2, 0, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnReqLawyerMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnReqLawyerMouseEntered

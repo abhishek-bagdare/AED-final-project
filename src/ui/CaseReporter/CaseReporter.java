@@ -148,11 +148,11 @@ public class CaseReporter extends javax.swing.JPanel {
         jPanel10.setLayout(new java.awt.GridBagLayout());
         jVolunteerSplitPanel.setRightComponent(jPanel10);
 
-        jPanel8.add(jVolunteerSplitPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 0, 368, 229));
+        jPanel8.add(jVolunteerSplitPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(7, 0, 1110, 530));
 
-        jPanel7.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 657, 454));
+        jPanel7.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1110, 530));
 
-        add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(61, 45, 407, 292));
+        add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(-2, -5, 1110, 530));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnViewStatusMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnViewStatusMouseEntered

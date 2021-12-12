@@ -29,6 +29,8 @@ public class SigninPageImgJpanel extends javax.swing.JPanel {
 
         jLabel1 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(255, 255, 255));
+
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 

@@ -47,26 +47,33 @@ public class ManageOrganizationsJPanel extends javax.swing.JPanel {
                     comboBoxOrgType.addItem(type);
                 }
             }
-        } else if(enterprise.getEnterpriseType().getValue().equalsIgnoreCase("Health")){
+        } else if(enterprise.getEnterpriseType().getValue().equalsIgnoreCase("Wellness")){
             for (Organization.Type type : Organization.Type.values()){
                 if (type.getValue().equals(Organization.Type.Hospital.getValue()) || type.getValue().equals(Organization.Type.Forensic.getValue())
                         || type.getValue().equals(Organization.Type.CounsellingOrganization.getValue())){
                     comboBoxOrgType.addItem(type);
                 }
             }
-        } else if(enterprise.getEnterpriseType().getValue().equalsIgnoreCase("Legal")){
+        } else if(enterprise.getEnterpriseType().getValue().equalsIgnoreCase("Justice")){
             for (Organization.Type type : Organization.Type.values()){
                 if (type.getValue().equals(Organization.Type.Legal.getValue())){
                     comboBoxOrgType.addItem(type);
                 }
             }
-        }else if(enterprise.getEnterpriseType().getValue().equalsIgnoreCase("Pharmacy")){
+        }else if(enterprise.getEnterpriseType().getValue().equalsIgnoreCase("Pharmaceutical")){
             for (Organization.Type type : Organization.Type.values()){
                 if (type.getValue().equals(Organization.Type.Pharmacy.getValue())){
                     comboBoxOrgType.addItem(type);
                 }
             }
+        }else if(enterprise.getEnterpriseType().getValue().equalsIgnoreCase("Psychiatrist")){
+            for (Organization.Type type : Organization.Type.values()){
+                if (type.getValue().equals(Organization.Type.PsychiatricOrganization.getValue())){
+                    comboBoxOrgType.addItem(type);
+                }
+            }
         }
+        
         
         
         

@@ -68,7 +68,8 @@ public class LawyerRequestJPanel extends javax.swing.JPanel {
         btnEncounter = new javax.swing.JButton();
         btnCaseComplete = new javax.swing.JButton();
 
-        lblHeader.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        lblHeader.setFont(new java.awt.Font("Monaco", 1, 18)); // NOI18N
+        lblHeader.setForeground(new java.awt.Color(51, 102, 255));
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHeader.setText("Manage Requests");
 
@@ -93,7 +94,7 @@ public class LawyerRequestJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblLawyerManageRequest);
 
-        btnAssignRequest.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnAssignRequest.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
         btnAssignRequest.setText("Assign Request");
         btnAssignRequest.setBorderPainted(false);
         btnAssignRequest.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -110,7 +111,7 @@ public class LawyerRequestJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnViewCaseReport.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnViewCaseReport.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
         btnViewCaseReport.setText("View Case Report");
         btnViewCaseReport.setBorderPainted(false);
         btnViewCaseReport.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -127,7 +128,7 @@ public class LawyerRequestJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnEncounter.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnEncounter.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
         btnEncounter.setText("Ecounters");
         btnEncounter.setBorderPainted(false);
         btnEncounter.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -144,7 +145,7 @@ public class LawyerRequestJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnCaseComplete.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnCaseComplete.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
         btnCaseComplete.setText(" Case Complete");
         btnCaseComplete.setBorderPainted(false);
         btnCaseComplete.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -175,7 +176,7 @@ public class LawyerRequestJPanel extends javax.swing.JPanel {
                             .addComponent(btnAssignRequest, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(btnCaseComplete, javax.swing.GroupLayout.DEFAULT_SIZE, 131, Short.MAX_VALUE)
+                            .addComponent(btnCaseComplete, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btnEncounter, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addGap(149, 149, 149))
             .addComponent(lblHeader, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)

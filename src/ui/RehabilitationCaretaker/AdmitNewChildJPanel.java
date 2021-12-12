@@ -51,8 +51,11 @@ public class AdmitNewChildJPanel extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
 
+        jLabel1.setFont(new java.awt.Font("Monaco", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(51, 102, 255));
         jLabel1.setText("Admit New Child");
 
+        jLabel2.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
         jLabel2.setText("Child's Name");
 
         txtChildsName.addActionListener(new java.awt.event.ActionListener() {
@@ -61,6 +64,7 @@ public class AdmitNewChildJPanel extends javax.swing.JPanel {
             }
         });
 
+        jButton1.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
         jButton1.setText("Admit");
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -110,7 +114,7 @@ public class AdmitNewChildJPanel extends javax.swing.JPanel {
                         .addGap(32, 32, 32)
                         .addComponent(jButton1))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(29, Short.MAX_VALUE))
+                .addContainerGap(21, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

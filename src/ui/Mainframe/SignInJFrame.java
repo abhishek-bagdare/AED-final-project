@@ -5,7 +5,7 @@
  */
 package ui.Mainframe;
 
-import UI.MainFrame.SigninJFrame;
+//import ui.Mainframe.SignInJFrame;
 
 import business.EcoSystem;
 import business.DB4OUtil.DB4OUtil;
@@ -16,7 +16,6 @@ import business.UserAccount.UserAccount;
 import java.awt.CardLayout;
 import java.awt.Color;
 import javax.swing.JOptionPane;
-import javax.swing.JPanel;
 
 /**
  *
@@ -35,7 +34,7 @@ public class SignInJFrame extends javax.swing.JFrame {
         this.setSize(1080, 680);
         jSplitPane1.setDividerSize(0);
         jSplitPane1.setDividerLocation(230);
-        this.setExtendedState(SigninJFrame.MAXIMIZED_BOTH);
+        this.setExtendedState(SignInJFrame.MAXIMIZED_BOTH);
     }
 
 

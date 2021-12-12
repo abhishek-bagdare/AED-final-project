@@ -43,42 +43,35 @@ public class MainJFrame extends javax.swing.JFrame {
 
         TopPanel = new javax.swing.JPanel();
         NamejLabel = new javax.swing.JLabel();
-        SigninjButton = new javax.swing.JButton();
-        SignupjButton = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        SignupjButton = new javax.swing.JButton();
+        SigninjButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(255, 255, 255));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        TopPanel.setBackground(new java.awt.Color(204, 204, 204));
+        TopPanel.setBackground(new java.awt.Color(255, 255, 255));
+        TopPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        NamejLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        NamejLabel.setForeground(new java.awt.Color(0, 51, 51));
+        NamejLabel.setFont(new java.awt.Font("Monaco", 1, 48)); // NOI18N
+        NamejLabel.setForeground(new java.awt.Color(51, 102, 255));
         NamejLabel.setText("Child Abuse Rescue");
+        TopPanel.add(NamejLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 30, 550, 50));
 
-        SigninjButton.setBackground(new java.awt.Color(0, 128, 128));
-        SigninjButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        SigninjButton.setForeground(new java.awt.Color(0, 51, 51));
-        SigninjButton.setText("Sign In");
-        SigninjButton.setBorderPainted(false);
-        SigninjButton.setContentAreaFilled(false);
-        SigninjButton.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                SigninjButtonMouseExited(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                SigninjButtonMouseEntered(evt);
-            }
-        });
-        SigninjButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SigninjButtonActionPerformed(evt);
-            }
-        });
+        getContentPane().add(TopPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 4, 1410, 90));
 
-        SignupjButton.setBackground(new java.awt.Color(0, 128, 128));
-        SignupjButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        SignupjButton.setForeground(new java.awt.Color(0, 51, 51));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setIcon(new javax.swing.ImageIcon("/Users/abhishekbagdare/Desktop/kids.gif")); // NOI18N
+        jLabel1.setText("jLabel1");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -270, 1280, 830));
+
+        SignupjButton.setBackground(new java.awt.Color(255, 255, 255));
+        SignupjButton.setFont(new java.awt.Font("Monaco", 1, 24)); // NOI18N
+        SignupjButton.setForeground(new java.awt.Color(230, 126, 34));
         SignupjButton.setText("Sign Up");
         SignupjButton.setBorderPainted(false);
         SignupjButton.setContentAreaFilled(false);
@@ -95,98 +88,30 @@ public class MainJFrame extends javax.swing.JFrame {
                 SignupjButtonActionPerformed(evt);
             }
         });
+        jPanel1.add(SignupjButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 30, -1, -1));
 
-        javax.swing.GroupLayout TopPanelLayout = new javax.swing.GroupLayout(TopPanel);
-        TopPanel.setLayout(TopPanelLayout);
-        TopPanelLayout.setHorizontalGroup(
-            TopPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(TopPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(NamejLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 320, Short.MAX_VALUE)
-                .addComponent(SignupjButton)
-                .addGap(28, 28, 28)
-                .addComponent(SigninjButton, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(23, 23, 23))
-        );
-        TopPanelLayout.setVerticalGroup(
-            TopPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, TopPanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(TopPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(SigninjButton)
-                    .addComponent(SignupjButton))
-                .addGap(20, 20, 20))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, TopPanelLayout.createSequentialGroup()
-                .addGap(36, 36, 36)
-                .addComponent(NamejLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(28, Short.MAX_VALUE))
-        );
+        SigninjButton.setBackground(new java.awt.Color(255, 255, 255));
+        SigninjButton.setFont(new java.awt.Font("Monaco", 1, 24)); // NOI18N
+        SigninjButton.setForeground(new java.awt.Color(230, 126, 34));
+        SigninjButton.setText("Sign In");
+        SigninjButton.setBorderPainted(false);
+        SigninjButton.setContentAreaFilled(false);
+        SigninjButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                SigninjButtonMouseExited(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                SigninjButtonMouseEntered(evt);
+            }
+        });
+        SigninjButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SigninjButtonActionPerformed(evt);
+            }
+        });
+        jPanel1.add(SigninjButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 80, 170, -1));
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 785, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 466, Short.MAX_VALUE)
-        );
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 785, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(TopPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 466, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(TopPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(2, 93, 1410, 770));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -260,7 +185,7 @@ public class MainJFrame extends javax.swing.JFrame {
     private javax.swing.JButton SigninjButton;
     private javax.swing.JButton SignupjButton;
     private javax.swing.JPanel TopPanel;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 }

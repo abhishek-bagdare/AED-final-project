@@ -115,24 +115,28 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         btnDelete = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblManageEnterpriseAdmins.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        lblManageEnterpriseAdmins.setBackground(new java.awt.Color(255, 255, 255));
+        lblManageEnterpriseAdmins.setFont(new java.awt.Font("Monaco", 1, 24)); // NOI18N
+        lblManageEnterpriseAdmins.setForeground(new java.awt.Color(230, 126, 34));
         lblManageEnterpriseAdmins.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblManageEnterpriseAdmins.setText("Manage Enterprise Administrators");
+        add(lblManageEnterpriseAdmins, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 50, 687, 40));
 
         tableEnterpriseAdmins.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
             },
             new String [] {
-                "Enterprise", "Network", "Username", "Password", "Title 5"
+                "Enterprise", "Network", "Username", "Password"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, true, true
+                false, false, false, true
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -141,22 +145,33 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tableEnterpriseAdmins);
 
-        lblSelectEnterprise.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 120, 490, 170));
+
+        lblSelectEnterprise.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
         lblSelectEnterprise.setText("Select Enterprise:");
+        add(lblSelectEnterprise, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, -1, -1));
 
-        lblNetwork.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lblNetwork.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
         lblNetwork.setText("Select Network:");
+        add(lblNetwork, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 130, -1, -1));
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
         jLabel4.setText("Name:");
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 210, 71, -1));
+        add(txtNameOfAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 210, 130, -1));
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
         jLabel5.setText("Set Username:");
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 240, 110, 26));
+        add(txtUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 240, 130, -1));
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
         jLabel6.setText("Set Password:");
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 280, 110, -1));
 
-        btnSubmit.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnSubmit.setBackground(new java.awt.Color(51, 102, 255));
+        btnSubmit.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
+        btnSubmit.setForeground(new java.awt.Color(255, 255, 255));
         btnSubmit.setText("Submit");
         btnSubmit.setBorderPainted(false);
         btnSubmit.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -172,6 +187,8 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
                 btnSubmitActionPerformed(evt);
             }
         });
+        add(btnSubmit, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 320, -1, -1));
+        add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 270, 130, -1));
 
         comboBoxSelectNetwork.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         comboBoxSelectNetwork.addActionListener(new java.awt.event.ActionListener() {
@@ -179,10 +196,14 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
                 comboBoxSelectNetworkActionPerformed(evt);
             }
         });
+        add(comboBoxSelectNetwork, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 130, 130, -1));
 
         comboBoxSelectEnterprise.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        add(comboBoxSelectEnterprise, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 170, 130, -1));
 
-        btnDelete.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnDelete.setBackground(new java.awt.Color(51, 102, 255));
+        btnDelete.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
+        btnDelete.setForeground(new java.awt.Color(255, 255, 255));
         btnDelete.setText("Delete");
         btnDelete.setBorderPainted(false);
         btnDelete.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -198,80 +219,7 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
                 btnDeleteActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblManageEnterpriseAdmins, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(27, 27, 27)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnSubmit)
-                        .addGap(30, 30, 30)
-                        .addComponent(btnDelete))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addGap(4, 4, 4)
-                        .addComponent(lblNetwork)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(comboBoxSelectNetwork, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addComponent(lblSelectEnterprise)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(comboBoxSelectEnterprise, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(32, 32, 32)
-                        .addComponent(txtNameOfAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(52, 52, 52)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 189, Short.MAX_VALUE)
-                .addGap(216, 216, 216))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(48, 48, 48)
-                .addComponent(lblManageEnterpriseAdmins, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(39, 39, 39)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(comboBoxSelectNetwork, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblNetwork))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(comboBoxSelectEnterprise, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(3, 3, 3)
-                                .addComponent(lblSelectEnterprise)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel4)
-                            .addComponent(txtNameOfAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtUsername)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel6)
-                            .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnSubmit)
-                            .addComponent(btnDelete)))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 368, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(39, Short.MAX_VALUE))
-        );
+        add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 320, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSubmitMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSubmitMouseEntered

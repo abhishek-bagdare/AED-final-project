@@ -90,10 +90,14 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
         jButton3 = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblManageNetworks.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        lblManageNetworks.setBackground(new java.awt.Color(255, 255, 255));
+        lblManageNetworks.setFont(new java.awt.Font("Monaco", 1, 24)); // NOI18N
+        lblManageNetworks.setForeground(new java.awt.Color(230, 126, 34));
         lblManageNetworks.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblManageNetworks.setText("Manage Networks");
+        add(lblManageNetworks, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 47, 805, 40));
 
         tableNetworks.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -116,23 +120,29 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tableNetworks);
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 110, 340, 130));
+
+        jLabel2.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
         jLabel2.setText("Name:");
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 120, 70, -1));
 
         txtEnterNameOfNetwork.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtEnterNameOfNetworkActionPerformed(evt);
             }
         });
+        add(txtEnterNameOfNetwork, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 120, 216, -1));
 
-        btnAddNewNetwork.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnAddNewNetwork.setBackground(new java.awt.Color(51, 102, 255));
+        btnAddNewNetwork.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
+        btnAddNewNetwork.setForeground(new java.awt.Color(255, 255, 255));
         btnAddNewNetwork.setText("ADD");
         btnAddNewNetwork.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnAddNewNetworkMouseEntered(evt);
-            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 btnAddNewNetworkMouseExited(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnAddNewNetworkMouseEntered(evt);
             }
         });
         btnAddNewNetwork.addActionListener(new java.awt.event.ActionListener() {
@@ -140,8 +150,11 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
                 btnAddNewNetworkActionPerformed(evt);
             }
         });
+        add(btnAddNewNetwork, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 190, 90, -1));
 
-        btnDeleteNetwork.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnDeleteNetwork.setBackground(new java.awt.Color(51, 102, 255));
+        btnDeleteNetwork.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
+        btnDeleteNetwork.setForeground(new java.awt.Color(255, 255, 255));
         btnDeleteNetwork.setText("Remove");
         btnDeleteNetwork.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseExited(java.awt.event.MouseEvent evt) {
@@ -156,71 +169,29 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
                 btnDeleteNetworkActionPerformed(evt);
             }
         });
+        add(btnDeleteNetwork, new org.netbeans.lib.awtextra.AbsoluteConstraints(212, 190, 120, -1));
 
-        jButton2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jButton2.setBackground(new java.awt.Color(51, 102, 255));
+        jButton2.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("View Cases");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
+        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 230, -1, -1));
 
-        jButton3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jButton3.setBackground(new java.awt.Color(51, 102, 255));
+        jButton3.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setText("Report");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtEnterNameOfNetwork))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jButton3)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(btnAddNewNetwork, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(btnDeleteNetwork)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addGap(70, 70, 70)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 104, Short.MAX_VALUE)
-                .addGap(333, 333, 333))
-            .addComponent(lblManageNetworks, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(47, 47, 47)
-                .addComponent(lblManageNetworks, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtEnterNameOfNetwork, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(4, 4, 4)
-                                .addComponent(jLabel2)))
-                        .addGap(42, 42, 42)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnAddNewNetwork)
-                            .addComponent(btnDeleteNetwork)
-                            .addComponent(jButton2))
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton3))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 329, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(199, Short.MAX_VALUE))
-        );
+        add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(96, 232, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtEnterNameOfNetworkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEnterNameOfNetworkActionPerformed

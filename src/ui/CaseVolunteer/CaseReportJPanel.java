@@ -446,7 +446,7 @@ public class CaseReportJPanel extends javax.swing.JPanel {
         userProcessContainer.remove(this);
         Component[] componentArray = userProcessContainer.getComponents();
         Component component = componentArray[componentArray.length - 1];
-        CaseVolunteerJPanel sysAdminwjp = (CaseVolunteerJPanel) component;
+        CaseVolunteerPJPanel sysAdminwjp = (CaseVolunteerPJPanel) component;
         //sysAdminwjp.populateTree();
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);         // TODO add your handling code here:

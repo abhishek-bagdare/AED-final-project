@@ -14,7 +14,7 @@ import java.util.Date;
  */
 public class LabAssistantWorkRequest extends WorkRequest{
     
-    DoctorWorkRequest DoctorWorkRequest;
+    DrWorkRequest DoctorWorkRequest;
     private String testResult;
     //private LabTest labtest;
     private String labsign;
@@ -36,11 +36,11 @@ public class LabAssistantWorkRequest extends WorkRequest{
         this.labtest = labtest;
     }*/
 
-    public DoctorWorkRequest getDoctorWorkRequest() {
+    public DrWorkRequest getDoctorWorkRequest() {
         return DoctorWorkRequest;
     }
 
-    public void setDoctorWorkRequest(DoctorWorkRequest DoctorWorkRequest) {
+    public void setDoctorWorkRequest(DrWorkRequest DoctorWorkRequest) {
         this.DoctorWorkRequest = DoctorWorkRequest;
     } 
 

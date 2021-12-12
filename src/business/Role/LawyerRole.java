@@ -10,7 +10,7 @@ import business.Enterprise.Enterprise;
 import business.Network.Network;
 import business.Organization.Organization;
 import business.UserAccount.UserAccount;
-import ui.Lawyer.LawyerJPanel;
+//import ui.Lawyer.LawyerJPanel;
 import javax.swing.JPanel;
 
 /**

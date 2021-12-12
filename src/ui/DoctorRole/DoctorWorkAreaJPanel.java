@@ -25,7 +25,7 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
     /**
      * Creates new form DoctorWorkAreaJPanel
      */
-    public DoctorWorkAreaJPanel(JPanel workArea, UserAccount account, DoctorOrganization organization, Business business) {
+    public DoctorWorkAreaJPanel(JPanel workArea, UserAccount account, Organization organization, Business business) {
         initComponents();
         
         this.workArea = workArea;

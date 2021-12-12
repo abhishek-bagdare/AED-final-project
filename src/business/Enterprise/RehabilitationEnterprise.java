@@ -14,7 +14,7 @@ import java.util.ArrayList;
  */
 public class RehabilitationEnterprise extends Enterprise {
 
-    public RehabilitationEnterprise(String name, EnterpriseType type) {
+    public RehabilitationEnterprise(String name) {
          super(name,EnterpriseType.Rehabilitation);
     }
 

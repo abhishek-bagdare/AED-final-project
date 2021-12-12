@@ -10,7 +10,7 @@ import business.Encounter.EncounterPsychiatrist;
 import business.Network.Network;
 import business.Organization.Organization;
 import business.UserAccount.UserAccount;
-import business.WorkQueue.CaseReporterWorkRequest;
+import business.WorkQueue.PsychiatristWorkRequest;
 import java.awt.CardLayout;
 import java.awt.Color;
 import java.util.ArrayList;
@@ -37,11 +37,11 @@ public class PsychiatristEncounterJPanel extends javax.swing.JPanel {
      */
     JPanel userProcessContainer;
     EcoSystem system;
-    CaseReporterWorkRequest request;
+    PsychiatristWorkRequest request;
     UserAccount userAccount;
     Network network;
     Organization organization;
-    public PsychiatristEncounterJPanel(JPanel userProcessContainer, EcoSystem system,UserAccount userAccount,Network network, Organization organization,CaseReporterWorkRequest request) {
+    public PsychiatristEncounterJPanel(JPanel userProcessContainer, EcoSystem system,UserAccount userAccount,Network network, Organization organization,PsychiatristWorkRequest request) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.system = system;

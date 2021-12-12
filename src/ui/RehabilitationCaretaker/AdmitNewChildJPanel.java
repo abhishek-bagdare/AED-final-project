@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package UI.RehabilitationCaretaker;
+package ui.RehabilitationCaretaker;
 
-import Business.EcoSystem;
-import Business.Organization.PharmacyOrganization;
-import Business.UserAccount.UserAccount;
-import Business.WorkQueue.Child;
-import Business.WorkQueue.RehabilitationCaretakerWorkRequest;
+import business.EcoSystem;
+import business.Organization.PharmacyOrganization;
+import business.UserAccount.UserAccount;
+import business.WorkQueue.Child;
+import business.WorkQueue.RehabilitationCaretakerWorkRequest;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 

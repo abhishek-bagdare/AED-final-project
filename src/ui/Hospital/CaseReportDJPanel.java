@@ -4,27 +4,21 @@
  * and open the template in the editor.
  */
 package ui.Hospital;
-/**
- *
- * @author abhishekbagdare
- */
+
 import business.EcoSystem;
 import business.Enterprise.Enterprise;
 import business.Network.Network;
-import business.Organization.CaseVolunteerOrganization;
 import business.Organization.ForensicOrganization;
-import business.Organization.HospitalOrganization;
 import business.Organization.Organization;
 import business.Organization.PharmacyOrganization;
 import business.UserAccount.UserAccount;
-import business.WorkQueue.DrWorkRequest;
 import business.WorkQueue.CaseReporterWorkRequest;
 import business.WorkQueue.LabAssistantWorkRequest;
 import business.WorkQueue.PharmacistWorkRequest;
-import business.WorkQueue.WorkRequest;
 import java.awt.CardLayout;
 import java.awt.Color;
-import java.awt.Component;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 import java.util.Properties;
 import javax.mail.Message;
 import javax.mail.PasswordAuthentication;
@@ -35,13 +29,16 @@ import javax.mail.internet.MimeMessage;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
- 
+/**
+ *
+ * @author abhishekbagdare
+ */
 public class CaseReportDJPanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form CaseReportJPanel
+     * Creates new form CaseReportDJPanel
      */
-    JPanel userProcessContainer;
+   JPanel userProcessContainer;
     EcoSystem system;
     CaseReporterWorkRequest request;
     UserAccount userAccount;
@@ -71,6 +68,7 @@ public class CaseReportDJPanel extends javax.swing.JPanel {
         java.awt.GridBagConstraints gridBagConstraints;
 
         jPanel1 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
         namesurvivorjLabel = new javax.swing.JLabel();
         relationjLabel = new javax.swing.JLabel();
         typejLabel = new javax.swing.JLabel();
@@ -93,10 +91,10 @@ public class CaseReportDJPanel extends javax.swing.JPanel {
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(255, 255, 255));
-        setLayout(new java.awt.GridBagLayout());
-
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(new java.awt.GridBagLayout());
+
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
         namesurvivorjLabel.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         namesurvivorjLabel.setText("Name of Survivor : ");
@@ -200,14 +198,14 @@ public class CaseReportDJPanel extends javax.swing.JPanel {
             }
         });
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jButton4)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton1)
@@ -215,8 +213,8 @@ public class CaseReportDJPanel extends javax.swing.JPanel {
                         .addComponent(jButton3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton2))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(typejLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(relationjLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(locationjLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -226,56 +224,56 @@ public class CaseReportDJPanel extends javax.swing.JPanel {
                             .addComponent(namesuspectjLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(namesurvivorjLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(33, 33, 33)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addComponent(jTextField3, javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jTextField7, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 161, Short.MAX_VALUE))))))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(50, 50, 50)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(namesurvivorjLabel)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(12, 12, 12)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(3, 3, 3)
                         .addComponent(relationjLabel))
                     .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(typejLabel)
                     .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(locationjLabel))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(timejLabel))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(detailsjLabel))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(suspecttypejLabel))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(namesuspectjLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, 85, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, 86, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton3)
                     .addComponent(jButton2)
@@ -291,7 +289,7 @@ public class CaseReportDJPanel extends javax.swing.JPanel {
         gridBagConstraints.ipady = 74;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(33, 24, 182, 146);
-        add(jPanel1, gridBagConstraints);
+        jPanel1.add(jPanel2, gridBagConstraints);
 
         jButton5.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButton5.setText("Back");
@@ -313,63 +311,33 @@ public class CaseReportDJPanel extends javax.swing.JPanel {
         gridBagConstraints.gridy = 0;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(74, 14, 0, 0);
-        add(jButton5, gridBagConstraints);
+        jPanel1.add(jButton5, gridBagConstraints);
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 889, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 889, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 695, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 695, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jButton1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseEntered
-                  jButton1.setForeground(new Color(0,128,128));        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1MouseEntered
-
-    private void jButton1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseExited
-                  jButton1.setForeground(Color.black);        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1MouseExited
-
-    private void jButton2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseEntered
-                  jButton2.setForeground(new Color(0,128,128));        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2MouseEntered
-
-    private void jButton2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseExited
-                  jButton2.setForeground(Color.black);        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2MouseExited
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
-
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
-        
-        /*
-        RequestDoctorJPanel lencounterJPanel = new RequestDoctorJPanel(userProcessContainer,system,userAccount,DOrganization,network);
-            userProcessContainer.add("caseReportJPanel", lencounterJPanel);
-            CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-            layout.next(userProcessContainer);
-        
-        
-        userProcessContainer.remove(this);
-        Component[] componentArray = userProcessContainer.getComponents();
-        Component component = componentArray[componentArray.length - 1];
-        //DoctorJPanel sysAdminwjp = (DoctorJPanel) component;
-        //sysAdminwjp.populateTree();
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.previous(userProcessContainer);
-        */
-        
-        DoctorJPanel caseReportJPanel = new DoctorJPanel(userProcessContainer,userAccount,organization,enterprise,system,network);
-        userProcessContainer.add("caseReportJPanel", caseReportJPanel);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.next(userProcessContainer);
-
-
-    }//GEN-LAST:event_jButton5ActionPerformed
-
-    private void jButton5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseEntered
-           jButton5.setForeground(new Color(0,128,128));        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton5MouseEntered
-
-    private void jButton5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseExited
-     jButton5.setForeground(Color.black);        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton5MouseExited
 
     private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
         // TODO add your handling code here:
@@ -378,6 +346,14 @@ public class CaseReportDJPanel extends javax.swing.JPanel {
     private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField6ActionPerformed
+
+    private void jButton1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseEntered
+        jButton1.setForeground(new Color(0,128,128));        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1MouseEntered
+
+    private void jButton1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseExited
+        jButton1.setForeground(Color.black);        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1MouseExited
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
@@ -389,39 +365,38 @@ public class CaseReportDJPanel extends javax.swing.JPanel {
         if (userAccount==null){
             System.out.println("userAccount is not set");
         }
-        
-        
+
         Enterprise e= network.getEnterpriseDirectory().searchEnterprisebyType(Enterprise.EnterpriseType.Wellness);
-            Organization org = null;
-            for (Organization organization : e.getOrganizationDirectory().getOrganizationList()){
-                if (organization instanceof ForensicOrganization){
-                    org = organization;
-                    break;
-                }
+        Organization org = null;
+        for (Organization organization : e.getOrganizationDirectory().getOrganizationList()){
+            if (organization instanceof ForensicOrganization){
+                org = organization;
+                break;
             }
-            if (org!=null){
-                org.getWorkQueue().getLabAssistanceWorkRequest().add(labrequest);
-                //userAccount.getWorkQueue().getCaseReporterWorkRequestList().add(request);
-                if(userAccount.getWorkQueue().getLabAssistanceWorkRequest()==null){
-                    System.out.println("True");
-                }
-                userAccount.getWorkQueue().getLabAssistanceWorkRequest().add(labrequest);
+        }
+        if (org!=null){
+            org.getWorkQueue().getLabAssistanceWorkRequest().add(labrequest);
+            //userAccount.getWorkQueue().getHelpSeekerworkRequestList().add(request);
+            if(userAccount.getWrkQue().getLabAssistanceWorkRequest()==null){
+                System.out.println("True");
             }
-            
+            userAccount.getWrkQue().getLabAssistanceWorkRequest().add(labrequest);
+        }
+
         RequestLabTestJPanel requestLabTestJPanel = new RequestLabTestJPanel(userProcessContainer,system,labrequest,userAccount,network);
         userProcessContainer.add("caseReportJPanel", requestLabTestJPanel);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
-        
+
         //JOptionPane.showMessageDialog(null, "Request submitted to Forensic Department.");
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseEntered
-           jButton3.setForeground(new Color(0,128,128));        // TODO add your handling code here:
+        jButton3.setForeground(new Color(0,128,128));        // TODO add your handling code here:
     }//GEN-LAST:event_jButton3MouseEntered
 
     private void jButton3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseExited
-            jButton3.setForeground(Color.black);        // TODO add your handling code here:
+        jButton3.setForeground(Color.black);        // TODO add your handling code here:
     }//GEN-LAST:event_jButton3MouseExited
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -430,12 +405,20 @@ public class CaseReportDJPanel extends javax.swing.JPanel {
         if(request.getDoctorWorkRequest().getLabAssistanceWorkRequest().getStatus().equalsIgnoreCase("Waiting")){
             JOptionPane.showMessageDialog(this, "Requested has not been acccepted yet.");
         }else{
-        LabTestResultsJPanel requestLabTestJPanel = new LabTestResultsJPanel(userProcessContainer,system,request.getDoctorWorkRequest().getLabAssistanceWorkRequest());
-        userProcessContainer.add("caseReportJPanel", requestLabTestJPanel);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.next(userProcessContainer);}
-            
+            LabTestResultsJPanel requestLabTestJPanel = new LabTestResultsJPanel(userProcessContainer,system,request.getDoctorWorkRequest().getLabAssistanceWorkRequest());
+            userProcessContainer.add("caseReportJPanel", requestLabTestJPanel);
+            CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+            layout.next(userProcessContainer);}
+
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseEntered
+        jButton2.setForeground(new Color(0,128,128));        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2MouseEntered
+
+    private void jButton2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseExited
+        jButton2.setForeground(Color.black);        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2MouseExited
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
@@ -447,25 +430,24 @@ public class CaseReportDJPanel extends javax.swing.JPanel {
         if (userAccount==null){
             System.out.println("userAccount is not set");
         }
-        
-        
+
         Enterprise e= network.getEnterpriseDirectory().searchEnterprisebyType(Enterprise.EnterpriseType.Pharmaceutical);
-            Organization org = null;
-            for (Organization organization : e.getOrganizationDirectory().getOrganizationList()){
-                if (organization instanceof PharmacyOrganization){
-                    org = organization;
-                    break;
-                }
+        Organization org = null;
+        for (Organization organization : e.getOrganizationDirectory().getOrganizationList()){
+            if (organization instanceof PharmacyOrganization){
+                org = organization;
+                break;
             }
-            if (org!=null){
-                org.getWorkQueue().getPharmacistWorkRequest().add(prequest);
-                //userAccount.getWorkQueue().getCaseReporterWorkRequestList().add(request);
-                if(userAccount.getWorkQueue().getLabAssistanceWorkRequest()==null){
-                    System.out.println("True");
-                }
-                userAccount.getWorkQueue().getPharmacistWorkRequest().add(prequest);
+        }
+        if (org!=null){
+            org.getWorkQueue().getPharmacistWorkRequest().add(prequest);
+            //userAccount.getWorkQueue().getHelpSeekerworkRequestList().add(request);
+            if(userAccount.getWrkQue().getLabAssistanceWorkRequest()==null){
+                System.out.println("True");
             }
-            
+            userAccount.getWrkQue().getPharmacistWorkRequest().add(prequest);
+        }
+
         PrescribeMedicinesJPanel requestLabTestJPanel = new PrescribeMedicinesJPanel(userProcessContainer,system,prequest);
         userProcessContainer.add("caseReportJPanel", requestLabTestJPanel);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
@@ -473,39 +455,72 @@ public class CaseReportDJPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-            String FromEmail="sexualawareness.help@gmail.com";
+        String FromEmail="sexualawareness.help@gmail.com";
         String FromEmailPass="Fin@lProject21";
         String Subject = "Sign up successful";
-        
+
         Properties properties=new Properties();
         properties.put("mail.smtp.auth", "true");
         properties.put("mail.smtp.starttls.enable", "true");
         properties.put("mail.smtp.host", "smtp.gmail.com");
         properties.put("mail.smtp.port", "587");
-        
+
         Session session=Session.getDefaultInstance(properties, new javax.mail.Authenticator(){
-           @Override
+            @Override
             protected PasswordAuthentication getPasswordAuthentication(){
-         return new PasswordAuthentication(FromEmail,FromEmailPass);
-        }
+                return new PasswordAuthentication(FromEmail,FromEmailPass);
+            }
         });
-        
+
         try
         {
             Message msg=new MimeMessage(session);
             msg.setFrom(new InternetAddress(FromEmail));
             msg.addRecipients(Message.RecipientType.TO, InternetAddress.parse(request.getEmail()));
             msg.setSubject("A Doctor has been assigned.");
-            msg.setText("Dear "+ request.getChildName()+"\n"+"I am here to help you. Please schedule an appointment through the following link."+"\n"+"calendly.link"+"\n"+"Best,"+"\n"+userAccount.getEmployee().getName());
+            msg.setText("Dear "+ request.getChildName()+"\n"+"I am here to help you. Please schedule an appointment through the following link."+"\n"+"calendly.link"+"\n"+"Best,"+"\n"+userAccount.getEmp().getName());
             Transport.send(msg);
-           JOptionPane.showMessageDialog(this, "Invitation has been sent successfully.");
+            JOptionPane.showMessageDialog(this, "Invitation has been sent successfully.");
         }catch(Exception e)
         {
             System.out.println(""+e);
             JOptionPane.showMessageDialog(this, "Incorrect E-mail id.Invitation cannot be been sent.");
-        }                    
-// TODO add your handling code here:
+        }
+        // TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseEntered
+        jButton5.setForeground(new Color(0,128,128));        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton5MouseEntered
+
+    private void jButton5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseExited
+        jButton5.setForeground(Color.black);        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton5MouseExited
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+
+        /*
+        RequestDoctorJPanel lencounterJPanel = new RequestDoctorJPanel(userProcessContainer,system,userAccount,DOrganization,network);
+        userProcessContainer.add("caseReportJPanel", lencounterJPanel);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+
+        userProcessContainer.remove(this);
+        Component[] componentArray = userProcessContainer.getComponents();
+        Component component = componentArray[componentArray.length - 1];
+        //DoctorJPanel sysAdminwjp = (DoctorJPanel) component;
+        //sysAdminwjp.populateTree();
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.previous(userProcessContainer);
+        */
+
+        DoctorJPanel caseReportJPanel = new DoctorJPanel(userProcessContainer,userAccount,organization,enterprise,system,network);
+        userProcessContainer.add("caseReportJPanel", caseReportJPanel);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+
+    }//GEN-LAST:event_jButton5ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -516,6 +531,7 @@ public class CaseReportDJPanel extends javax.swing.JPanel {
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
@@ -532,8 +548,7 @@ public class CaseReportDJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel timejLabel;
     private javax.swing.JLabel typejLabel;
     // End of variables declaration//GEN-END:variables
-
-    private void PopulateReport() {
+ private void PopulateReport() {
         jTextField1.setText(request.getChildName());
         jTextField5.setText(request.getRelation());
         jTextField6.setText(request.getAssaultType());

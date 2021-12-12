@@ -339,7 +339,7 @@ public class CaseReportLJPanel extends javax.swing.JPanel {
             msg.setFrom(new InternetAddress(FromEmail));
             msg.addRecipients(Message.RecipientType.TO, InternetAddress.parse(ema));
             msg.setSubject("A Lawyer has been assigned.");
-            msg.setText("Dear "+nv +"\n"+"I am here to help you. Please schedule an appointment through the following link."+"\n"+"calendly.link"+"\n"+"Best,"+"\n"+userAccount.getEmployee().getName());
+            msg.setText("Dear "+nv +"\n"+"I am here to help you. Please schedule an appointment through the following link."+"\n"+"calendly.link"+"\n"+"Best,"+"\n"+userAccount.getEmp().getName());
             Transport.send(msg);
             JOptionPane.showMessageDialog(this, "Invitation has been sent successfully.");
 

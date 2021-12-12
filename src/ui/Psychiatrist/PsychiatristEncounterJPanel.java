@@ -268,7 +268,7 @@ public class PsychiatristEncounterJPanel extends javax.swing.JPanel {
             hpe.setProgress(txtProgress.getText());
             request.getHPEncounter().add(hpe);
             //organization.getHPencounterdir().getHPEncounters().add(hpe);
-            //organization.getHPencounterdir().getHPEncounterDirectory().put(request.getHelpSeekerWorkRequest().getNameofvictim(), organization.getHPencounterdir().getHPEncounters());
+            //organization.getHPencounterdir().getHPEncounterDirectory().put(request.CaseReporterWorkRequest().getNameofvictim(), organization.getHPencounterdir().getHPEncounters());
             populate();
             txtEncounterNo.setText("");
             txtProgress.setText("");
@@ -295,9 +295,9 @@ public class PsychiatristEncounterJPanel extends javax.swing.JPanel {
             {
                 Message msg=new MimeMessage(session);
                 msg.setFrom(new InternetAddress(FromEmail));
-                msg.addRecipients(Message.RecipientType.TO, InternetAddress.parse(request.getHelpSeekerWorkRequest().getEmail()));
-                msg.setSubject("Invitation for a session with Help Provider, " + request.getHelpSeekerWorkRequest().getNameofvictim() );
-                msg.setText("Dear "+ request.getHelpSeekerWorkRequest().getNameofvictim()+"\n"+"I am here to help you. Join me through the following link for the next encounter."+"\n"+"zoom1.link"+"\n"+"Best");
+                msg.addRecipients(Message.RecipientType.TO, InternetAddress.parse(request.CaseReporterWorkRequest().getEmail()));
+                msg.setSubject("Invitation for a session with Help Provider, " + request.CaseReporterWorkRequest().getNameofvictim() );
+                msg.setText("Dear "+ request.CaseReporterWorkRequest().getNameofvictim()+"\n"+"I am here to help you. Join me through the following link for the next encounter."+"\n"+"zoom1.link"+"\n"+"Best");
                 Transport.send(msg);
             }catch(Exception e)
             {
@@ -329,8 +329,8 @@ public class PsychiatristEncounterJPanel extends javax.swing.JPanel {
 
 private void populate() {
     
-        txtName.setText(request.getHelpSeekerWorkRequest().getChildName());
-        txtAreaMoreDetails.setText(request.getHelpSeekerWorkRequest().getMoredetails());
+        txtName.setText(request.getCaseReporterWorkRequest().getChildName());
+        txtAreaMoreDetails.setText(request.getCaseReporterWorkRequest().getMoredetails());
         
         DefaultTableModel model= (DefaultTableModel) tblPsychiatristEncounter.getModel();
         Object[] row=new Object[3];

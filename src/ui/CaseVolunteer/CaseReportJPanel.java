@@ -377,7 +377,7 @@ public class CaseReportJPanel extends javax.swing.JPanel {
         }
         if (org!=null){
             org.getWorkQueue().getLawyerworkRequestList().add(legalawyerequest);
-            //userAccount.getWorkQueue().getHelpSeekerworkRequestList().add(request);
+            //userAccount.getWorkQueue().CaseReporterWorkRequestList().add(request);
             userAccount.getWrkQue().getLawyerworkRequestList().add(legalawyerequest);
         }
 
@@ -410,7 +410,7 @@ public class CaseReportJPanel extends javax.swing.JPanel {
         }
         if (org!=null){
             org.getWorkQueue().getPsychiatristWorkRequestList().add(psychrequest);
-            //userAccount.getWorkQueue().getHelpSeekerworkRequestList().add(request);
+            //userAccount.getWorkQueue().CaseReporterWorkRequestList().add(request);
             userAccount.getWrkQue().getPsychiatristWorkRequestList().add(psychrequest);
         }
 
@@ -477,7 +477,7 @@ public class CaseReportJPanel extends javax.swing.JPanel {
         }
         if (org!=null){
             org.getWorkQueue().getDoctorworkRequestList().add(docrequest);
-            //userAccount.getWorkQueue().getHelpSeekerworkRequestList().add(request);
+            //userAccount.getWorkQueue().CaseReporterWorkRequestList().add(request);
             userAccount.getWrkQue().getDoctorworkRequestList().add(docrequest);
         }
 
@@ -509,7 +509,7 @@ public class CaseReportJPanel extends javax.swing.JPanel {
         }
         if (org!=null){
             org.getWorkQueue().getCounsellarworkRequestList().add(counsellarreq);
-            //userAccount.getWorkQueue().getHelpSeekerworkRequestList().add(request);
+            //userAccount.getWorkQueue().CaseReporterWorkRequestList().add(request);
             userAccount.getWrkQue().getCounsellarworkRequestList().add(counsellarreq);
         }
 

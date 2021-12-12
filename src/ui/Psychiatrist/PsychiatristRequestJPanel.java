@@ -237,11 +237,11 @@ public class PsychiatristRequestJPanel extends javax.swing.JPanel {
         Object[] row=new Object[4];
         model.setRowCount(0);
         
-         for(PsychiatristWorkRequest request : organization.getWorkQueue().getHPworkRequestList())
+         for(PsychiatristWorkRequest request : organization.getWorkQueue().getPsychiatristWorkRequestList())
          {
          
-            row[0]=request.getHelpSeekerWorkRequest().getChildName();
-            row[1] = request.getHelpSeekerWorkRequest().getAssaultType();
+            row[0]=request.getCaseReporterWorkRequest().getChildName();
+            row[1] = request.getCaseReporterWorkRequest().getAssaultType();
             row[2] = request;
             if (request.getReceiver()==null){
               row[3] = "Not Assigned";
@@ -274,9 +274,9 @@ public class PsychiatristRequestJPanel extends javax.swing.JPanel {
         {
             Message msg=new MimeMessage(session);
             msg.setFrom(new InternetAddress(FromEmail));
-            msg.addRecipients(Message.RecipientType.TO, InternetAddress.parse(request.getHelpSeekerWorkRequest().getEmail()));
+            msg.addRecipients(Message.RecipientType.TO, InternetAddress.parse(request.getCaseReporterWorkRequest().getEmail()));
             msg.setSubject("Invitation for a session with Help Provider.");
-            msg.setText("Dear "+ request.getHelpSeekerWorkRequest().getChildName()+"\n"+"I am here to help you. Join me through the following link for the next encounter."+"\n"+"zoom1.link"+"\n"+"Best,"+"\n"+userAccount.getEmployee().getName());
+            msg.setText("Dear "+ request.getCaseReporterWorkRequest().getChildName()+"\n"+"I am here to help you. Join me through the following link for the next encounter."+"\n"+"zoom1.link"+"\n"+"Best,"+"\n"+userAccount.getEmp().getName());
             Transport.send(msg);
             JOptionPane.showMessageDialog(this, "Invitation has been sent successfully.");
 
@@ -290,7 +290,7 @@ public class PsychiatristRequestJPanel extends javax.swing.JPanel {
     
     private int CheckOpenCases(UserAccount userAccount) {
         int a = 0;
-        for(PsychiatristWorkRequest request : organization.getWorkQueue().getHPworkRequestList())
+        for(PsychiatristWorkRequest request : organization.getWorkQueue().getPsychiatristWorkRequestList())
         {
         
           if (request.getReceiver()==userAccount){

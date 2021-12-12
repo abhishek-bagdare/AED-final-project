@@ -6,9 +6,9 @@
 package ui.Hospital;
 
 import ui.Lab.*;
-import Business.EcoSystem;
-import Business.WorkQueue.LabAssistantWorkRequest;
-import Business.WorkQueue.LabTest;
+import business.EcoSystem;
+import business.WorkQueue.LabAssistantWorkRequest;
+import business.WorkQueue.LabTest;
 import java.awt.CardLayout;
 import java.awt.Color;
 import java.awt.Component;

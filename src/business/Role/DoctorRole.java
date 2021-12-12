@@ -8,8 +8,7 @@ import business.EcoSystem;
 import business.Enterprise.Enterprise;
 import business.Network.Network; 
 import business.Organization.Organization;
-import business.UserAccount.UserAccount;
-import ui.DoctorRole.DoctorWorkAreaJPanel;
+import business.UserAccount.UserAccount; 
 import javax.swing.JPanel;
 import ui.Hospital.DoctorJPanel;
 

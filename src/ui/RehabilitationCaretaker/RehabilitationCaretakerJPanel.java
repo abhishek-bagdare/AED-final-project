@@ -3,16 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package UI.RehabilitationCaretaker;
+package ui.RehabilitationCaretaker;
 
-import Business.EcoSystem;
-import Business.Enterprise.Enterprise;
-import Business.Enterprise.PharmaceuticalEnterprise;
-import Business.Network.Network;
-import Business.Organization.Organization;
-import Business.Organization.PharmacyOrganization;
-import Business.UserAccount.UserAccount;
-import UI.Pharmacy.PharmaViewRequestJPanel;
+import business.EcoSystem;
+import business.Enterprise.Enterprise;
+import business.Enterprise.PharmaceuticalEnterprise;
+import business.Network.Network;
+import business.Organization.Organization;
+import business.Organization.PharmacyOrganization;
+import business.UserAccount.UserAccount;
+import ui.Pharmacy.PharmaViewRequestJPanel;
 import javax.swing.JPanel;
 
 /**

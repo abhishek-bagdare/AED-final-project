@@ -302,7 +302,7 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         
         if(enterprise.getEnterpriseType().getValue().equalsIgnoreCase("Health")){
             if(enterprise.getUserAccountDirectory().CheckIsValidInput(password)){
-                        UserAccount userAccount=enterprise.getUserAccountDirectory().createUserAccount(username, password, employee, new HealthAdminRole());
+                        UserAccount userAccount=enterprise.getUserAccountDirectory().createUserAccnt(username, password, employee, new HealthAdminRole());
                     }
                     else{
                         JOptionPane.showMessageDialog(null, "Password should have a minimum length of 8 and contain atleast 1 Uppercase, 1 Lowercase, 1 Special character and 1 Digit ");

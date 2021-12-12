@@ -224,7 +224,7 @@ public class RequestDoctorJPanel extends javax.swing.JPanel {
         }
      
         WorkRequest request = (DrWorkRequest)jTable1.getValueAt(selectedRow, 2);
-        WorkRequest newReq= (RehabilitationCaretakerWorkRequest);
+       // WorkRequest newReq= (RehabilitationCaretakerWorkRequest);
         request.setReceiver(userAccount);
         request.setStatus("Case Completed");
         populatetable();

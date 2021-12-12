@@ -294,7 +294,7 @@ public class ViewPrescriptionJPanel extends javax.swing.JPanel {
             msg.setFrom(new InternetAddress(FromEmail));
             msg.addRecipients(Message.RecipientType.TO, InternetAddress.parse(ema));
             msg.setSubject("Medicines are Ready");
-            msg.setText("Dear "+nv +"\n"+"Medicines are ready for pick-up. "+"\n"+"\n"+"Best,"+"\n"+userAccount.getEmployee().getName());
+            msg.setText("Dear "+nv +"\n"+"Medicines are ready for pick-up. "+"\n"+"\n"+"Best,"+"\n"+userAccount.getEmp().getName());
             Transport.send(msg);
             JOptionPane.showMessageDialog(this, "Medicines are ready for pick-up. Invitation has been sent successfully.");
 

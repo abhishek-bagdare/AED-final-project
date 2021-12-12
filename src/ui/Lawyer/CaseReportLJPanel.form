@@ -215,7 +215,6 @@
           <Font name="Monaco" size="14" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Send Invite"/>
-        <Property name="borderPainted" type="boolean" value="false"/>
       </Properties>
       <Events>
         <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnSendInviteMouseEntered"/>
@@ -229,7 +228,6 @@
           <Font name="Monaco" size="14" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Back"/>
-        <Property name="borderPainted" type="boolean" value="false"/>
       </Properties>
       <Events>
         <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnBackMouseEntered"/>

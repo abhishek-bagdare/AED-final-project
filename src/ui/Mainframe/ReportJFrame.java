@@ -304,7 +304,7 @@ public class ReportJFrame extends javax.swing.JFrame {
 
         String em=jTextField5.getText();
         String validate="^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@" + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
-        if(!em.matches(validate))
+        if(1==0)
         {
             JOptionPane.showMessageDialog(null, "Please enter valid email");
             return;

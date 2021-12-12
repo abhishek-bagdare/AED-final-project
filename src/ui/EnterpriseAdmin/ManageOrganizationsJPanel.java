@@ -108,11 +108,17 @@ public class ManageOrganizationsJPanel extends javax.swing.JPanel {
         comboBoxOrgType = new javax.swing.JComboBox();
         btnDltOrg = new javax.swing.JButton();
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(255, 255, 255));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setFont(new java.awt.Font("Monaco", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(230, 126, 34));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Manage Organization(s)");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 16, 656, 41));
 
         tableOrg.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -135,18 +141,23 @@ public class ManageOrganizationsJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tableOrg);
 
-        lblOrgType.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        lblOrgType.setText("Organization Type:");
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 80, 210, 98));
 
-        btnAddOrg.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lblOrgType.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
+        lblOrgType.setText("Organization Type:");
+        jPanel1.add(lblOrgType, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 83, -1, 26));
+
+        btnAddOrg.setBackground(new java.awt.Color(51, 102, 255));
+        btnAddOrg.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
+        btnAddOrg.setForeground(new java.awt.Color(255, 255, 255));
         btnAddOrg.setText("Add Organization");
         btnAddOrg.setBorderPainted(false);
         btnAddOrg.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnAddOrgMouseEntered(evt);
-            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 btnAddOrgMouseExited(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnAddOrgMouseEntered(evt);
             }
         });
         btnAddOrg.addActionListener(new java.awt.event.ActionListener() {
@@ -154,18 +165,22 @@ public class ManageOrganizationsJPanel extends javax.swing.JPanel {
                 btnAddOrgActionPerformed(evt);
             }
         });
+        jPanel1.add(btnAddOrg, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 140, -1, -1));
 
         comboBoxOrgType.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jPanel1.add(comboBoxOrgType, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 80, 155, -1));
 
-        btnDltOrg.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnDltOrg.setBackground(new java.awt.Color(51, 102, 255));
+        btnDltOrg.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
+        btnDltOrg.setForeground(new java.awt.Color(255, 255, 255));
         btnDltOrg.setText("Delete Organization");
         btnDltOrg.setBorderPainted(false);
         btnDltOrg.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnDltOrgMouseEntered(evt);
-            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 btnDltOrgMouseExited(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnDltOrgMouseEntered(evt);
             }
         });
         btnDltOrg.addActionListener(new java.awt.event.ActionListener() {
@@ -173,66 +188,9 @@ public class ManageOrganizationsJPanel extends javax.swing.JPanel {
                 btnDltOrgActionPerformed(evt);
             }
         });
+        jPanel1.add(btnDltOrg, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 140, -1, -1));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(lblOrgType)
-                        .addGap(22, 22, 22)
-                        .addComponent(comboBoxOrgType, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(btnDltOrg)
-                        .addGap(9, 9, 9)
-                        .addComponent(btnAddOrg)))
-                .addGap(38, 38, 38)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 113, Short.MAX_VALUE)
-                .addGap(193, 193, 193))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblOrgType, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(comboBoxOrgType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(27, 27, 27)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnDltOrg)
-                            .addComponent(btnAddOrg)))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(27, Short.MAX_VALUE))
-        );
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 656, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 383, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
+        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(75, 38, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAddOrgMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAddOrgMouseEntered

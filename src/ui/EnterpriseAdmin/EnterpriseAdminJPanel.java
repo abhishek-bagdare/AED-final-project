@@ -53,6 +53,7 @@ public class EnterpriseAdminJPanel extends javax.swing.JPanel {
         txtFieldEnterpriseName = new javax.swing.JTextField();
         jPanel3 = new javax.swing.JPanel();
 
+        setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jSplitPane1.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);

@@ -62,15 +62,22 @@ public class CaseReporter extends javax.swing.JPanel {
         btnReport = new javax.swing.JButton();
         jPanel10 = new javax.swing.JPanel();
 
-        jPanel7.setLayout(new java.awt.CardLayout());
+        setBackground(new java.awt.Color(255, 255, 255));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel7.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel8.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jVolunteerSplitPanel.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
 
-        jPanel09.setBackground(new java.awt.Color(0, 128, 128));
+        jPanel09.setBackground(new java.awt.Color(253, 235, 208));
         jPanel09.setLayout(new java.awt.GridBagLayout());
 
-        lblCaseReporter.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
-        lblCaseReporter.setForeground(new java.awt.Color(255, 255, 255));
+        lblCaseReporter.setFont(new java.awt.Font("Monaco", 1, 18)); // NOI18N
+        lblCaseReporter.setForeground(new java.awt.Color(51, 102, 255));
         lblCaseReporter.setText("Welcome Case Reporter");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -80,18 +87,18 @@ public class CaseReporter extends javax.swing.JPanel {
         gridBagConstraints.insets = new java.awt.Insets(16, 112, 0, 0);
         jPanel09.add(lblCaseReporter, gridBagConstraints);
 
-        btnViewStatus.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        btnViewStatus.setForeground(new java.awt.Color(255, 255, 255));
+        btnViewStatus.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
+        btnViewStatus.setForeground(new java.awt.Color(51, 102, 255));
         btnViewStatus.setText("View Status");
         btnViewStatus.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnViewStatus.setBorderPainted(false);
         btnViewStatus.setContentAreaFilled(false);
         btnViewStatus.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnViewStatusMouseEntered(evt);
-            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 btnViewStatusMouseExited(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnViewStatusMouseEntered(evt);
             }
         });
         btnViewStatus.addActionListener(new java.awt.event.ActionListener() {
@@ -108,18 +115,18 @@ public class CaseReporter extends javax.swing.JPanel {
         gridBagConstraints.insets = new java.awt.Insets(11, 47, 11, 84);
         jPanel09.add(btnViewStatus, gridBagConstraints);
 
-        btnReport.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        btnReport.setForeground(new java.awt.Color(255, 255, 255));
+        btnReport.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
+        btnReport.setForeground(new java.awt.Color(51, 102, 255));
         btnReport.setText("Report");
         btnReport.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnReport.setBorderPainted(false);
         btnReport.setContentAreaFilled(false);
         btnReport.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnReportMouseEntered(evt);
-            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 btnReportMouseExited(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnReportMouseEntered(evt);
             }
         });
         btnReport.addActionListener(new java.awt.event.ActionListener() {
@@ -141,39 +148,11 @@ public class CaseReporter extends javax.swing.JPanel {
         jPanel10.setLayout(new java.awt.GridBagLayout());
         jVolunteerSplitPanel.setRightComponent(jPanel10);
 
-        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
-        jPanel8.setLayout(jPanel8Layout);
-        jPanel8Layout.setHorizontalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jVolunteerSplitPanel, javax.swing.GroupLayout.Alignment.TRAILING)
-        );
-        jPanel8Layout.setVerticalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jVolunteerSplitPanel)
-        );
+        jPanel8.add(jVolunteerSplitPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 0, 368, 229));
 
-        jPanel7.add(jPanel8, "card2");
+        jPanel7.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 657, 454));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 407, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, 407, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
+        add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(61, 45, 407, 292));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnViewStatusMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnViewStatusMouseEntered
@@ -187,7 +166,7 @@ public class CaseReporter extends javax.swing.JPanel {
     private void btnViewStatusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewStatusActionPerformed
         // TODO add your handling code here:
         CaseReporterViewStatusJPanel reportJPanel1=new CaseReporterViewStatusJPanel(userProcessContainer,userAccount,HSOrganization,HSenterprise,business);
-        jSplitPane1.setBottomComponent(reportJPanel1);
+        jVolunteerSplitPanel.setBottomComponent(reportJPanel1);
     }//GEN-LAST:event_btnViewStatusActionPerformed
 
     private void btnReportMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnReportMouseEntered
@@ -200,30 +179,18 @@ public class CaseReporter extends javax.swing.JPanel {
 
     private void btnReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReportActionPerformed
         ReportJPanel reportJPanel=new ReportJPanel(userProcessContainer,business,userAccount,HSOrganization,network);
-        jSplitPane1.setBottomComponent(reportJPanel);
+        jVolunteerSplitPanel.setBottomComponent(reportJPanel);
         //ReportJFrame r = new ReportJFrame(system,network,ua,org);
     }//GEN-LAST:event_btnReportActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton MRjButton2;
-    private javax.swing.JButton MRjButton3;
     private javax.swing.JButton btnReport;
     private javax.swing.JButton btnViewStatus;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel09;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
-    private javax.swing.JSplitPane jSplitPane1;
-    private javax.swing.JSplitPane jSplitPane2;
     private javax.swing.JSplitPane jVolunteerSplitPanel;
     private javax.swing.JLabel lblCaseReporter;
     // End of variables declaration//GEN-END:variables

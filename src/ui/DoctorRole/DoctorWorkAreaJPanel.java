@@ -3,8 +3,7 @@
  * and open the template in the editor.
  */
 package ui.DoctorRole;
-
-import business.Business;
+ 
 import business.Organization.DoctorOrganization;
 import business.UserAccount.UserAccount;
 import business.WorkQueue.LabTestWorkRequest;
@@ -21,7 +20,7 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
 
     private JPanel workArea;
     private DoctorOrganization organization;
-    private Business business;
+    
     private UserAccount userAccount;
     /**
      * Creates new form DoctorWorkAreaJPanel
@@ -31,7 +30,7 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
         
         this.workArea = workArea;
         this.organization = organization;
-        this.business = business;
+      //  this.business = business;
         this.userAccount = account;
         
         populateRequestTable();

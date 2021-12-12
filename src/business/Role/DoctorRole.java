@@ -3,8 +3,7 @@
  * and open the template in the editor.
  */
 package business.Role;
-
-import business.Business;
+ 
 import business.Organization.DoctorOrganization;
 import business.Organization.Organization;
 import business.UserAccount.UserAccount;

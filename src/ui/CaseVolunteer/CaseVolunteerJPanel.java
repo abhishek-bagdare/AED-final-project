@@ -8,9 +8,11 @@ package ui.CaseVolunteer;
 import business.EcoSystem;
 import business.Enterprise.Enterprise;
 import business.Enterprise.NGOrgEnterprise;
+import business.Network.Network;
 import business.Organization.CaseVolunteerOrganization;
 import business.Organization.Organization;
 import business.UserAccount.UserAccount;
+
 import javax.swing.JPanel;
 
 /**
@@ -22,19 +24,25 @@ public class CaseVolunteerJPanel extends javax.swing.JPanel {
     /**
      * Creates new form CaseVolunteerJPanel
      */
-    private JPanel userProcCont;
-    private EcoSystem bus;
-    private UserAccount usrAccnt;
+    private JPanel userProcessContainer;
+    private EcoSystem business;
+    private UserAccount userAccount;
     private CaseVolunteerOrganization CVOrg; 
-    private NGOrgEnterprise NGOrgEnt;
-    public CaseVolunteerJPanel(JPanel userProcCont, UserAccount usrAccnt, Organization CVOrg,Enterprise enterprise,EcoSystem bus) {
+    private NGOrgEnterprise NGOrgenterprise;
+    private Network network;
+    public CaseVolunteerJPanel(JPanel userProcessContainer, UserAccount account, Organization CVOrg,Enterprise enterprise,EcoSystem business,Network network) {
         initComponents();
-        this.userProcCont = userProcCont;
-        this.usrAccnt = usrAccnt;
-        this.bus = bus;
+        this.userProcessContainer = userProcessContainer;
+        this.userAccount = account;
+        this.business = business;
         this.CVOrg = (CaseVolunteerOrganization)CVOrg;
-        this.NGOrgEnt = (NGOrgEnterprise) enterprise;
+        this.NGOrgenterprise = (NGOrgEnterprise) enterprise;
+        this.network = network;
+        popBtm();
+        CaseVolunteerSplitJPanel.setDividerSize(0);
+        CaseVolunteerSplitJPanel.setDividerLocation(100);
     }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -44,136 +52,73 @@ public class CaseVolunteerJPanel extends javax.swing.JPanel {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        java.awt.GridBagConstraints gridBagConstraints;
 
         jPanel1 = new javax.swing.JPanel();
-        jCasePanel = new javax.swing.JPanel();
-        jCaseVolunteerPanel = new javax.swing.JScrollPane();
-        tblCaseReq = new javax.swing.JTable();
-        btnViewReport = new javax.swing.JButton();
-        lblCaseReq = new javax.swing.JLabel();
+        CaseVolunteerSplitJPanel = new javax.swing.JSplitPane();
+        jPanel2 = new javax.swing.JPanel();
+        lblUpperPart = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
 
-        jCasePanel.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(new java.awt.BorderLayout());
 
-        tblCaseReq.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
-            },
-            new String [] {
-                "Case No.", "Name ", "Location", "Network", "Status"
-            }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                true, false, false, false, false
-            };
+        CaseVolunteerSplitJPanel.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
 
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        jCaseVolunteerPanel.setViewportView(tblCaseReq);
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setLayout(new java.awt.GridBagLayout());
 
-        btnViewReport.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        btnViewReport.setText("View Report");
-        btnViewReport.setBorderPainted(false);
-        btnViewReport.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnViewReportMouseEntered(evt);
-            }
-        });
-        btnViewReport.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnViewReportActionPerformed(evt);
-            }
-        });
+        lblUpperPart.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        lblUpperPart.setText("Welcome Case Volunteer");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(37, 98, 43, 108);
+        jPanel2.add(lblUpperPart, gridBagConstraints);
 
-        lblCaseReq.setFont(new java.awt.Font("Agency FB", 1, 36)); // NOI18N
-        lblCaseReq.setText("Case Requests");
+        CaseVolunteerSplitJPanel.setTopComponent(jPanel2);
 
-        javax.swing.GroupLayout jCasePanelLayout = new javax.swing.GroupLayout(jCasePanel);
-        jCasePanel.setLayout(jCasePanelLayout);
-        jCasePanelLayout.setHorizontalGroup(
-            jCasePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jCasePanelLayout.createSequentialGroup()
-                .addGap(0, 81, Short.MAX_VALUE)
-                .addComponent(jCaseVolunteerPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 580, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(54, 54, 54))
-            .addGroup(jCasePanelLayout.createSequentialGroup()
-                .addGap(292, 292, 292)
-                .addComponent(btnViewReport, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jCasePanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lblCaseReq)
-                .addGap(267, 267, 267))
-        );
-        jCasePanelLayout.setVerticalGroup(
-            jCasePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jCasePanelLayout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addComponent(lblCaseReq)
-                .addGap(42, 42, 42)
-                .addComponent(jCaseVolunteerPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(48, 48, 48)
-                .addComponent(btnViewReport, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(209, Short.MAX_VALUE))
-        );
+        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel3.setLayout(new java.awt.GridBagLayout());
+        CaseVolunteerSplitJPanel.setRightComponent(jPanel3);
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jCasePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jCasePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        jPanel1.add(CaseVolunteerSplitJPanel, java.awt.BorderLayout.CENTER);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 715, Short.MAX_VALUE)
+            .addGap(0, 400, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 632, Short.MAX_VALUE)
+            .addGap(0, 300, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 610, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnViewReportMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnViewReportMouseEntered
-
-    }//GEN-LAST:event_btnViewReportMouseEntered
-
-    private void btnViewReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewReportActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnViewReportActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnViewReport;
-    private javax.swing.JPanel jCasePanel;
-    private javax.swing.JScrollPane jCaseVolunteerPanel;
+    private javax.swing.JSplitPane CaseVolunteerSplitJPanel;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JLabel lblCaseReq;
-    private javax.swing.JTable tblCaseReq;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JLabel lblUpperPart;
     // End of variables declaration//GEN-END:variables
+
+    private void popBtm() {
+        CaseRequestJPanel caserequestJPanel=new CaseRequestJPanel(userProcessContainer,business,CVOrg,userAccount,network);
+        System.out.println("CaseManagerJPanel"+userAccount.getUsername()+userAccount.getPwd());
+        CaseVolunteerSplitJPanel.setBottomComponent(caserequestJPanel);
+    }
+
 }

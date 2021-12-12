@@ -22,7 +22,7 @@ public class RehabilitationOrganization extends Organization{
     @Override
     public ArrayList<Role> getSupportedRole() {
           ArrayList<Role> roles = new ArrayList();
-       // roles.add(new RehabilitationCaretaker());
+        roles.add(new RehabilitationCaretaker());
         return roles;
     }
     

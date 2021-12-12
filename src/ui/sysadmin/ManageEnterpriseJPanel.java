@@ -68,8 +68,9 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
 
         for (Enterprise.EnterpriseType type : Enterprise.EnterpriseType.values()) {
             if (!type.getValue().equals(Enterprise.EnterpriseType.CaseReporter.getValue())){
+                 if (!type.getValue().equals(Enterprise.EnterpriseType.Psychiatrist.getValue())){
                 comboBoxEnterpriseType.addItem(type);
-            }
+            }}
         }
 
     }

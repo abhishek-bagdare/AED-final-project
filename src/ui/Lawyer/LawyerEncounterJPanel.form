@@ -18,26 +18,27 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Component id="lblHeader" alignment="0" max="32767" attributes="0"/>
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="lblName" min="-2" pref="72" max="-2" attributes="0"/>
                           <Component id="lblEncounterNo" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblName" min="-2" pref="72" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Component id="txtName" min="-2" pref="161" max="-2" attributes="0"/>
                           <Component id="txtEncounterNo" min="-2" pref="161" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
-                      <Component id="lblMinutes" min="-2" pref="83" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="lblMinutes" max="32767" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jScrollPane2" min="-2" pref="161" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="87" max="32767" attributes="0"/>
+              <EmptySpace pref="74" max="32767" attributes="0"/>
               <Component id="jScrollPane1" min="-2" pref="292" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
           </Group>
@@ -79,9 +80,9 @@
                           <Component id="txtEncounterNo" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="jScrollPane2" alignment="0" max="32767" attributes="0"/>
-                          <Component id="lblMinutes" alignment="0" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jScrollPane2" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblMinutes" min="-2" pref="71" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="281" max="-2" attributes="0"/>
                   </Group>
@@ -94,7 +95,10 @@
     <Component class="javax.swing.JLabel" name="lblHeader">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Tahoma" size="16" style="1"/>
+          <Font name="Monaco" size="18" style="1"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="66" red="33" type="rgb"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
         <Property name="text" type="java.lang.String" value="Encounters"/>
@@ -102,6 +106,9 @@
     </Component>
     <Component class="javax.swing.JLabel" name="lblName">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Monaco" size="14" style="1"/>
+        </Property>
         <Property name="horizontalAlignment" type="int" value="11"/>
         <Property name="text" type="java.lang.String" value="Name"/>
       </Properties>
@@ -158,6 +165,9 @@
     </Component>
     <Component class="javax.swing.JLabel" name="lblEncounterNo">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Monaco" size="14" style="1"/>
+        </Property>
         <Property name="horizontalAlignment" type="int" value="11"/>
         <Property name="text" type="java.lang.String" value="Encounter no"/>
       </Properties>
@@ -167,7 +177,7 @@
     <Component class="javax.swing.JLabel" name="lblMinutes">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="11"/>
-        <Property name="text" type="java.lang.String" value="Minutes"/>
+        <Property name="text" type="java.lang.String" value="Minutes of Encounter"/>
       </Properties>
     </Component>
     <Container class="javax.swing.JScrollPane" name="jScrollPane2">

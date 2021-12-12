@@ -236,7 +236,6 @@ public class CaseReportLJPanel extends javax.swing.JPanel {
 
         btnSendInvite.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
         btnSendInvite.setText("Send Invite");
-        btnSendInvite.setBorderPainted(false);
         btnSendInvite.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btnSendInviteMouseEntered(evt);
@@ -253,7 +252,6 @@ public class CaseReportLJPanel extends javax.swing.JPanel {
 
         btnBack.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
         btnBack.setText("Back");
-        btnBack.setBorderPainted(false);
         btnBack.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btnBackMouseEntered(evt);

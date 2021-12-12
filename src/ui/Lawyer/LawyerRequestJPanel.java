@@ -96,7 +96,6 @@ public class LawyerRequestJPanel extends javax.swing.JPanel {
 
         btnAssignRequest.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
         btnAssignRequest.setText("Assign Request");
-        btnAssignRequest.setBorderPainted(false);
         btnAssignRequest.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btnAssignRequestMouseEntered(evt);
@@ -113,7 +112,6 @@ public class LawyerRequestJPanel extends javax.swing.JPanel {
 
         btnViewCaseReport.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
         btnViewCaseReport.setText("View Case Report");
-        btnViewCaseReport.setBorderPainted(false);
         btnViewCaseReport.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btnViewCaseReportMouseEntered(evt);
@@ -130,7 +128,6 @@ public class LawyerRequestJPanel extends javax.swing.JPanel {
 
         btnEncounter.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
         btnEncounter.setText("Ecounters");
-        btnEncounter.setBorderPainted(false);
         btnEncounter.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btnEncounterMouseEntered(evt);
@@ -147,7 +144,6 @@ public class LawyerRequestJPanel extends javax.swing.JPanel {
 
         btnCaseComplete.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
         btnCaseComplete.setText(" Case Complete");
-        btnCaseComplete.setBorderPainted(false);
         btnCaseComplete.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btnCaseCompleteMouseEntered(evt);

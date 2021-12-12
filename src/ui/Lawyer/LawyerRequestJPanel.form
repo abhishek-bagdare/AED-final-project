@@ -102,7 +102,6 @@
           <Font name="Monaco" size="14" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Assign Request"/>
-        <Property name="borderPainted" type="boolean" value="false"/>
       </Properties>
       <Events>
         <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnAssignRequestMouseEntered"/>
@@ -116,7 +115,6 @@
           <Font name="Monaco" size="14" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="View Case Report"/>
-        <Property name="borderPainted" type="boolean" value="false"/>
       </Properties>
       <Events>
         <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnViewCaseReportMouseEntered"/>
@@ -130,7 +128,6 @@
           <Font name="Monaco" size="14" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Ecounters"/>
-        <Property name="borderPainted" type="boolean" value="false"/>
       </Properties>
       <Events>
         <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnEncounterMouseEntered"/>
@@ -144,7 +141,6 @@
           <Font name="Monaco" size="14" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value=" Case Complete"/>
-        <Property name="borderPainted" type="boolean" value="false"/>
       </Properties>
       <Events>
         <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnCaseCompleteMouseEntered"/>

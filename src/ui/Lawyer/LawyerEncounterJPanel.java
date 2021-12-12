@@ -101,7 +101,6 @@ public class LawyerEncounterJPanel extends javax.swing.JPanel {
 
         btnUpdate.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
         btnUpdate.setText("Update");
-        btnUpdate.setBorderPainted(false);
         btnUpdate.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btnUpdateMouseEntered(evt);
@@ -118,7 +117,6 @@ public class LawyerEncounterJPanel extends javax.swing.JPanel {
 
         btnBack.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
         btnBack.setText("Back");
-        btnBack.setBorderPainted(false);
         btnBack.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btnBackMouseEntered(evt);

@@ -19,6 +19,7 @@ import business.Role.HealthAdminRole;
 import business.Role.LegalAdminRole;
 import business.Role.NGOAdminRole;
 import business.Role.PharmacyAdminRole;
+import business.Role.PsychiatristRole;
 //import Business.Role.AdminRole;
 import business.UserAccount.UserAccount;
 import java.awt.CardLayout;
@@ -248,7 +249,7 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         
         Employee employee = enterprise.getEmployeeDirectory().createEmployee(name);
         
-        if(enterprise.getEnterpriseType().getValue().equalsIgnoreCase("Health")){
+        if(enterprise.getEnterpriseType().getValue().equalsIgnoreCase("Wellness")){
             if(enterprise.getUserAccountDirectory().CheckIsValidInput(password)){
                         UserAccount userAccount=enterprise.getUserAccountDirectory().createUserAccnt(username, password, employee, new HealthAdminRole());
                     }
@@ -258,7 +259,7 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
                         return;
                     }
             //UserAccount account = enterprise.getUserAccountDirectory().createUserAccnt(username, password, employee, new HealthAdminRole());
-        } else if(enterprise.getEnterpriseType().getValue().equalsIgnoreCase("Legal")){
+        } else if(enterprise.getEnterpriseType().getValue().equalsIgnoreCase("Justice")){
             if(enterprise.getUserAccountDirectory().CheckIsValidInput(password)){
                         UserAccount userAccount=enterprise.getUserAccountDirectory().createUserAccnt(username, password, employee, new LegalAdminRole());
                     }
@@ -278,9 +279,20 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
                         return;
                     }
             //UserAccount account = enterprise.getUserAccountDirectory().createUserAccnt(username, password, employee, new NGOAdminRole());
-        }else if(enterprise.getEnterpriseType().getValue().equalsIgnoreCase("Pharmacy")){
+        }else if(enterprise.getEnterpriseType().getValue().equalsIgnoreCase("Pharmaceutical")){
             if(enterprise.getUserAccountDirectory().CheckIsValidInput(password)){
                         UserAccount userAccount=enterprise.getUserAccountDirectory().createUserAccnt(username, password, employee, new PharmacyAdminRole());
+                    }
+                    else{
+                        JOptionPane.showMessageDialog(null, "Password should have a minimum length of 8 and contain atleast 1 Uppercase, 1 Lowercase, 1 Special character and 1 Digit ");
+                        txtPassword.setText("");
+                        return;
+                    }
+            //UserAccount account = enterprise.getUserAccountDirectory().createUserAccnt(username, password, employee, new PharmacyAdminRole());
+        }
+        else if(enterprise.getEnterpriseType().getValue().equalsIgnoreCase("Psychiatrist")){
+            if(enterprise.getUserAccountDirectory().CheckIsValidInput(password)){
+                        UserAccount userAccount=enterprise.getUserAccountDirectory().createUserAccnt(username, password, employee, new PsychiatristRole());
                     }
                     else{
                         JOptionPane.showMessageDialog(null, "Password should have a minimum length of 8 and contain atleast 1 Uppercase, 1 Lowercase, 1 Special character and 1 Digit ");

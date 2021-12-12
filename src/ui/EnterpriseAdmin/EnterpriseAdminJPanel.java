@@ -53,13 +53,16 @@ public class EnterpriseAdminJPanel extends javax.swing.JPanel {
         txtFieldEnterpriseName = new javax.swing.JTextField();
         jPanel3 = new javax.swing.JPanel();
 
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
         jSplitPane1.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setBackground(new java.awt.Color(253, 235, 208));
+        jPanel2.setForeground(new java.awt.Color(51, 102, 255));
         jPanel2.setLayout(new java.awt.GridBagLayout());
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 51, 51));
+        jLabel1.setFont(new java.awt.Font("Monaco", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(51, 102, 255));
         jLabel1.setText("Welcome Enterprise Admin");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -69,8 +72,8 @@ public class EnterpriseAdminJPanel extends javax.swing.JPanel {
         gridBagConstraints.insets = new java.awt.Insets(11, 198, 0, 0);
         jPanel2.add(jLabel1, gridBagConstraints);
 
-        btnManageOrg.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        btnManageOrg.setForeground(new java.awt.Color(0, 51, 51));
+        btnManageOrg.setFont(new java.awt.Font("Monaco", 1, 18)); // NOI18N
+        btnManageOrg.setForeground(new java.awt.Color(51, 102, 255));
         btnManageOrg.setText("Manage Organization(s)");
         btnManageOrg.setBorderPainted(false);
         btnManageOrg.setContentAreaFilled(false);
@@ -94,8 +97,8 @@ public class EnterpriseAdminJPanel extends javax.swing.JPanel {
         gridBagConstraints.insets = new java.awt.Insets(6, 84, 0, 0);
         jPanel2.add(btnManageOrg, gridBagConstraints);
 
-        btnManageEmployee.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        btnManageEmployee.setForeground(new java.awt.Color(0, 51, 51));
+        btnManageEmployee.setFont(new java.awt.Font("Monaco", 1, 18)); // NOI18N
+        btnManageEmployee.setForeground(new java.awt.Color(51, 102, 255));
         btnManageEmployee.setText("Manage Employee");
         btnManageEmployee.setBorderPainted(false);
         btnManageEmployee.setContentAreaFilled(false);
@@ -120,8 +123,8 @@ public class EnterpriseAdminJPanel extends javax.swing.JPanel {
         gridBagConstraints.insets = new java.awt.Insets(6, 6, 0, 0);
         jPanel2.add(btnManageEmployee, gridBagConstraints);
 
-        btnManageEmployeeAccess.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        btnManageEmployeeAccess.setForeground(new java.awt.Color(0, 51, 51));
+        btnManageEmployeeAccess.setFont(new java.awt.Font("Monaco", 1, 18)); // NOI18N
+        btnManageEmployeeAccess.setForeground(new java.awt.Color(51, 102, 255));
         btnManageEmployeeAccess.setText("Manage User");
         btnManageEmployeeAccess.setBorderPainted(false);
         btnManageEmployeeAccess.setContentAreaFilled(false);
@@ -146,8 +149,8 @@ public class EnterpriseAdminJPanel extends javax.swing.JPanel {
         gridBagConstraints.insets = new java.awt.Insets(6, 6, 0, 110);
         jPanel2.add(btnManageEmployeeAccess, gridBagConstraints);
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 51, 51));
+        jLabel2.setFont(new java.awt.Font("Monaco", 1, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(51, 102, 255));
         jLabel2.setText("Your Enterprise is : ");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -180,11 +183,11 @@ public class EnterpriseAdminJPanel extends javax.swing.JPanel {
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 669, Short.MAX_VALUE)
+            .addGap(0, 918, Short.MAX_VALUE)
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 282, Short.MAX_VALUE)
+            .addGap(0, 453, Short.MAX_VALUE)
         );
 
         jSplitPane1.setRightComponent(jPanel3);
@@ -200,26 +203,7 @@ public class EnterpriseAdminJPanel extends javax.swing.JPanel {
             .addComponent(jSplitPane1)
         );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 673, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 398, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
+        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(98, 57, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnManageOrgMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnManageOrgMouseExited

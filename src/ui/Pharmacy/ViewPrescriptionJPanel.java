@@ -7,8 +7,8 @@ package ui.Pharmacy;
 
 import business.EcoSystem;
 import business.UserAccount.UserAccount;
-import business.WorkQueue.HelpSeekerWorkRequest;
-import business.WorkQueue.Meds;
+import business.WorkQueue.CaseReporterWorkRequest;
+import business.WorkQueue.Medicines;
 import business.WorkQueue.PharmacistWorkRequest;
 import java.awt.CardLayout;
 import java.awt.Color;
@@ -226,7 +226,7 @@ public class ViewPrescriptionJPanel extends javax.swing.JPanel {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
 
         request.setStatus("Processed");
-        sendInvite(request.getDoctorWorkRequest().getHelpSeekerWorkRequest());
+        sendInvite(request.getDoctorWorkRequest().getCaseReporterWorkRequest());
 
         //JOptionPane.showMessageDialog(null,"Medicines are ready for pick-up");
     }//GEN-LAST:event_jButton2ActionPerformed
@@ -248,7 +248,7 @@ public class ViewPrescriptionJPanel extends javax.swing.JPanel {
 
     private void populatereport() {
         jTextField2.setText(request.getRequestDate().toString());
-        jTextField4.setText(request.getDoctorWorkRequest().getHelpSeekerWorkRequest().getChildName());
+        jTextField4.setText(request.getDoctorWorkRequest().getCaseReporterWorkRequest().getChildName());
         jTextField3.setText(request.getSender().toString());
         populatetable();
     }
@@ -258,18 +258,18 @@ public class ViewPrescriptionJPanel extends javax.swing.JPanel {
         Object[] row=new Object[2];
         model.setRowCount(0);
         
-         for(Meds M : request.getMedicines())
+         for(Medicines M : request.getMedicines())
          {
          
             row[0]=M;
-            row[1]=M.getQty();
+            row[1]=M.getAmount();
             
             model.addRow(row);
             
         }
     }
     
-    private void sendInvite(HelpSeekerWorkRequest request){
+    private void sendInvite(CaseReporterWorkRequest request){
         String FromEmail="sexualawareness.help@gmail.com";
         String FromEmailPass="Fin@lProject21";
         String Subject = "Sign up successful";

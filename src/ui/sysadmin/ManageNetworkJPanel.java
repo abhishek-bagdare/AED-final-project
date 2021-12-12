@@ -9,7 +9,7 @@ import business.EcoSystem;
 import business.Enterprise.Enterprise;
 import business.Network.Network;
 import business.Organization.CaseVolunteerOrganization;
-import Business.Organization.HelpSeekerOrganization;
+import business.Organization.CaseReporterOrganization;
 import business.Organization.Organization;
 import java.awt.CardLayout;
 import java.awt.Color;

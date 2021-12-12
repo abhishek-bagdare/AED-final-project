@@ -10,18 +10,16 @@ import business.Enterprise.Enterprise;
 import business.Network.Network;
 import business.Organization.Organization;
 import business.UserAccount.UserAccount;
+import javax.swing.JPanel;
 import ui.EnterpriseAdmin.EnterpriseAdminJPanel;
-import javax.swing.JPanel;
-import javax.swing.JPanel;
 
 /**
  *
  * @author abhishekbagdare
  */
-public class HealthAdminRole extends Role {
-      @Override
+public class NGOAdminRole extends Role{
+     @Override
     public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business,Network network) {
         return new EnterpriseAdminJPanel(userProcessContainer, enterprise, business);
     }
-
 }

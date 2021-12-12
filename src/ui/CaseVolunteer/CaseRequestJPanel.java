@@ -5,8 +5,7 @@
  */
 package ui.CaseVolunteer;
 
-import javax.swing.JPanel;
-import business.DB4OUtil.DB4OUtil;
+import javax.swing.JPanel; 
 import business.EcoSystem;
 import business.Network.Network;
 import business.Organization.CaseVolunteerOrganization;

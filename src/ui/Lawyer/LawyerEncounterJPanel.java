@@ -251,9 +251,9 @@ public class LawyerEncounterJPanel extends javax.swing.JPanel {
             {
                 Message msg=new MimeMessage(session);
                 msg.setFrom(new InternetAddress(FromEmail));
-                msg.addRecipients(Message.RecipientType.TO, InternetAddress.parse(request.getHelpSeekerWorkRequest().getEmail()));
-                msg.setSubject("Invitation for a session with Lawyer, " + request.getHelpSeekerWorkRequest().getNameofvictim() );
-                msg.setText("Dear "+ request.getHelpSeekerWorkRequest().getNameofvictim()+"\n"+"I am here to help you. Please schedule an appointment through the following link for the next encounter."+"\n"+"calendly.link"+"\n"+"Best,"+"\n"+"Andy Rubella");
+                msg.addRecipients(Message.RecipientType.TO, InternetAddress.parse(request.CaseReporterWorkRequest().getEmail()));
+                msg.setSubject("Invitation for a session with Lawyer, " + request.CaseReporterWorkRequest().getNameofvictim() );
+                msg.setText("Dear "+ request.CaseReporterWorkRequest().getNameofvictim()+"\n"+"I am here to help you. Please schedule an appointment through the following link for the next encounter."+"\n"+"calendly.link"+"\n"+"Best,"+"\n"+"Andy Rubella");
                 Transport.send(msg);
             }catch(Exception e)
             {

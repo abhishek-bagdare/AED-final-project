@@ -5,9 +5,9 @@
  */
 package ui.Hospital;
 
-import Business.EcoSystem;
-import Business.WorkQueue.Meds;
-import Business.WorkQueue.PharmacistWorkRequest;
+import business.EcoSystem;
+import business.WorkQueue.Medicines;
+import business.WorkQueue.PharmacistWorkRequest;
 import java.awt.CardLayout;
 import java.awt.Color;
 import java.awt.Component;
@@ -283,7 +283,7 @@ public class PrescribeMedicinesJPanel extends javax.swing.JPanel {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        Meds M = new Meds(jTextField5.getText(),Integer.parseInt(jTextField3.getText()));
+        Medicines M = new Medicines(jTextField5.getText(),Integer.parseInt(jTextField3.getText()));
         pRequest.getMedicines().add(M);
         populatetable();
         jTextField3.setText("");
@@ -348,11 +348,11 @@ public class PrescribeMedicinesJPanel extends javax.swing.JPanel {
         Object[] row=new Object[2];
         model.setRowCount(0);
         
-         for(Meds M : pRequest.getMedicines())
+         for(Medicines M : pRequest.getMedicines())
          {
          
             row[0]=M;
-            row[1]=M.getQty();
+            row[1]=M.getAmount();
             
             model.addRow(row);
             

@@ -11,7 +11,7 @@ import java.util.Date;
  *
  * @author abhishekbagdare
  */
-public class CaseReporterWorkRequest {
+public class CaseReporterWorkRequest extends WorkRequest{
       
     private String childName;
     private String relation;

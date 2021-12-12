@@ -344,7 +344,7 @@ public class CaseReporterViewStatusJPanel extends javax.swing.JPanel {
         Object[] row=new Object[4];
         model.setRowCount(0);
         int count = 1;
-        for(CaseReporterWorkRequest request : userAccount.getWorkQueue().getHelpSeekerworkRequestList())
+        for(CaseReporterWorkRequest request : userAccount.getWrkQue().getCaseReporterWorkRequestList())
          {
             request.setRequestid(count);
             row[0]=request.getRequestid();
@@ -352,7 +352,7 @@ public class CaseReporterViewStatusJPanel extends javax.swing.JPanel {
             if (request.getReceiver()==null){
                 row[2] = "Not Assigned";
             }else{
-                row[2] = request.getReceiver().getEmployee().getName();
+                row[2] = request.getReceiver().getEmp().getName();
             }
             row[3] = request;
             

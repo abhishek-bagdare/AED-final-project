@@ -50,7 +50,7 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
             for (Enterprise enterprise : network.getEnterpriseDirectory().getEnterpriseList()) {
                 Object[] row = new Object[3];
                 row[0] = enterprise;
-                row[1] = network.getNetworkName();
+                row[1] = network.getNameOfNetwork();
                 row[2] = enterprise.getEnterpriseType().getValue();
 
                 model.addRow(row);
@@ -67,7 +67,7 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
         }
 
         for (Enterprise.EnterpriseType type : Enterprise.EnterpriseType.values()) {
-            if (!type.getValue().equals(Enterprise.EnterpriseType.HelpSeeker.getValue())){
+            if (!type.getValue().equals(Enterprise.EnterpriseType.CaseReporter.getValue())){
                 comboBoxEnterpriseType.addItem(type);
             }
         }

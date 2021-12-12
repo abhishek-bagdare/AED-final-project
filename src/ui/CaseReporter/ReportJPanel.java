@@ -5,7 +5,7 @@
  */
 package ui.CaseReporter;
 
-import UI.Hospital.*;
+import ui.Hospital.*;
 import business.EcoSystem;
 import business.Enterprise.Enterprise;
 import business.Network.Network;
@@ -445,7 +445,7 @@ public class ReportJPanel extends javax.swing.JPanel {
             }
             if (org!=null){
                 org.getWorkQueue().getCaseReporterWorkRequestList().add(request);
-                //userAccount.getWorkQueue().getHelpSeekerworkRequestList().add(request);
+                //userAccount.getWorkQueue().CaseReporterWorkRequestList().add(request);
             }
 
             

@@ -19,6 +19,7 @@ public abstract class WorkRequest {
     private String status;
     private Date requestDate;
     private Date resolveDate;
+       private int requestid;
     
     public WorkRequest(){
         requestDate = new Date();
@@ -31,7 +32,16 @@ public abstract class WorkRequest {
     public void setMessage(String message) {
         this.message = message;
     }
+ 
 
+    public int getRequestid() {
+        return requestid;
+    }
+
+    public void setRequestid(int requestid) {
+        this.requestid = requestid;
+    }
+    
     public UserAccount getSender() {
         return sender;
     }

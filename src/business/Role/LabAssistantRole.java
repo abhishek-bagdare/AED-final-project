@@ -4,9 +4,12 @@
  */
 package business.Role;
  
+import business.EcoSystem;
+import business.Enterprise.Enterprise;
+import business.Network.Network;
 import business.Organization.Organization;
 import business.UserAccount.UserAccount;
-import ui.LabAssistantRole.LabAssistantWorkAreaJPanel;
+import ui.Lab.LabAssistantJPanel;
 import javax.swing.JPanel;
 
 /**
@@ -20,6 +23,6 @@ public class LabAssistantRole extends Role {
     public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business,Network network) {
         return new LabAssistantJPanel(userProcessContainer, account, organization,enterprise,business,network);
     }
-    
+ 
 
 }

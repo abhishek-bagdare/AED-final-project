@@ -5,7 +5,7 @@
  */
 package ui.Mainframe;
 
-import UI.MainFrame.MainJFrame;
+import ui.Mainframe.MainJFrame;
 import business.DB4OUtil.DB4OUtil;
 import business.EcoSystem;
 import business.Employee.Employee;

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package UI.CaseVolunteer;
+package ui.CaseVolunteer;
 
 import business.EcoSystem;
 import business.Enterprise.Enterprise;
@@ -14,8 +14,8 @@ import business.Organization.HospitalOrganization;
 import business.Organization.LegalOrganization;
 import business.Organization.Organization;
 import business.UserAccount.UserAccount;
-import business.WorkQueue.CounsellarWorkRequest;
-import business.WorkQueue.DoctorWorkRequest;
+import business.WorkQueue.CounsellorWorkRequest;
+import business.WorkQueue.DrWorkRequest;
 import business.WorkQueue.PsychiatristWorkRequest;
 import business.WorkQueue.CaseReporterWorkRequest;
 import business.WorkQueue.LawyerWorkRequest;
@@ -320,9 +320,9 @@ public class CaseReportJPanel extends javax.swing.JPanel {
                         .addComponent(lblDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(btnBack))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnReqDoc, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnReqCounsellar, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnReqCounsellar, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnReqDoc, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(44, 44, 44)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnReqPsych, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -365,8 +365,8 @@ public class CaseReportJPanel extends javax.swing.JPanel {
         LawyerWorkRequest legalawyerequest = new LawyerWorkRequest();
         legalawyerequest.setStatus("Waiting");
         legalawyerequest.setSender(userAccount);
-        legalawyerequest.setHelpSeekerWorkRequest(request);
-        legalawyerequest.getHelpSeekerWorkRequest().setLawyerWorkRequest(legalawyerequest);
+        legalawyerequest.setCaseReporterWorkRequest(request);
+        legalawyerequest.getCaseReporterWorkRequest().setLawyerWorkRequest(legalawyerequest);
         Enterprise e= network.getEnterpriseDirectory().searchEnterprisebyType(Enterprise.EnterpriseType.Justice);
         Organization org = null;
         for (Organization organization : e.getOrganizationDirectory().getOrganizationList()){
@@ -378,7 +378,7 @@ public class CaseReportJPanel extends javax.swing.JPanel {
         if (org!=null){
             org.getWorkQueue().getLawyerworkRequestList().add(legalawyerequest);
             //userAccount.getWorkQueue().getHelpSeekerworkRequestList().add(request);
-            userAccount.getWorkQueue().getLawyerworkRequestList().add(legalawyerequest);
+            userAccount.getWrkQue().getLawyerworkRequestList().add(legalawyerequest);
         }
 
         JOptionPane.showMessageDialog(null, "Request submitted to Lawyer.");
@@ -397,8 +397,8 @@ public class CaseReportJPanel extends javax.swing.JPanel {
         PsychiatristWorkRequest psychrequest = new PsychiatristWorkRequest();
         psychrequest.setStatus("Waiting");
         psychrequest.setSender(userAccount);
-        psychrequest.setHelpSeekerWorkRequest(request);
-        psychrequest.getHelpSeekerWorkRequest().setHpWorkRequest(psychrequest);
+        psychrequest.setCaseReporterWorkRequest(request);
+        psychrequest.getCaseReporterWorkRequest().setHpWorkRequest(psychrequest);
 
         Enterprise e= network.getEnterpriseDirectory().searchEnterprisebyType(Enterprise.EnterpriseType.Psychiatrist);
         Organization org = null;
@@ -409,9 +409,9 @@ public class CaseReportJPanel extends javax.swing.JPanel {
             }
         }
         if (org!=null){
-            org.getWorkQueue().getHPworkRequestList().add(psychrequest);
+            org.getWorkQueue().getPsychiatristWorkRequestList().add(psychrequest);
             //userAccount.getWorkQueue().getHelpSeekerworkRequestList().add(request);
-            userAccount.getWorkQueue().getHPworkRequestList().add(psychrequest);
+            userAccount.getWrkQue().getPsychiatristWorkRequestList().add(psychrequest);
         }
 
         JOptionPane.showMessageDialog(null, "Request submitted to Psychiatrist");
@@ -461,11 +461,11 @@ public class CaseReportJPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_btnReqDocMouseExited
 
     private void btnReqDocActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReqDocActionPerformed
-        DoctorWorkRequest docrequest = new DoctorWorkRequest();
+        DrWorkRequest docrequest = new DrWorkRequest();
         docrequest.setStatus("Waiting");
         docrequest.setSender(userAccount);
-        docrequest.setHelpSeekerWorkRequest(request);
-        docrequest.getHelpSeekerWorkRequest().setDoctorWorkRequest(docrequest);
+        docrequest.setCaseReporterWorkRequest(request);
+        docrequest.getCaseReporterWorkRequest().setDoctorWorkRequest(docrequest);
 
         Enterprise e= network.getEnterpriseDirectory().searchEnterprisebyType(Enterprise.EnterpriseType.Wellness);
         Organization org = null;
@@ -478,7 +478,7 @@ public class CaseReportJPanel extends javax.swing.JPanel {
         if (org!=null){
             org.getWorkQueue().getDoctorworkRequestList().add(docrequest);
             //userAccount.getWorkQueue().getHelpSeekerworkRequestList().add(request);
-            userAccount.getWorkQueue().getDoctorworkRequestList().add(docrequest);
+            userAccount.getWrkQue().getDoctorworkRequestList().add(docrequest);
         }
 
         JOptionPane.showMessageDialog(null, "Request submitted to Hosptital.");
@@ -493,7 +493,7 @@ public class CaseReportJPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_btnReqCounsellarMouseExited
 
     private void btnReqCounsellarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReqCounsellarActionPerformed
-        CounsellarWorkRequest counsellarreq = new CounsellarWorkRequest();
+        CounsellorWorkRequest counsellarreq = new CounsellorWorkRequest();
         counsellarreq.setStatus("Waiting");
         counsellarreq.setSender(userAccount);
         counsellarreq.setHswr(request);
@@ -510,7 +510,7 @@ public class CaseReportJPanel extends javax.swing.JPanel {
         if (org!=null){
             org.getWorkQueue().getCounsellarworkRequestList().add(counsellarreq);
             //userAccount.getWorkQueue().getHelpSeekerworkRequestList().add(request);
-            userAccount.getWorkQueue().getCounsellarworkRequestList().add(counsellarreq);
+            userAccount.getWrkQue().getCounsellarworkRequestList().add(counsellarreq);
         }
 
         JOptionPane.showMessageDialog(null, "Request submitted to Counsellar");

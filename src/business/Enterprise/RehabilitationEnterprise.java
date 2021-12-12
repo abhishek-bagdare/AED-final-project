@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Business.Enterprise;
+package business.Enterprise;
 
-import Business.Role.Role;
+import business.Role.Role;
 import java.util.ArrayList;
 
 /**

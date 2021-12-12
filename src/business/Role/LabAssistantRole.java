@@ -12,7 +12,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author raunak
+ * @author virajshah
  */
 public class LabAssistantRole extends Role {
 

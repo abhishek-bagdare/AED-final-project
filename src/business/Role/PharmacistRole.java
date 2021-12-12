@@ -9,7 +9,7 @@ import business.EcoSystem;
 import business.Enterprise.Enterprise;
 import business.Network.Network;
 import business.Organization.PharmacyOrganization;
-import Business.Organization.Organization;
+import business.Organization.Organization;
 import business.UserAccount.UserAccount;
 import ui.Pharmacy.PharmacistJPanel;
 import javax.swing.JPanel;

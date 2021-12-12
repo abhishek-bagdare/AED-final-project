@@ -8,8 +8,7 @@ package business;
 
 import business.Network.Network; 
 import business.Organization.Organization;
-import business.Role.Role;
-import business.Role.AdminRole;
+import business.Role.Role; 
 import business.Role.SystemAdminRole;
 import java.util.ArrayList;
 

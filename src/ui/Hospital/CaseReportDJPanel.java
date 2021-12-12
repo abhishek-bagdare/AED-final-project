@@ -8,20 +8,20 @@ package ui.Hospital;
  *
  * @author Ajinkya
  */
-import Business.EcoSystem;
-import Business.Enterprise.Enterprise;
-import Business.Network.Network;
-import Business.Organization.CaseVolunteerOrganization;
-import Business.Organization.ForensicOrganization;
-import Business.Organization.HospitalOrganization;
-import Business.Organization.Organization;
-import Business.Organization.PharmacyOrganization;
-import Business.UserAccount.UserAccount;
-import Business.WorkQueue.DoctorWorkRequest;
-import Business.WorkQueue.HelpSeekerWorkRequest;
-import Business.WorkQueue.LabAssistantWorkRequest;
-import Business.WorkQueue.PharmacistWorkRequest;
-import Business.WorkQueue.WorkRequest;
+import business.EcoSystem;
+import business.Enterprise.Enterprise;
+import business.Network.Network;
+import business.Organization.CaseVolunteerOrganization;
+import business.Organization.ForensicOrganization;
+import business.Organization.HospitalOrganization;
+import business.Organization.Organization;
+import business.Organization.PharmacyOrganization;
+import business.UserAccount.UserAccount;
+import business.WorkQueue.DrWorkRequest;
+import business.WorkQueue.CaseReporterWorkRequest;
+import business.WorkQueue.LabAssistantWorkRequest;
+import business.WorkQueue.PharmacistWorkRequest;
+import business.WorkQueue.WorkRequest;
 import java.awt.CardLayout;
 import java.awt.Color;
 import java.awt.Component;

@@ -5,8 +5,7 @@
  */
 package business.Role;
 
-import Business.Network.Network;
-import business.Business;
+import business.Network.Network; 
 import business.EcoSystem;
 import business.Enterprise.Enterprise;
 import business.Organization.Organization;

@@ -377,7 +377,7 @@ public class ReportJFrame extends javax.swing.JFrame {
             }
 
             this.dispose();
-            SigninJFrame eng = new SigninJFrame();
+            SignInJFrame eng = new SignInJFrame();
             eng.setVisible(true);
 
         }

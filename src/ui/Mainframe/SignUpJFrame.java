@@ -551,7 +551,7 @@ public class SignUpJFrame extends javax.swing.JFrame {
             UserAccount ua= org.getUserAccountDirectory().authenticateUserAccnt(username, password);
             //ReportJFrame r = new ReportJFrame(system,network,ua,org);
             dB4OUtil.storeSystem(system);
-            SigninJFrame s = new SigninJFrame();
+            SignInJFrame s = new SignInJFrame();
             s.setVisible(true);
         }
 

@@ -5,16 +5,16 @@
  */
 package ui.Hospital;
 
-import Business.EcoSystem;
-import Business.Enterprise.Enterprise;
-import Business.Network.Network;
-import Business.Organization.Organization;
-import Business.UserAccount.UserAccount;
-import Business.WorkQueue.DoctorWorkRequest;
-import Business.WorkQueue.CaseReporterWorkRequest;
-import Business.WorkQueue.RehabilitationCaretakerWorkRequest;
-import Business.WorkQueue.WorkRequest;
-import UI.CaseVolunteer.CaseReportJPanel;
+import business.EcoSystem;
+import business.Enterprise.Enterprise;
+import business.Network.Network;
+import business.Organization.Organization;
+import business.UserAccount.UserAccount;
+import business.WorkQueue.DrWorkRequest;
+import business.WorkQueue.CaseReporterWorkRequest;
+import business.WorkQueue.RehabilitationCaretakerWorkRequest;
+import business.WorkQueue.WorkRequest;
+import ui.CaseVolunteer.CaseReportJPanel;
 import java.awt.CardLayout;
 import java.awt.Color;
 import javax.swing.JOptionPane;
@@ -34,7 +34,7 @@ public class RequestDoctorJPanel extends javax.swing.JPanel {
     EcoSystem system;
     UserAccount userAccount;
     Organization organization;
-    DoctorWorkRequest request;
+    DrWorkRequest request;
     Enterprise enterpirse;
     Network network;
     public RequestDoctorJPanel(JPanel userProcessContainer, EcoSystem system, UserAccount userAccount,Organization organization,Network network) {
@@ -172,7 +172,7 @@ public class RequestDoctorJPanel extends javax.swing.JPanel {
 
 
             int selectedRow = jTable1.getSelectedRow();
-            WorkRequest request = (DoctorWorkRequest)jTable1.getValueAt(selectedRow, 2);
+            WorkRequest request = (DrWorkRequest)jTable1.getValueAt(selectedRow, 2);
             if (CheckOpenCases(userAccount) == 0){
                 request.setReceiver(userAccount);
                 request.setStatus("Accepted");
@@ -200,7 +200,7 @@ public class RequestDoctorJPanel extends javax.swing.JPanel {
             return;
         }
 
-        DoctorWorkRequest request = (DoctorWorkRequest)jTable1.getValueAt(selectedRow, 2);
+        DrWorkRequest request = (DrWorkRequest)jTable1.getValueAt(selectedRow, 2);
         request.getCaseReporterWorkRequest().setDoctorWorkRequest(request);
 
         if (request.getReceiver()!=userAccount){
@@ -223,7 +223,7 @@ public class RequestDoctorJPanel extends javax.swing.JPanel {
             return;
         }
      
-        WorkRequest request = (DoctorWorkRequest)jTable1.getValueAt(selectedRow, 2);
+        WorkRequest request = (DrWorkRequest)jTable1.getValueAt(selectedRow, 2);
         WorkRequest newReq= (RehabilitationCaretakerWorkRequest);
         request.setReceiver(userAccount);
         request.setStatus("Case Completed");
@@ -245,7 +245,7 @@ public class RequestDoctorJPanel extends javax.swing.JPanel {
         Object[] row=new Object[4];
         model.setRowCount(0);
         
-        for(DoctorWorkRequest request : organization.getWorkQueue().getDoctorworkRequestList())
+        for(DrWorkRequest request : organization.getWorkQueue().getDoctorworkRequestList())
         {
         
           row[0]=request.getCaseReporterWorkRequest().getChildName();
@@ -265,7 +265,7 @@ public class RequestDoctorJPanel extends javax.swing.JPanel {
     
     private int CheckOpenCases(UserAccount userAccount) {
         int a = 0;
-        for(DoctorWorkRequest request : organization.getWorkQueue().getDoctorworkRequestList())
+        for(DrWorkRequest request : organization.getWorkQueue().getDoctorworkRequestList())
         {
         
           if (request.getReceiver()==userAccount){

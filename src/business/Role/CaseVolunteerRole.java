@@ -9,23 +9,18 @@ import business.EcoSystem;
 import business.Enterprise.Enterprise;
 import business.Network.Network;
 import business.Organization.Organization;
-import business.UserAccount.UserAccount; 
+import business.UserAccount.UserAccount;
 import javax.swing.JPanel;
 
 /**
  *
  * @author abhishekbagdare
  */
-public class RehabilitationCaretaker extends Role{
+public class CaseVolunteerRole extends Role{
 
     @Override
     public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business, Network network) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
-//    @Override
-//    public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business, Network network) {
-////      
-//    }
     
 }

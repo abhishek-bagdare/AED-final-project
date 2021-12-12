@@ -5,6 +5,8 @@
  */
 package business.Organization;
 
+import business.Role.CaseReporterRole;
+import business.Role.Role;
 import java.util.ArrayList;
 
 /**
@@ -15,13 +17,13 @@ import java.util.ArrayList;
 public class CaseReporterOrganization extends Organization{
 
     public CaseReporterOrganization() {
-        super(Organization.Type.CaseReport.getValue());
+        super(Organization.Type.CaseReporter.getValue());
     }
     
     @Override
     public ArrayList<Role> getSupportedRole() {
         ArrayList<Role> roles = new ArrayList();
-        roles.add(new CaseReportRole());
+        roles.add(new CaseReporterRole());
         return roles;
     }
      

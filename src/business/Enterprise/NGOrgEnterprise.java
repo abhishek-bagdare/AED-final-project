@@ -6,6 +6,7 @@
 package business.Enterprise;
 
 import business.Enterprise.Enterprise;
+import business.Role.Role;
 import java.util.ArrayList;
 
 /**

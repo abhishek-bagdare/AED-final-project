@@ -13,19 +13,19 @@ import java.util.HashMap;
  */
 public class EncounterLawyerDir {
     
-private ArrayList<LawyerEncounter> Encounters;
-    private HashMap<String,ArrayList<LawyerEncounter>> EncounterDirectory;
+private ArrayList<EncounterLawyer> Encounters;
+    private HashMap<String,ArrayList<EncounterLawyer>> EncounterDirectory;
 
-    public LawyerEncounterDirectory() {
-       EncounterDirectory=new HashMap<String,ArrayList<LawyerEncounter>>();
-       Encounters=new ArrayList<LawyerEncounter>();
+    public EncounterLawyerDir() {
+       EncounterDirectory=new HashMap<String,ArrayList<EncounterLawyer>>();
+       Encounters=new ArrayList<EncounterLawyer>();
     }
 
-    public ArrayList<LawyerEncounter> getEncounters() {
+    public ArrayList<EncounterLawyer> getEncounters() {
         return Encounters;
     }
 
-    public HashMap<String, ArrayList<LawyerEncounter>> getEncounterDirectory() {
+    public HashMap<String, ArrayList<EncounterLawyer>> getEncounterDirectory() {
         return EncounterDirectory;
     }
 }

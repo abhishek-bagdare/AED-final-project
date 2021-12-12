@@ -18,7 +18,7 @@ import Business.Network.Network;
 import java.awt.Color;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-//import Business.WorkQueue.HelpSeekerWorkRequest;
+//import Business.WorkQueue.CaseReporterWorkRequest;
 /**
  *
  * @author virajshah
@@ -274,7 +274,7 @@ public class SurvivorReportJPanel extends javax.swing.JPanel {
 
     private void btnReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReportActionPerformed
 
-        HelpSeekerWorkRequest request = new HelpSeekerWorkRequest();
+        CaseReporterWorkRequest request = new CaseReporterWorkRequest();
         request.setStatus("Waiting");
         request.setSender(userAccount);
 
@@ -352,11 +352,11 @@ public class SurvivorReportJPanel extends javax.swing.JPanel {
                 }
             }
             if (org!=null){
-                org.getWorkQueue().getHelpSeekerworkRequestList().add(request);
-                //userAccount.getWorkQueue().getHelpSeekerworkRequestList().add(request);
+                org.getWorkQueue().getCaseReporterWorkRequestList().add(request);
+                //userAccount.getWorkQueue().getCaseReporterWorkRequestList().add(request);
             }
 
-            //organization.getWorkQueue().getHelpSeekerworkRequestList().add(request);
+            //organization.getWorkQueue().getCaseReporterWorkRequestList().add(request);
             txtSurvivorName.setText("");
             txtSurvivorAge.setText("");
             //            jTextField3.setText("");
@@ -370,7 +370,7 @@ public class SurvivorReportJPanel extends javax.swing.JPanel {
             btnFemale.setSelected(false);
             jComboBox1.setSelectedIndex(0);
             jDateChooser1.setDate(null);
-            userAccount.getWorkQueue().getHelpSeekerworkRequestList().add(request);
+            userAccount.getWorkQueue().getCaseReporterWorkRequestList().add(request);
             JOptionPane.showMessageDialog(null, "Incident is reported successfully.");
 
         }

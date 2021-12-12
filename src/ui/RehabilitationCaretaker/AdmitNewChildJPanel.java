@@ -120,7 +120,7 @@ public class AdmitNewChildJPanel extends javax.swing.JPanel {
 
  private void populateDetails() {
 //        jTextField2.setText(request.getRequestDate().toString());
-//        jTextField4.setText(request.getDoctorWorkRequest().getHelpSeekerWorkRequest().getChildName());
+//        jTextField4.setText(request.getDoctorWorkRequest().getCaseReporterWorkRequest().getChildName());
 //        jTextField3.setText(request.getSender().toString());
         populatetable();
     }

@@ -9,7 +9,7 @@ import business.EcoSystem;
 import business.Network.Network;
 import business.UserAccount.UserAccount;
 import business.WorkQueue.LabAssistantWorkRequest;
-import b`usiness.WorkQueue.LabTest;
+import business.WorkQueue.LabTest;
 import java.awt.CardLayout;
 import java.awt.Color;
 import java.awt.Component;
@@ -20,7 +20,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author patel and Ajinkya
+ * @author abhishekbagdare
  */
 public class RequestLabTestJPanel extends javax.swing.JPanel {
 
@@ -301,7 +301,7 @@ public class RequestLabTestJPanel extends javax.swing.JPanel {
 
     private void populateform() {
         jTextField3.setText(labrequest.getSender().toString());
-        jTextField1.setText(labrequest.getDoctorWorkRequest().getHelpSeekerWorkRequest().getChildName());
+        jTextField1.setText(labrequest.getDoctorWorkRequest().getCaseReporterWorkRequest().getChildName());
         Date date = new Date();
         jTextField2.setText(date.toString());
         

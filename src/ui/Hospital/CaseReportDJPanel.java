@@ -6,7 +6,7 @@
 package ui.Hospital;
 /**
  *
- * @author Ajinkya
+ * @author abhishekbagdare
  */
 import business.EcoSystem;
 import business.Enterprise.Enterprise;
@@ -46,12 +46,12 @@ public class CaseReportDJPanel extends javax.swing.JPanel {
      */
     JPanel userProcessContainer;
     EcoSystem system;
-    HelpSeekerWorkRequest request;
+    CaseReporterWorkRequest request;
     UserAccount userAccount;
     Network network;
     Enterprise enterprise;
     Organization organization;
-    public CaseReportDJPanel(JPanel userProcessContainer, EcoSystem system, HelpSeekerWorkRequest request,UserAccount userAccount, Network network,Enterprise enterprise, Organization organization) {
+    public CaseReportDJPanel(JPanel userProcessContainer, EcoSystem system, CaseReporterWorkRequest request,UserAccount userAccount, Network network,Enterprise enterprise, Organization organization) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.system = system;
@@ -404,7 +404,7 @@ public class CaseReportDJPanel extends javax.swing.JPanel {
             }
             if (org!=null){
                 org.getWorkQueue().getLabAssistanceWorkRequest().add(labrequest);
-                //userAccount.getWorkQueue().getHelpSeekerworkRequestList().add(request);
+                //userAccount.getWorkQueue().getCaseReporterWorkRequestList().add(request);
                 if(userAccount.getWorkQueue().getLabAssistanceWorkRequest()==null){
                     System.out.println("True");
                 }
@@ -462,7 +462,7 @@ public class CaseReportDJPanel extends javax.swing.JPanel {
             }
             if (org!=null){
                 org.getWorkQueue().getPharmacistWorkRequest().add(prequest);
-                //userAccount.getWorkQueue().getHelpSeekerworkRequestList().add(request);
+                //userAccount.getWorkQueue().getCaseReporterWorkRequestList().add(request);
                 if(userAccount.getWorkQueue().getLabAssistanceWorkRequest()==null){
                     System.out.println("True");
                 }

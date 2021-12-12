@@ -5,7 +5,7 @@
  */
 package ui.Hospital;
 
-import UI.Lab.*;
+import ui.Lab.*;
 import Business.EcoSystem;
 import Business.WorkQueue.LabAssistantWorkRequest;
 import Business.WorkQueue.LabTest;
@@ -20,7 +20,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author patel and Ajinkya
+ * @author abhishekbagdare
  */
 public class LabTestResultsJPanel extends javax.swing.JPanel {
 
@@ -214,7 +214,7 @@ public class LabTestResultsJPanel extends javax.swing.JPanel {
 
     private void PopulateReport() {
         jTextField1.setText(request.getSender().toString());
-        jTextField2.setText(request.getDoctorWorkRequest().getHelpSeekerWorkRequest().getChildName());
+        jTextField2.setText(request.getDoctorWorkRequest().getCaseReporterWorkRequest().getChildName());
         jTextField3.setText(request.getReceiver().toString());
         PopulateTable();
     }

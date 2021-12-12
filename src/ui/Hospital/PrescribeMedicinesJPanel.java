@@ -18,7 +18,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author patel and Ajinkya
+ * @author abhishekbagdare
  */
 public class PrescribeMedicinesJPanel extends javax.swing.JPanel {
 
@@ -338,7 +338,7 @@ public class PrescribeMedicinesJPanel extends javax.swing.JPanel {
         pRequest.setRequestDate(date);
         jTextField2.setText(date.toString());
         jTextField1.setText(pRequest.getSender().toString());
-        jTextField4.setText(pRequest.getDoctorWorkRequest().getHelpSeekerWorkRequest().getChildName());
+        jTextField4.setText(pRequest.getDoctorWorkRequest().getCaseReporterWorkRequest().getChildName());
         populatetable();
         
     }

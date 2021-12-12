@@ -11,7 +11,7 @@ import Business.Network.Network;
 import Business.Organization.Organization;
 import Business.UserAccount.UserAccount;
 import Business.WorkQueue.DoctorWorkRequest;
-import Business.WorkQueue.HelpSeekerWorkRequest;
+import Business.WorkQueue.CaseReporterWorkRequest;
 import Business.WorkQueue.RehabilitationCaretakerWorkRequest;
 import Business.WorkQueue.WorkRequest;
 import UI.CaseVolunteer.CaseReportJPanel;
@@ -23,7 +23,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author patel and Ajinkya
+ * @author abhishekbagdare
  */
 public class RequestDoctorJPanel extends javax.swing.JPanel {
 
@@ -201,13 +201,13 @@ public class RequestDoctorJPanel extends javax.swing.JPanel {
         }
 
         DoctorWorkRequest request = (DoctorWorkRequest)jTable1.getValueAt(selectedRow, 2);
-        request.getHelpSeekerWorkRequest().setDoctorWorkRequest(request);
+        request.getCaseReporterWorkRequest().setDoctorWorkRequest(request);
 
         if (request.getReceiver()!=userAccount){
             JOptionPane.showMessageDialog(this, "You cannot view the report of this case. Access Denied.");
         }else{
 
-            CaseReportDJPanel caseReportJPanel = new CaseReportDJPanel(userProcessContainer,system,request.getHelpSeekerWorkRequest(),userAccount,network,enterpirse,organization);
+            CaseReportDJPanel caseReportJPanel = new CaseReportDJPanel(userProcessContainer,system,request.getCaseReporterWorkRequest(),userAccount,network,enterpirse,organization);
             userProcessContainer.add("caseReportJPanel", caseReportJPanel);
             CardLayout layout = (CardLayout) userProcessContainer.getLayout();
             layout.next(userProcessContainer);
@@ -248,8 +248,8 @@ public class RequestDoctorJPanel extends javax.swing.JPanel {
         for(DoctorWorkRequest request : organization.getWorkQueue().getDoctorworkRequestList())
         {
         
-          row[0]=request.getHelpSeekerWorkRequest().getChildName();
-          row[1] = request.getHelpSeekerWorkRequest().getDoi();
+          row[0]=request.getCaseReporterWorkRequest().getChildName();
+          row[1] = request.getCaseReporterWorkRequest().getDoi();
           row[2] = request;  
           if (request.getReceiver()==null){
               row[3] = "Not Assigned";

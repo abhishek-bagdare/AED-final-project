@@ -5,7 +5,7 @@
  */
 package business.Role;
 
-import UI.Counsellar.CounsellarJPanel;
+import ui.Counsellor.CounsellorJPanel;
 import javax.swing.JPanel;
 
 import business.EcoSystem;
@@ -14,7 +14,7 @@ import business.Network.Network;
 import business.Organization.CounsellingOrganization;
 import business.Organization.Organization;
 import business.UserAccount.UserAccount;
-import Business.WorkQueue.HelpSeekerWorkRequest; 
+import business.WorkQueue.CaseReporterWorkRequest; 
 import javax.swing.JPanel;
 import ui.Counsellor.CounsellorJPanel;
 /**

@@ -67,7 +67,8 @@ public class PsychiatristRequestJPanel extends javax.swing.JPanel {
         btnEncounters = new javax.swing.JButton();
         btnCaseComplete = new javax.swing.JButton();
 
-        lblHeader.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        lblHeader.setFont(new java.awt.Font("Monaco", 1, 18)); // NOI18N
+        lblHeader.setForeground(new java.awt.Color(51, 102, 255));
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHeader.setText("Manage Requests");
 
@@ -92,9 +93,8 @@ public class PsychiatristRequestJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblPsychiatristRequestDetails);
 
-        btnAssignRequest.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnAssignRequest.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
         btnAssignRequest.setText("Assign Request");
-        btnAssignRequest.setBorderPainted(false);
         btnAssignRequest.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btnAssignRequestMouseEntered(evt);
@@ -109,16 +109,15 @@ public class PsychiatristRequestJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnEncounters.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnEncounters.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
         btnEncounters.setText("Encounters");
-        btnEncounters.setBorderPainted(false);
         btnEncounters.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEncountersActionPerformed(evt);
             }
         });
 
-        btnCaseComplete.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnCaseComplete.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
         btnCaseComplete.setText("Case Complete");
         btnCaseComplete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -132,18 +131,14 @@ public class PsychiatristRequestJPanel extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(lblHeader, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
+                .addGap(56, 56, 56)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(48, 48, 48)
-                        .addComponent(btnAssignRequest))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(40, 40, 40)
-                        .addComponent(btnEncounters, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(btnCaseComplete)))
+                    .addComponent(btnAssignRequest, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(btnCaseComplete, javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(btnEncounters, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(71, 71, 71)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 358, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 333, Short.MAX_VALUE)
                 .addGap(256, 256, 256))
         );
         layout.setVerticalGroup(
@@ -159,9 +154,9 @@ public class PsychiatristRequestJPanel extends javax.swing.JPanel {
                         .addComponent(btnAssignRequest)
                         .addGap(18, 18, 18)
                         .addComponent(btnEncounters)
-                        .addGap(28, 28, 28)
+                        .addGap(18, 18, 18)
                         .addComponent(btnCaseComplete)))
-                .addContainerGap(118, Short.MAX_VALUE))
+                .addContainerGap(114, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

@@ -19,6 +19,7 @@ import business.WorkQueue.DrWorkRequest;
 import business.WorkQueue.PsychiatristWorkRequest;
 import business.WorkQueue.CaseReporterWorkRequest;
 import business.WorkQueue.Child;
+import business.WorkQueue.Children;
 import business.WorkQueue.LawyerWorkRequest;
 import business.WorkQueue.RehabilitationCaretakerWorkRequest;
 import business.WorkQueue.WorkRequest;
@@ -519,15 +520,7 @@ public class CaseReportJPanel extends javax.swing.JPanel {
 
     private void btnReqRehabActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReqRehabActionPerformed
         // TODO add your handling code here:
-        RehabilitationCaretakerWorkRequest rehabWR =new RehabilitationCaretakerWorkRequest();
-        rehabWR.setSender(userAccount);
-        Child c=new Child();
-        c.setChildName(request.getChildName());
-        c.setChildAge(request.getAge());
-       ArrayList <Child> a= new ArrayList<Child>();
-       a=rehabWR.getChildren();
-       a.add(c);
-        rehabWR.setChildren(a);
+        
     }//GEN-LAST:event_btnReqRehabActionPerformed
 
 

@@ -5,6 +5,8 @@
  */
 package business.WorkQueue;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author abhishekbagdare
@@ -12,6 +14,19 @@ package business.WorkQueue;
 public class Child {
      String childName;
     Integer childAge;
+      ArrayList <Child> children= new ArrayList<Child>();
+
+    public ArrayList<Child> getChildren() {
+        return children;
+    }
+
+    public void setChildren(ArrayList<Child> children) {
+        this.children = children;
+    }
+    public void addChild(Child c)
+    {
+        children.add(c);
+    }
 
     public String getChildName() {
         return childName;

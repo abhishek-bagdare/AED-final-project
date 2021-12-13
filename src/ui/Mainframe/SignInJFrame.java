@@ -120,7 +120,7 @@ public class SignInJFrame extends javax.swing.JFrame {
         container.setLayout(new java.awt.CardLayout());
         jSplitPane1.setRightComponent(container);
 
-        getContentPane().add(jSplitPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-3, 201, 1420, 490));
+        getContentPane().add(jSplitPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-3, 51, 1420, 640));
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(new java.awt.GridBagLayout());
@@ -152,7 +152,7 @@ public class SignInJFrame extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(40, 73, 39, 95);
         jPanel2.add(jButton1, gridBagConstraints);
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-1, 1, 1420, 200));
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-1, 1, 1420, 50));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

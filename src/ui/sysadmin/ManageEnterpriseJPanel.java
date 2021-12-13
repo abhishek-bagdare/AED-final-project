@@ -58,6 +58,7 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
         }
     }
 
+    @SuppressWarnings("unchecked")
     private void populateComboBox() {
         comboBoxNetworkName.removeAllItems();
         comboBoxEnterpriseType.removeAllItems();

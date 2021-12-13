@@ -20,6 +20,7 @@ import business.Role.LegalAdminRole;
 import business.Role.NGOAdminRole;
 import business.Role.PharmacyAdminRole;
 import business.Role.PsychiatristRole;
+import business.Role.RehabilitationCaretaker;
 //import Business.Role.AdminRole;
 import business.UserAccount.UserAccount;
 import java.awt.CardLayout;
@@ -71,6 +72,7 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         }
     }
 
+    @SuppressWarnings("unchecked")
     private void populateNetworkComboBox(){
         comboBoxSelectNetwork.removeAllItems();
         
@@ -79,6 +81,7 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         }
     }
     
+    @SuppressWarnings("unchecked")
     private void populateEnterpriseComboBox(Network network){
         comboBoxSelectEnterprise.removeAllItems();
         
@@ -290,9 +293,9 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
                     }
             //UserAccount account = enterprise.getUserAccountDirectory().createUserAccnt(username, password, employee, new PharmacyAdminRole());
         }
-        else if(enterprise.getEnterpriseType().getValue().equalsIgnoreCase("Psychiatrist")){
+        else if(enterprise.getEnterpriseType().getValue().equalsIgnoreCase("Rehabilitation")){
             if(enterprise.getUserAccountDirectory().CheckIsValidInput(password)){
-                        UserAccount userAccount=enterprise.getUserAccountDirectory().createUserAccnt(username, password, employee, new PsychiatristRole());
+                        UserAccount userAccount=enterprise.getUserAccountDirectory().createUserAccnt(username, password, employee, new RehabilitationCaretaker());
                     }
                     else{
                         JOptionPane.showMessageDialog(null, "Password should have a minimum length of 8 and contain atleast 1 Uppercase, 1 Lowercase, 1 Special character and 1 Digit ");

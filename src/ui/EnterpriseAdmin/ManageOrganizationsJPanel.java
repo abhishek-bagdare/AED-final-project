@@ -39,6 +39,7 @@ public class ManageOrganizationsJPanel extends javax.swing.JPanel {
         //System.out.println(enterprise.getEnterpriseType().getValue());
     }
 
+    @SuppressWarnings("unchecked")
     private void populateCombo(){
         comboBoxOrgType.removeAllItems();
         if(enterprise.getEnterpriseType().getValue().equalsIgnoreCase("NGO")){

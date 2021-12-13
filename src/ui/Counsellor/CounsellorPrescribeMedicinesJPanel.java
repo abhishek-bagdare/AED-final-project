@@ -47,7 +47,8 @@ public class CounsellorPrescribeMedicinesJPanel extends javax.swing.JPanel {
         btnRequestPharmacist = new javax.swing.JButton();
         btnBack = new javax.swing.JButton();
 
-        lblHeader.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        lblHeader.setFont(new java.awt.Font("Monaco", 1, 18)); // NOI18N
+        lblHeader.setForeground(new java.awt.Color(51, 102, 255));
         lblHeader.setText("Prescription");
 
         tblPrescriptionDetails.setModel(new javax.swing.table.DefaultTableModel(
@@ -63,18 +64,17 @@ public class CounsellorPrescribeMedicinesJPanel extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(tblPrescriptionDetails);
 
-        lblDoctorName.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lblDoctorName.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
         lblDoctorName.setText("Doctor's Name:");
 
-        lblDate.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lblDate.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
         lblDate.setText("Date:");
 
-        lblDoctorSign.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lblDoctorSign.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
         lblDoctorSign.setText("Doctor's Sign:");
 
-        btnRequestPharmacist.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnRequestPharmacist.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
         btnRequestPharmacist.setText("Request Pharmacist");
-        btnRequestPharmacist.setBorderPainted(false);
         btnRequestPharmacist.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btnRequestPharmacistMouseEntered(evt);
@@ -84,9 +84,8 @@ public class CounsellorPrescribeMedicinesJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnBack.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnBack.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
         btnBack.setText("Back");
-        btnBack.setBorderPainted(false);
         btnBack.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btnBackMouseEntered(evt);
@@ -119,14 +118,15 @@ public class CounsellorPrescribeMedicinesJPanel extends javax.swing.JPanel {
                         .addComponent(lblDate)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtDate, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(91, 91, 91)
-                        .addComponent(lblDoctorSign)
-                        .addGap(4, 4, 4)
-                        .addComponent(txtDoctorSign, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(190, 190, 190)
-                        .addComponent(btnRequestPharmacist)))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                            .addGap(91, 91, 91)
+                            .addComponent(lblDoctorSign)
+                            .addGap(18, 18, 18)
+                            .addComponent(txtDoctorSign))
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                            .addGap(190, 190, 190)
+                            .addComponent(btnRequestPharmacist))))
                 .addContainerGap(61, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -135,24 +135,24 @@ public class CounsellorPrescribeMedicinesJPanel extends javax.swing.JPanel {
                 .addGap(40, 40, 40)
                 .addComponent(btnBack)
                 .addGap(7, 7, 7)
-                .addComponent(lblHeader)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtDoctorName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblDoctorName)
-                    .addComponent(lblDate))
-                .addGap(35, 35, 35)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(3, 3, 3)
-                        .addComponent(lblDoctorSign))
-                    .addComponent(txtDoctorSign, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                        .addComponent(lblHeader)
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtDoctorName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblDoctorName)
+                            .addComponent(lblDate))
+                        .addGap(35, 35, 35)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(57, 57, 57))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(txtDoctorSign, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lblDoctorSign)))
+                .addGap(27, 27, 27)
                 .addComponent(btnRequestPharmacist)
-                .addContainerGap(28, Short.MAX_VALUE))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

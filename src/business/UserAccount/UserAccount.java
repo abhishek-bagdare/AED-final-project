@@ -11,10 +11,8 @@ import business.WorkQueue.WorkQueue;
 
 /**
  *
- * @author Dhaval
+ * @author virajshah
  */
-
-
 public class UserAccount {
     
     private String username;
@@ -69,7 +67,5 @@ public class UserAccount {
     public String toString() {
         return username;
     }
-    
-    
     
 }

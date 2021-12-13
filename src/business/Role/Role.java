@@ -1,5 +1,6 @@
 /*
- * To change this template, choose Tools | Templates
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
 package business.Role;
@@ -14,7 +15,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author raunak
+ * @author virajshah
  */
 public abstract class Role {
 
@@ -52,5 +53,5 @@ public abstract class Role {
     public String toString() {
         return (type != null) ? this.type.getValue() : this.getClass().getName();
     }
-
+    
 }

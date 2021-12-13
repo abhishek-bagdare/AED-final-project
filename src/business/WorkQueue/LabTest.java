@@ -7,7 +7,7 @@ package business.WorkQueue;
 
 /**
  *
- * @author ajink
+ * @author virajshah
  */
 public class LabTest {
     private String test;

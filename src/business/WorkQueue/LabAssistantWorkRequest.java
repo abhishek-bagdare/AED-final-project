@@ -10,7 +10,7 @@ import java.util.Date;
 
 /**
  *
- * @author patel
+ * @author virajshah
  */
 public class LabAssistantWorkRequest extends WorkRequest{
     
@@ -61,7 +61,4 @@ public class LabAssistantWorkRequest extends WorkRequest{
     }
     
     
-    
-    
-
 }

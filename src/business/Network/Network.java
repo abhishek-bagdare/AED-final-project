@@ -9,9 +9,10 @@ import business.Enterprise.EnterpriseDirectory;
 
 /**
  *
- * @author MyPC1
+ * @author virajshah
  */
 public class Network {
+    
     private String nameOfNetwork;
     private EnterpriseDirectory enterpriseDirectory;
     
@@ -33,4 +34,6 @@ public class Network {
     @Override
     public String toString(){
         return nameOfNetwork;
-    }}
+    }
+    
+}

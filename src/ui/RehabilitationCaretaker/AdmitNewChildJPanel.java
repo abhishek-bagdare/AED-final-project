@@ -7,6 +7,7 @@ package ui.RehabilitationCaretaker;
 
 import business.EcoSystem;
 import business.Organization.PharmacyOrganization;
+import business.Organization.RehabilitationOrganization;
 import business.UserAccount.UserAccount;
 import business.WorkQueue.Child;
 import business.WorkQueue.RehabilitationCaretakerWorkRequest;
@@ -27,7 +28,7 @@ public class AdmitNewChildJPanel extends javax.swing.JPanel {
     EcoSystem system;
     RehabilitationCaretakerWorkRequest request;
     UserAccount userAccount;
-    AdmitNewChildJPanel(JPanel userProcessContainer, EcoSystem business, PharmacyOrganization POrganization, UserAccount userAccount) {
+    AdmitNewChildJPanel(JPanel userProcessContainer, EcoSystem business, RehabilitationOrganization POrganization, UserAccount userAccount) {
       this.userProcessContainer = userProcessContainer;
         this.system = system;
         this.request = request;
@@ -133,8 +134,7 @@ public class AdmitNewChildJPanel extends javax.swing.JPanel {
         DefaultTableModel model= (DefaultTableModel) jTable1.getModel();
         Object[] row=new Object[2];
         model.setRowCount(0);
-        
-         for(Child C : request.getChildren())
+        try{ for(Child C : request.getChildren())
          {
          
             row[0]=C.getChildAge();
@@ -142,7 +142,8 @@ public class AdmitNewChildJPanel extends javax.swing.JPanel {
             
             model.addRow(row);
             
-        }
+        }}catch(Exception c){}
+        
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;

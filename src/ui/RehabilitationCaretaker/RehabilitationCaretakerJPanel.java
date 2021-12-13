@@ -11,6 +11,7 @@ import business.Enterprise.RehabilitationEnterprise;
 import business.Network.Network;
 import business.Organization.Organization;
 import business.Organization.PharmacyOrganization;
+import business.Organization.RehabilitationOrganization;
 import business.UserAccount.UserAccount;
 import ui.Pharmacy.PharmaViewRequestJPanel;
 import javax.swing.JPanel;
@@ -26,7 +27,7 @@ public class RehabilitationCaretakerJPanel extends javax.swing.JPanel {
      */  private JPanel userProcessContainer;
     private EcoSystem business;
     private UserAccount userAccount;
-    private PharmacyOrganization POrganization; 
+    private RehabilitationOrganization POrganization; 
     private RehabilitationEnterprise Penterprise;
    
 
@@ -35,7 +36,7 @@ public class RehabilitationCaretakerJPanel extends javax.swing.JPanel {
         this.userProcessContainer = userProcessContainer;
         this.userAccount = account;
         this.business = business;
-        this.POrganization = (PharmacyOrganization)organization;
+        this.POrganization = (RehabilitationOrganization)organization;
         this.Penterprise = (RehabilitationEnterprise) enterprise;
         jSplitPane1.setDividerSize(0);
         jSplitPane1.setDividerLocation(100);

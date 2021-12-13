@@ -24,6 +24,9 @@ public class RehabilitationCaretakerWorkRequest extends WorkRequest {
      public ArrayList<Child> getChildren() {
         return children;
     }
+     public void addChild(Child c){
+         children.add(c);
+     }
 
     public void setChildren(ArrayList<Child> children) {
         this.children = children;

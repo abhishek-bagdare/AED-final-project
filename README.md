@@ -17,7 +17,7 @@ Many orphans are taken hostages as child labors, No resources or system to fight
    
 NGOs do not have a centralized system that can help interact with multiple parties to rescue and rehabilitate children who are victims of multiple atrocities.
    
-APPROACH
+APPROACH.  
 Design a software system for NGOs that can initiate a restoration process for a child who has been a victim of atrocities through reporting to NGO. 
    
 A Volunteer from NGO would be assigned to the case, he would then examine the case and redirect the case to the necessary stakeholder.   

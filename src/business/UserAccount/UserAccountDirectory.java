@@ -9,13 +9,10 @@ import java.util.ArrayList;
 import business.Employee.Employee;
 import business.Role.Role;
 
-
 /**
  *
- * @author Dhaval
+ * @author virajshah
  */
-
-
 public class UserAccountDirectory {
     
     private ArrayList<UserAccount> userAccntList;
@@ -94,5 +91,5 @@ public class UserAccountDirectory {
 
         return field_status;
     }
-
+    
 }

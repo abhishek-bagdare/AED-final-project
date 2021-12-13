@@ -18,11 +18,14 @@ import business.WorkQueue.CounsellorWorkRequest;
 import business.WorkQueue.DrWorkRequest;
 import business.WorkQueue.PsychiatristWorkRequest;
 import business.WorkQueue.CaseReporterWorkRequest;
+import business.WorkQueue.Child;
 import business.WorkQueue.LawyerWorkRequest;
+import business.WorkQueue.RehabilitationCaretakerWorkRequest;
 import business.WorkQueue.WorkRequest;
 import java.awt.CardLayout;
 import java.awt.Color;
 import java.awt.Component;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
@@ -83,6 +86,7 @@ public class CaseReportJPanel extends javax.swing.JPanel {
         btnReqCounsellar = new javax.swing.JButton();
         btnReqDoc = new javax.swing.JButton();
         btnReqPsych = new javax.swing.JButton();
+        btnReqRehab = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -275,7 +279,7 @@ public class CaseReportJPanel extends javax.swing.JPanel {
                 btnReqCounsellarActionPerformed(evt);
             }
         });
-        add(btnReqCounsellar, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 380, 200, 41));
+        add(btnReqCounsellar, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 480, 200, 41));
 
         btnReqDoc.setBackground(new java.awt.Color(51, 102, 255));
         btnReqDoc.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
@@ -316,6 +320,26 @@ public class CaseReportJPanel extends javax.swing.JPanel {
             }
         });
         add(btnReqPsych, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 310, 152, 38));
+
+        btnReqRehab.setBackground(new java.awt.Color(51, 102, 255));
+        btnReqRehab.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
+        btnReqRehab.setForeground(new java.awt.Color(255, 255, 255));
+        btnReqRehab.setText("Request Rehabilitation");
+        btnReqRehab.setBorderPainted(false);
+        btnReqRehab.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnReqRehabMouseExited(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnReqRehabMouseEntered(evt);
+            }
+        });
+        btnReqRehab.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnReqRehabActionPerformed(evt);
+            }
+        });
+        add(btnReqRehab, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 380, 200, 41));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnReqLawyerMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnReqLawyerMouseEntered
@@ -485,6 +509,27 @@ public class CaseReportJPanel extends javax.swing.JPanel {
 
     }//GEN-LAST:event_btnReqCounsellarActionPerformed
 
+    private void btnReqRehabMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnReqRehabMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnReqRehabMouseExited
+
+    private void btnReqRehabMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnReqRehabMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnReqRehabMouseEntered
+
+    private void btnReqRehabActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReqRehabActionPerformed
+        // TODO add your handling code here:
+        RehabilitationCaretakerWorkRequest rehabWR =new RehabilitationCaretakerWorkRequest();
+        rehabWR.setSender(userAccount);
+        Child c=new Child();
+        c.setChildName(request.getChildName());
+        c.setChildAge(request.getAge());
+       ArrayList <Child> a= new ArrayList<Child>();
+       a=rehabWR.getChildren();
+       a.add(c);
+        rehabWR.setChildren(a);
+    }//GEN-LAST:event_btnReqRehabActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBack;
@@ -492,6 +537,7 @@ public class CaseReportJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnReqDoc;
     private javax.swing.JButton btnReqLawyer;
     private javax.swing.JButton btnReqPsych;
+    private javax.swing.JButton btnReqRehab;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel lblDate;
     private javax.swing.JLabel lblLocation;

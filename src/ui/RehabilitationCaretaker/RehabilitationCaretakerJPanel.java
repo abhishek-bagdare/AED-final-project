@@ -6,8 +6,8 @@
 package ui.RehabilitationCaretaker;
 
 import business.EcoSystem;
-import business.Enterprise.Enterprise;
-import business.Enterprise.PharmaceuticalEnterprise;
+import business.Enterprise.Enterprise; 
+import business.Enterprise.RehabilitationEnterprise;
 import business.Network.Network;
 import business.Organization.Organization;
 import business.Organization.PharmacyOrganization;
@@ -27,7 +27,7 @@ public class RehabilitationCaretakerJPanel extends javax.swing.JPanel {
     private EcoSystem business;
     private UserAccount userAccount;
     private PharmacyOrganization POrganization; 
-    private PharmaceuticalEnterprise Penterprise;
+    private RehabilitationEnterprise Penterprise;
    
 
     public RehabilitationCaretakerJPanel(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business, Network network) {
@@ -36,7 +36,7 @@ public class RehabilitationCaretakerJPanel extends javax.swing.JPanel {
         this.userAccount = account;
         this.business = business;
         this.POrganization = (PharmacyOrganization)organization;
-        this.Penterprise = (PharmaceuticalEnterprise) enterprise;
+        this.Penterprise = (RehabilitationEnterprise) enterprise;
         jSplitPane1.setDividerSize(0);
         jSplitPane1.setDividerLocation(100);
         populateBottom();

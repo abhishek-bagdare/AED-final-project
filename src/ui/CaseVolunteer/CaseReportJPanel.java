@@ -60,8 +60,6 @@ public class CaseReportJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        btnReqLawyer = new javax.swing.JButton();
-        btnReqPsych = new javax.swing.JButton();
         lblDate = new javax.swing.JPanel();
         lblVictimName = new javax.swing.JLabel();
         lblRelation = new javax.swing.JLabel();
@@ -81,54 +79,16 @@ public class CaseReportJPanel extends javax.swing.JPanel {
         txtSuspect = new javax.swing.JTextField();
         btnBack = new javax.swing.JButton();
         lblVictimInfo = new javax.swing.JLabel();
-        btnReqDoc = new javax.swing.JButton();
+        btnReqLawyer = new javax.swing.JButton();
         btnReqCounsellar = new javax.swing.JButton();
+        btnReqDoc = new javax.swing.JButton();
+        btnReqPsych = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        btnReqLawyer.setBackground(new java.awt.Color(51, 102, 255));
-        btnReqLawyer.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
-        btnReqLawyer.setForeground(new java.awt.Color(255, 255, 255));
-        btnReqLawyer.setText("Request Lawyer");
-        btnReqLawyer.setBorderPainted(false);
-        btnReqLawyer.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                btnReqLawyerMouseExited(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnReqLawyerMouseEntered(evt);
-            }
-        });
-        btnReqLawyer.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnReqLawyerActionPerformed(evt);
-            }
-        });
-        jPanel1.add(btnReqLawyer, new org.netbeans.lib.awtextra.AbsoluteConstraints(176, 633, 170, 38));
-
-        btnReqPsych.setBackground(new java.awt.Color(51, 102, 255));
-        btnReqPsych.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
-        btnReqPsych.setForeground(new java.awt.Color(255, 255, 255));
-        btnReqPsych.setText("Psychiatrist");
-        btnReqPsych.setBorderPainted(false);
-        btnReqPsych.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                btnReqPsychMouseExited(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnReqPsychMouseEntered(evt);
-            }
-        });
-        btnReqPsych.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnReqPsychActionPerformed(evt);
-            }
-        });
-        jPanel1.add(btnReqPsych, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 633, 152, 38));
 
         lblDate.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -275,25 +235,27 @@ public class CaseReportJPanel extends javax.swing.JPanel {
         lblVictimInfo.setText("Victim Information");
         jPanel1.add(lblVictimInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(272, 14, 342, 42));
 
-        btnReqDoc.setBackground(new java.awt.Color(51, 102, 255));
-        btnReqDoc.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
-        btnReqDoc.setForeground(new java.awt.Color(255, 255, 255));
-        btnReqDoc.setText("Request Doctor");
-        btnReqDoc.setBorderPainted(false);
-        btnReqDoc.addMouseListener(new java.awt.event.MouseAdapter() {
+        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(2, 0, -1, -1));
+
+        btnReqLawyer.setBackground(new java.awt.Color(51, 102, 255));
+        btnReqLawyer.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
+        btnReqLawyer.setForeground(new java.awt.Color(255, 255, 255));
+        btnReqLawyer.setText("Request Lawyer");
+        btnReqLawyer.setBorderPainted(false);
+        btnReqLawyer.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                btnReqDocMouseExited(evt);
+                btnReqLawyerMouseExited(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnReqDocMouseEntered(evt);
+                btnReqLawyerMouseEntered(evt);
             }
         });
-        btnReqDoc.addActionListener(new java.awt.event.ActionListener() {
+        btnReqLawyer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnReqDocActionPerformed(evt);
+                btnReqLawyerActionPerformed(evt);
             }
         });
-        jPanel1.add(btnReqDoc, new org.netbeans.lib.awtextra.AbsoluteConstraints(176, 548, 170, 41));
+        add(btnReqLawyer, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 110, 170, 38));
 
         btnReqCounsellar.setBackground(new java.awt.Color(51, 102, 255));
         btnReqCounsellar.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
@@ -313,9 +275,47 @@ public class CaseReportJPanel extends javax.swing.JPanel {
                 btnReqCounsellarActionPerformed(evt);
             }
         });
-        jPanel1.add(btnReqCounsellar, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 548, 200, 41));
+        add(btnReqCounsellar, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 380, 200, 41));
 
-        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(2, 0, -1, -1));
+        btnReqDoc.setBackground(new java.awt.Color(51, 102, 255));
+        btnReqDoc.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
+        btnReqDoc.setForeground(new java.awt.Color(255, 255, 255));
+        btnReqDoc.setText("Request Doctor");
+        btnReqDoc.setBorderPainted(false);
+        btnReqDoc.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnReqDocMouseExited(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnReqDocMouseEntered(evt);
+            }
+        });
+        btnReqDoc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnReqDocActionPerformed(evt);
+            }
+        });
+        add(btnReqDoc, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 220, 170, 41));
+
+        btnReqPsych.setBackground(new java.awt.Color(51, 102, 255));
+        btnReqPsych.setFont(new java.awt.Font("Monaco", 1, 14)); // NOI18N
+        btnReqPsych.setForeground(new java.awt.Color(255, 255, 255));
+        btnReqPsych.setText("Psychiatrist");
+        btnReqPsych.setBorderPainted(false);
+        btnReqPsych.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnReqPsychMouseExited(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnReqPsychMouseEntered(evt);
+            }
+        });
+        btnReqPsych.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnReqPsychActionPerformed(evt);
+            }
+        });
+        add(btnReqPsych, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 310, 152, 38));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnReqLawyerMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnReqLawyerMouseEntered
@@ -366,9 +366,10 @@ public class CaseReportJPanel extends javax.swing.JPanel {
         psychrequest.setCaseReporterWorkRequest(request);
         psychrequest.getCaseReporterWorkRequest().setHpWorkRequest(psychrequest);
 
-        Enterprise e= network.getEnterpriseDirectory().searchEnterprisebyType(Enterprise.EnterpriseType.Psychiatrist);
+        Enterprise e= network.getEnterpriseDirectory().searchEnterprisebyType(Enterprise.EnterpriseType.NGO);
         Organization org = null;
         for (Organization organization : e.getOrganizationDirectory().getOrganizationList()){
+            System.out.println("ex"+organization.getName());
             if (organization instanceof PsychiatricOrganization){
                 org = organization;
                 break;

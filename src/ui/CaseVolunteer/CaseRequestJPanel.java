@@ -461,6 +461,7 @@ public class CaseRequestJPanel extends javax.swing.JPanel {
             }else{
                 row[3] = request.getReceiver();
             }
+         
             
             model.addRow(row);
         }

@@ -188,7 +188,7 @@ public class RequestDoctorJPanel extends javax.swing.JPanel {
         
         
         int selectedRow = jTable1.getSelectedRow();
-        String st=jTable1.getValueAt(selectedRow, 2).toString();
+        String st=jTable1.getValueAt(selectedRow, 3).toString();
         String stat="Waiting";
         if(st.equalsIgnoreCase(stat))
         {
